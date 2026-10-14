@@ -1,8 +1,8 @@
 # Triply ✈ Travel Planner & Bill Splitter
 
-**Plan the trip. Keep the memories. Split the bills.**
+**Plan · Travel · Together**
 
-แอปวางแผนเที่ยวและหารค่าใช้จ่ายกับเพื่อน สไตล์ Cute Premium Travel Journal ติดตั้งลงมือถือได้ (PWA) ใช้ออฟไลน์ได้ รองรับภาษาไทยและญี่ปุ่น
+แอปวางแผนเที่ยวและหารค่าใช้จ่ายกับเพื่อน โทนเขียวป่า-ครีม ภาพประกอบภูเขา ทะเลสาบ ฟอนต์ Mali ติดตั้งลงมือถือได้ (PWA) ใช้ออฟไลน์ได้ รองรับภาษาไทยและญี่ปุ่น
 
 ## ฟีเจอร์
 - **Dashboard** — ยอดใช้จ่ายรวม งบคงเหลือ (เกจแบบน้ำ) ใครจ่ายไปเท่าไหร่ ยอดที่ต้องเคลียร์ กิจกรรมล่าสุด
@@ -26,6 +26,7 @@ manifest.webmanifest   ข้อมูลแอปสำหรับติดต
 sw.js                  service worker สำหรับใช้ออฟไลน์
 vendor/                html2canvas 1.4.1, jsPDF 2.5.1
 icons/                 ไอคอนแอป
+fonts/                 ฟอนต์ Mali (ไทย + ละติน) สำหรับใช้ออฟไลน์ — SIL Open Font License
 ```
 
 ## ข้อมูล

@@ -503,6 +503,64 @@ select.inp{appearance:none;background-image:linear-gradient(45deg,transparent 50
 .pp-row small{display:block;color:#6B655E;font-size:12px}
 .stop .tm small{display:block;font-size:11.5px;color:var(--ink-2);font-weight:500}
 @media (prefers-reduced-motion:reduce){.journal.draw .illo .ink{stroke-dashoffset:0}.journal.draw .illo .washes,.journal.draw .j-conn{opacity:1}}
+
+/* plan v2 */
+.day-sub{font-size:13px;font-weight:500;color:var(--ink-2);font-family:var(--f-body)}
+.day-sum{display:grid;grid-template-columns:1.4fr 1fr;gap:10px;margin-top:4px}
+.day-sum>div{padding:10px 14px;border-radius:16px;background:var(--sunken);border:1px solid var(--line);min-width:0}
+.day-sum>div:first-child{background:var(--coral-soft);border-color:transparent}
+.day-sum small{display:block;font-size:11.5px;color:var(--ink-2);line-height:1.4}
+.day-sum b{display:block;font-family:var(--f-display);font-size:19px;line-height:1.25}
+.m-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.m-chip{display:inline-flex;align-items:center;gap:4px;height:24px;padding:0 9px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:12px;font-weight:600;color:var(--ink-2);white-space:nowrap}
+.m-chip svg{width:13px;height:13px}
+.m-chip.est{background:var(--peach);color:var(--peach-ink);border-color:transparent}
+.m-chip.ver{background:var(--warn-bg);color:var(--warn);border:1px dashed var(--warn);cursor:pointer}
+.stop .note{white-space:pre-line;margin-top:6px}
+.stop.travel{align-items:center}
+.stop.travel .tm{padding-top:0;font-size:12.5px;color:var(--ink-2)}
+.stop .pin.tv{background:var(--surface);color:var(--ink-2);border:1.5px dashed var(--line-2);margin-top:0}
+.tv-body{display:flex;flex-direction:column;align-items:flex-start;gap:4px;border:0;background:none;padding:4px 2px;text-align:left;color:var(--ink-2);min-width:0}
+.tv-body .nm{font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.tv-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tv-note{font-size:12px;color:var(--ink-3);max-width:46ch}
+.est-total{display:grid;grid-template-columns:1.3fr 1fr;gap:10px;margin-top:4px}
+.est-total>div{padding:12px 14px;border-radius:16px;background:var(--mint);min-width:0}
+.est-total>div+div{background:var(--sunken)}
+.est-total small{display:block;font-size:11.5px;color:var(--ink-2)}
+.est-total b{display:block;font-family:var(--f-display);font-size:22px;line-height:1.25}
+.est-total b.sm{font-size:16px}
+.est-target{margin-top:10px;color:var(--ink-2)}
+.est-rows{display:flex;flex-direction:column;margin-top:12px;border-top:1px solid var(--line)}
+.est-row{display:grid;grid-template-columns:minmax(0,1fr) auto 76px;gap:10px;align-items:center;padding:9px 4px;border:0;border-bottom:1px solid var(--line);background:none;text-align:left;font-size:13.5px;color:var(--ink)}
+.est-row:hover{background:var(--sunken)}
+.est-row .d{display:flex;flex-direction:column;font-weight:600;min-width:0}
+.est-row .d small{font-weight:500;color:var(--ink-2);font-size:11.5px;display:flex;align-items:center;gap:4px}
+.est-row .v{font-weight:700;text-align:right;white-space:nowrap}
+.est-row .a{text-align:right;color:var(--ink-2);font-size:12.5px;white-space:nowrap}
+.est-row.tr{background:linear-gradient(90deg,var(--blue),transparent)}
+.est-row.head{order:-1;border-bottom:1px solid var(--line);padding:6px 4px;font-size:11.5px;color:var(--ink-3);cursor:default}
+.est-row.head:hover{background:none}
+.stepper{gap:14px;flex-wrap:nowrap}.stepper b{font-family:var(--f-display);font-size:24px;min-width:32px;text-align:center}
+.prep{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:18px;background:var(--coral-soft)}
+.prep>div{flex:1;min-width:0}.prep b{display:block;font-family:var(--f-display)}.prep small{color:var(--ink-2);font-size:12.5px}
+.pp-row.tv{background:transparent;border:1px dashed #D9CFB8}
+.pp-tv{width:54px;display:grid;place-items:center;color:#6B655E}
+.j-sub{font-size:14px;font-weight:600;color:#7A6A55;margin-top:4px}
+.j-time small{margin-left:8px;font-size:12px;font-weight:500;color:#7A6A55}
+.j-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.j-stop.r .j-tags{justify-content:flex-end}
+.j-est{padding:1px 8px;border-radius:999px;background:#F7E4B8;color:#7A5A12;font-style:normal;font-weight:700;font-size:12px}
+.j-ver{padding:1px 8px;border-radius:999px;border:1.5px dashed #C88A1E;color:#9A6A12;font-style:normal;font-weight:600;font-size:11.5px;transform:rotate(-2deg)}
+.j-note{white-space:pre-line}
+.j-conn-wrap{position:relative}
+.j-tvs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:2px;max-width:86%}
+.j-tvs.top{position:static;transform:none;margin:4px auto 8px}
+.j-tv{display:inline-flex;align-items:center;gap:6px;border:0;background:#FBF5E8;padding:2px 10px;border-radius:999px;font-size:12px;color:#5E574F;font-weight:500;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;box-shadow:0 0 0 1px #E6D9BE}
+.j-tv svg{width:14px;height:14px;fill:none;stroke:#5E574F;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.j-tv b{font-weight:700}
+.j-sticky b{display:block;margin-top:8px;padding-top:6px;border-top:1.5px dashed rgba(0,0,0,.2);font-size:12.5px;white-space:pre-line}
+@media (max-width:520px){.j-tv{font-size:11px;white-space:normal;text-align:center}.day-sum{grid-template-columns:1fr 1fr}}
 /* ---------- money ---------- */
 .sum-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 @media (max-width:760px){.sum-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -848,11 +906,21 @@ th:{
  'common.close':'ปิด','common.yesDelete':'ลบเลย','common.confirm':'ยืนยัน','common.me':'ฉัน','common.days':'{n} วัน','common.undo':'เลิกทำ',
  'install.title':'ติดตั้ง Triply ลงมือถือ','install.sub':'เปิดเต็มจอจากหน้าจอโฮม ใช้ได้แม้ไม่มีเน็ต','install.btn':'ติดตั้ง','install.later':'ไว้ทีหลัง','install.iosTitle':'เพิ่ม Triply ไปที่หน้าจอโฮม',
  'install.ios1':'แตะปุ่มแชร์ด้านล่างของ Safari','install.ios2':'เลื่อนลงแล้วเลือก "เพิ่มไปยังหน้าจอโฮม"','install.ios3':'กด "เพิ่ม" แล้วเปิด Triply จากไอคอนได้เลย','install.done':'ติดตั้งแล้ว เปิดจากหน้าจอโฮมได้เลย','install.settings':'ติดตั้งเป็นแอป','install.installed':'กำลังใช้งานแบบแอปอยู่',
- 'plan.viewTimeline':'ไทม์ไลน์','plan.viewJournal':'สมุดภาพ','plan.paste':'วางแพลน','paste.title':'วางแพลนจากข้อความ','paste.hint':'ขึ้นต้นแต่ละรายการด้วยเวลา เช่น 11:00–13:00 น. | ตลาดวโรรส บรรทัดที่ไม่มีเวลาจะกลายเป็นโน้ตของรายการก่อนหน้า',
+ 'plan.viewTimeline':'ไทม์ไลน์','plan.viewJournal':'สมุดภาพ','plan.paste':'วางแพลน','paste.title':'วางแพลนจากข้อความ','paste.hint':'ขึ้นต้นแต่ละรายการด้วยเวลา เช่น 11:00–13:00 น. | ตลาดวโรรส บรรทัดที่ไม่มีเวลาจะเป็นโน้ต ถ้ามี "งบ…: 100–250 บาท/คน" จะตั้งงบให้เอง และวางหลายวันได้ถ้ามีหัว DAY 1 — 19 OCTOBER 2026',
  'paste.day':'ใส่ในวัน','paste.replace':'แทนที่แพลนเดิมของวันนั้น','paste.preview':'จะใส่ {n} รายการ','paste.none':'ยังไม่เจอรายการที่ขึ้นต้นด้วยเวลา','paste.save':'ใส่ลงแพลน','paste.done':'ใส่แพลนแล้ว {n} รายการ','paste.ready':'แพลนที่เตรียมไว้:','paste.cnx3':'เชียงใหม่ วันที่ 3 (วันกลับ)',
  'vibe.title':'สรุปสถานที่ทั้งหมด','vibe.sub':'จัดกลุ่มให้อัตโนมัติ แตะชื่อเพื่อแก้กลุ่มได้','vibe.mu':'สายมู','vibe.art':'อาร์ตและถ่ายรูป','vibe.chill':'กิน ดื่ม และพักผ่อน','vibe.move':'การเดินทางและอื่น ๆ','vibe.auto':'อัตโนมัติ','vibe.empty':'ยังไม่มีในทริปนี้',
  'place.vibe':'กลุ่มสถานที่','place.illo':'ภาพวาด','place.end':'เวลาสิ้นสุด',
- 'j.note':'ที่ใหม่ ๆ\nของกินใหม่ ๆ\nความทรงจำใหม่ ๆ ♡','j.loading':'กำลังโหลดความสนุก…','j.plan':'เช็กลิสต์วันนี้','j.letsgo':'ไปกันเลย!','j.outro':'ต่างที่ ต่างเวลา\nแต่ความทรงจำเดียวกัน','j.empty':'หน้านี้ยังว่าง ลองวางแพลนหรือเพิ่มสถานที่ดูนะ'
+ 'j.note':'ที่ใหม่ ๆ\nของกินใหม่ ๆ\nความทรงจำใหม่ ๆ ♡','j.loading':'กำลังโหลดความสนุก…','j.plan':'เช็กลิสต์วันนี้','j.letsgo':'ไปกันเลย!','j.outro':'ต่างที่ ต่างเวลา\nแต่ความทรงจำเดียวกัน','j.empty':'หน้านี้ยังว่าง ลองวางแพลนหรือเพิ่มสถานที่ดูนะ',
+ 'est.title':'งบประมาณคาดการณ์','est.sub':'รวมจากงบของทุกกิจกรรม แยกจากค่าใช้จ่ายจริง','est.perPerson':'ต่อคน','est.group':'ทั้งกลุ่ม {n} คน','est.groupShort':'ทั้งกลุ่ม','est.actual':'จ่ายจริง','est.dayEst':'งบคาดการณ์วันนี้',
+ 'est.transport':'ค่าเดินทางร่วม','est.total':'รวมทั้งทริป','est.excl':'ไม่รวมตั๋วเครื่องบินและที่พัก','est.target':'งบเป้าหมาย','est.verify':'{n} รายการยังไม่ยืนยัน','est.editTransport':'ใส่ค่าเดินทางร่วม (รถเช่า น้ำมัน)',
+ 'est.mayOver':'ถ้าใช้เต็มงบสูงสุดอาจเกินเป้า','est.fits':'อยู่ในเป้า',
+ 'tr.title':'ค่าเดินทางร่วมกัน','tr.travelers':'จำนวนผู้เดินทาง (ใช้หารงบ)','tr.car':'รถเช่า (ทั้งคัน)','tr.fuel':'น้ำมัน','tr.parking':'ที่จอดรถและค่าใช้จ่ายระหว่างทาง','tr.actualCar':'ราคาเช่ารถจริง','tr.actualFuel':'ค่าน้ำมันจริง',
+ 'tr.hint':'ใส่ราคาจริงเมื่อรู้แล้ว ระบบจะใช้แทนช่วงประมาณและคำนวณยอดใหม่ทันที','tr.split':'หาร {n} คน',
+ 'place.kind':'ประเภท','place.kindAct':'กิจกรรม','place.kindTravel':'ช่วงเดินทาง','place.budgetPP':'งบต่อคน (ต่ำสุด – สูงสุด)','place.verify':'ยังไม่ยืนยัน (ต้องเช็กเวลาเปิด ราคา หรือรอบ)','place.map':'เปิดแผนที่',
+ 'badge.verify':'ยังไม่ยืนยัน','badge.verified':'ยืนยันแล้ว','badge.verifyHint':'แตะเมื่อเช็กแล้ว','dur.h':'{h} ชม.','dur.m':'{m} นาที','unit.pp':'/คน',
+ 'trip.dayZero':'นับวันแรกเป็น Day 0',
+ 'prep.title':'แพลนที่เตรียมไว้','prep.cnx':'เชียงใหม่ 18–21 ต.ค. 2026 · ครบ 4 วัน พร้อมงบ','prep.btn':'นำเข้าทั้งทริป','prep.short':'นำเข้าแพลนเชียงใหม่','prep.q':'นำเข้าทริปเชียงใหม่ 18–21 ต.ค.?',
+ 'prep.body':'จะสร้างทริปใหม่ {n} กิจกรรม + {m} ช่วงเดินทาง พร้อมงบต่อคนและค่ารถเช่า ทริปอื่นไม่ถูกแตะ','prep.bodyReplace':'มีทริปนี้อยู่แล้ว จะแทนที่แพลนเดิมด้วยเวอร์ชันล่าสุด ({n} กิจกรรม + {m} ช่วงเดินทาง) ค่าใช้จ่ายจริงยังอยู่ครบ','prep.done':'นำเข้าแล้ว {n} รายการ'
 },
 ja:{
  'nav.home':'ホーム','nav.plan':'旅のプラン','nav.money':'支出','nav.receipt':'旅のレシート','nav.settings':'設定',
@@ -915,7 +983,17 @@ ja:{
  'paste.day':'追加する日','paste.replace':'その日の既存プランを置き換える','paste.preview':'{n}件を追加します','paste.none':'時間で始まる項目が見つかりません','paste.save':'プランに追加','paste.done':'{n}件をプランに追加しました','paste.ready':'用意済みプラン：','paste.cnx3':'チェンマイ 3日目（帰る日）',
  'vibe.title':'スポットまとめ','vibe.sub':'自動で分類。名前をタップして変更できます','vibe.mu':'パワースポット','vibe.art':'アート＆写真','vibe.chill':'食べる・飲む・くつろぐ','vibe.move':'移動・その他','vibe.auto':'自動','vibe.empty':'この旅にはまだありません',
  'place.vibe':'分類','place.illo':'イラスト','place.end':'終了時間',
- 'j.note':'新しい場所\n新しいごはん\n新しい思い出 ♡','j.loading':'わくわく読み込み中…','j.plan':'今日のチェックリスト','j.letsgo':'Let\'s go!','j.outro':'場所も時間もちがっても\n思い出はいっしょ','j.empty':'まだ白紙です。プランを貼り付けてみよう'
+ 'j.note':'新しい場所\n新しいごはん\n新しい思い出 ♡','j.loading':'わくわく読み込み中…','j.plan':'今日のチェックリスト','j.letsgo':'Let\'s go!','j.outro':'場所も時間もちがっても\n思い出はいっしょ','j.empty':'まだ白紙です。プランを貼り付けてみよう',
+ 'est.title':'予算見積もり','est.sub':'各アクティビティの予算を合計（実費とは別）','est.perPerson':'1人あたり','est.group':'グループ {n}人','est.groupShort':'グループ','est.actual':'実費','est.dayEst':'今日の見積もり',
+ 'est.transport':'共有の交通費','est.total':'旅行全体','est.excl':'航空券・宿泊費は含みません','est.target':'目標予算','est.verify':'未確認 {n}件','est.editTransport':'交通費を入力（レンタカー・ガソリン）',
+ 'est.mayOver':'上限まで使うと目標を超える可能性','est.fits':'目標内',
+ 'tr.title':'共有の交通費','tr.travelers':'人数（予算の割り勘用）','tr.car':'レンタカー（1台）','tr.fuel':'ガソリン','tr.parking':'駐車場・道中の費用','tr.actualCar':'実際のレンタカー代','tr.actualFuel':'実際のガソリン代',
+ 'tr.hint':'実額が分かったら入力すると、見積もりの代わりに使って再計算します','tr.split':'{n}人で割る',
+ 'place.kind':'種類','place.kindAct':'アクティビティ','place.kindTravel':'移動','place.budgetPP':'1人あたり予算（最小〜最大）','place.verify':'未確認（営業時間・料金を要確認）','place.map':'地図を開く',
+ 'badge.verify':'未確認','badge.verified':'確認済み','badge.verifyHint':'確認したらタップ','dur.h':'{h}時間','dur.m':'{m}分','unit.pp':'/人',
+ 'trip.dayZero':'初日をDay 0にする',
+ 'prep.title':'用意済みプラン','prep.cnx':'チェンマイ 2026/10/18–21・4日間フルプラン（予算付き）','prep.btn':'旅ごと読み込む','prep.short':'チェンマイのプランを読み込む','prep.q':'チェンマイ 10/18–21 を読み込みますか？',
+ 'prep.body':'新しい旅を作成します：アクティビティ{n}件＋移動{m}件、1人あたり予算とレンタカー代付き。他の旅は変更しません','prep.bodyReplace':'この旅は既にあります。最新版に置き換えます（アクティビティ{n}件＋移動{m}件）。実費の記録は残ります','prep.done':'{n}件を読み込みました'
 }};
 const CATS = ['food','transport','stay','activity','shopping','other'];
 const CAT_META = {food:{i:'i-food',bg:'var(--peach)',fg:'var(--peach-ink)',hex:'#E6B95C'},transport:{i:'i-car',bg:'var(--blue)',fg:'var(--blue-ink)',hex:'#8DA8D8'},
@@ -942,9 +1020,9 @@ function validDB(d){return d&&typeof d==='object'&&Array.isArray(d.members)&&Arr
 function normalizeDB(d){d.activity=Array.isArray(d.activity)?d.activity:[];d.version=1;
   d.trips.forEach(t=>{t.memberIds=Array.isArray(t.memberIds)?t.memberIds:[];t.catBudgets=t.catBudgets||{};t.currency=t.currency||'THB';t.budget=+t.budget||0});
   d.expenses.forEach(e=>{e.shares=Array.isArray(e.shares)?e.shares:[];e.amount=Math.round(+e.amount||0)});return d}
-const ILLO_RULES=[[/เช็กเอาต์|check.?out|ที่พัก|โรงแรม|รีสอร์ท|โฮสเทล|hotel/i,'hotel'],[/ตลาด|กาด|market/i,'market'],[/สตรีตอาร์ต|street ?art|อาร์ต|แกลเลอรี|gallery|มิวเซียม|พิพิธภัณฑ์/i,'art'],[/คลอง|แม่น้ำ|ริมน้ำ|canal|river/i,'canal'],
- [/คืนรถ|รถเช่า|เติมน้ำมัน|เดินทางไปสนามบิน|ขับรถ|รถตู้/i,'car'],[/สนามบิน|เช็กอิน|โหลดกระเป๋า|airport/i,'airport'],[/บิน|flight/i,'plane'],[/วัด|ไหว้|สายมู|ศาล|พระธาตุ|เจดีย์|temple|shrine/i,'temple'],
- [/คาเฟ่|กาแฟ|cafe|coffee/i,'cafe'],[/ดอย|ภูเขา|น้ำตก|อุทยาน|ทะเลหมอก|สวน/i,'mountain'],[/ข้าว|อาหาร|มื้อ|ร้าน|ซีฟู้ด|ส้มตำ|ก๋วยเตี๋ยว/i,'food'],[/ช้อป|ห้าง|ถนนคนเดิน|ของฝาก/i,'shopping']];
+const ILLO_RULES=[[/เช็กเอาต์|check.?out|check.?in|residence|ที่พัก|โรงแรม|รีสอร์ท|โฮสเทล|hotel|ตื่นนอน/i,'hotel'],[/ตลาด|กาด|market/i,'market'],[/สตรีตอาร์ต|สตรีทอาร์ต|street ?art|อาร์ต|แกลเลอรี|gallery|มิวเซียม|museum|พิพิธภัณฑ์|ศิลปะ|บ้านข้างวัด|คราฟต์|craft|kalm/i,'art'],[/คลอง|แม่น้ำ|ริมน้ำ|canal|river|khlong/i,'canal'],[/onsen|ออนเซน|สปา|spa|นวด/i,'onsen'],[/\bbar\b|drinks|เบียร์|ดนตรีสด|บาร์|ผับ|bwuuu/i,'bar'],
+ [/คืนรถ|รถเช่า|เติมน้ำมัน|เดินทางไปสนามบิน|ขับรถ|รถตู้/i,'car'],[/สนามบิน|เช็กอิน|โหลดกระเป๋า|ผู้โดยสาร|airport/i,'airport'],[/^มื้อ/,'food'],[/บิน|flight/i,'plane'],[/วัด|ไหว้|สายมู|ศาล|พระธาตุ|เจดีย์|ม่อน|temple|shrine/i,'temple'],
+ [/คาเฟ่|กาแฟ|cafe|coffee/i,'cafe'],[/ดอย|ภูเขา|น้ำตก|อุทยาน|ทะเลหมอก|สวน/i,'mountain'],[/ข้าว|อาหาร|มื้อ|ร้าน|ซีฟู้ด|ส้มตำ|ก๋วยเตี๋ยว|cuisine|meena/i,'food'],[/ช้อป|ห้าง|ถนนคนเดิน|ของฝาก/i,'shopping']];
 const DAY3_TEXT=`10:00 น. | เช็กเอาต์
 11:00–13:00 น. | ตลาดวโรรส
 ซื้อไส้อั่ว น้ำพริกหนุ่ม แคบหมู และของฝาก แนะนำเตรียมถุงเก็บความเย็นหากซื้ออาหารกลับ
@@ -987,6 +1065,10 @@ const ILLO={
   ink:k('M10 120 L60 50 L90 86 L120 40 L190 120')+k('M28 94 h36 M98 78 h44 M70 106 h40')+k('M120 40 V22 l13 4 l-13 4')+k(circ(165,32,12))+k('M24 120 l6 -18 l6 18 M38 120 l5 -14 l5 14')},
  food:{wash:w('M40 80 H160 Q156 120 100 120 Q44 120 40 80 Z','#F4DCB4')+w('M46 82 Q100 74 154 82 Q150 96 100 98 Q50 96 46 82z','#E8A04F')+w('M80 76 q8 -14 20 -6 q10 -12 22 2z','#E9C27A')+w('M128 70 a10 10 0 0 1 16 8z','#9CCB6A'),
   ink:k('M40 80 H160 Q156 120 100 120 Q44 120 40 80 Z')+k('M40 80 Q100 70 160 80')+k('M80 76 q8 -14 20 -6 q10 -12 22 2')+k('M144 30 L102 76 M156 36 L110 80')+k('M60 64 q-4 -8 2 -14 M74 60 q-4 -8 2 -14')+k('M128 70 a10 10 0 0 1 16 8 z')+k('M60 104 h80')},
+ bar:{wash:w('M58 46 H112 V112 Q112 122 102 122 H68 Q58 122 58 112 Z','#F2C14E')+w('M58 46 q8 -14 20 -6 q8 -12 22 -2 q12 -6 12 8 z','#FFFFFF')+w('M134 70 a8 6 0 1 0 0.1 0 M162 58 a8 6 0 1 0 0.1 0','#8C76BA'),
+  ink:k('M58 46 H112 V112 Q112 122 102 122 H68 Q58 122 58 112 Z')+k('M112 62 q22 0 20 20 q-2 18 -20 18')+k('M58 46 q8 -14 20 -6 q8 -12 22 -2 q12 -6 12 8')+k('M74 64 V106 M94 64 V106')+k('M142 70 V30 L170 22 V58 M142 38 L170 30')+k('M134 70 a8 6 0 1 0 0.1 0 M162 58 a8 6 0 1 0 0.1 0')+k(ground)},
+ onsen:{wash:w('M30 92 Q100 80 170 92 Q166 122 100 122 Q34 122 30 92z','#9FD0D8')+w('M24 92 Q100 78 176 92 L172 100 Q100 88 28 100z','#B98A62')+w(circ(78,94,10),'#F6D9C4')+w(circ(124,94,10),'#F6D9C4')+w('M144 40 a10 10 0 1 1 0.1 0','#F6CF6A'),
+  ink:k('M24 92 Q100 78 176 92 M30 92 Q34 122 100 122 Q166 122 170 92')+k('M70 60 q-8 -10 0 -20 q8 -10 0 -20 M100 64 q-8 -10 0 -20 q8 -10 0 -20 M130 60 q-8 -10 0 -20 q8 -10 0 -20')+k(circ(78,94,10)+circ(124,94,10))+k('M74 92 h1 M82 92 h1 M120 92 h1 M128 92 h1 M76 98 q2 2 4 0 M122 98 q2 2 4 0')+k('M40 70 h18 v-6 h-18z M49 64 v-6')},
  shopping:{wash:w('M60 60 H140 L134 120 H66 Z','#F2B48F')+w('M86 60 v-18 h6 v18z','#E9C27A')+w('M110 60 l10 -20 l6 4 l-8 16z','#8FB86E'),
   ink:k('M60 60 H140 L134 120 H66 Z')+k('M80 60 q0 -22 20 -22 q20 0 20 22')+k('M88 60 v-18 M112 60 l9 -18')+k('M100 92 c-4-6-12 0-6 6 l6 5 l6-5 c6-6-2-12-6-6z')+k(ground)},
  pin:{wash:w('M30 50 L80 40 L120 50 L170 40 V110 L120 120 L80 110 L30 120 Z','#EFE6CC')+w('M40 70 q20 -10 30 6 q-10 16 -30 4z M130 84 q16 -6 26 8 q-12 12 -26 2z','#9CC59A')+w('M100 80 q-14 -16 -14 -26 a14 14 0 1 1 28 0 q0 10 -14 26z','#E2604F'),
@@ -996,65 +1078,311 @@ function illoSVG(kind,cls=''){const d=ILLO[kind]||ILLO.pin;
   return `<svg class="illo ${cls}" viewBox="0 0 200 140" aria-hidden="true"><g class="washes" filter="url(#wc)" transform="translate(3 2)">${d.wash}</g><g class="inks" filter="url(#rough)">${d.ink}</g></svg>`}
 const illoURL={};// small thumbs for pickers (static, no animation)
 const VIBES=['mu','art','chill','move'];
-const ILLO_VIBE={temple:'mu',art:'art',canal:'art',mountain:'art',market:'chill',cafe:'chill',food:'chill',hotel:'move',shopping:'chill',car:'move',airport:'move',plane:'move'};
+const ILLO_VIBE={bar:'chill',onsen:'chill',temple:'mu',art:'art',canal:'art',mountain:'art',market:'chill',cafe:'chill',food:'chill',hotel:'move',shopping:'chill',car:'move',airport:'move',plane:'move'};
 const CAT_ILLO={food:'food',transport:'car',stay:'hotel',activity:'pin',shopping:'shopping',other:'pin'};
 function guessIllo(name){for(const [re,kd] of ILLO_RULES)if(re.test(name||''))return kd;return null}
 const illoOf=p=>p.illo||guessIllo(p.name)||CAT_ILLO[p.category]||'pin';
-function vibeOf(p){if(p.vibe)return p.vibe;const kd=illoOf(p);if(ILLO_VIBE[kd])return ILLO_VIBE[kd];return p.category==='activity'?'art':['food','stay','shopping'].includes(p.category)?'chill':'move'}
-function parsePlan(text){const out=[];const pad=n=>String(n).padStart(2,'0');
-  const re=/^\s*[-•*]?\s*(\d{1,2})[:.](\d{2})\s*(?:น\.?)?\s*(?:(?:[–\-—~]|ถึง)\s*(\d{1,2})[:.](\d{2})\s*(?:น\.?)?)?\s*[|｜:\-–]?\s*(.*)$/;
-  for(const raw of String(text||'').split(/\r?\n/)){const line=raw.trim();if(!line)continue;const m=line.match(re);
-    if(m&&+m[1]<24){out.push({time:pad(m[1])+':'+m[2],endTime:m[3]?pad(m[3])+':'+m[4]:'',name:(m[5]||'').replace(/^[|｜]\s*/,'').trim()||'—',note:''})}
-    else if(out.length){const o=out[out.length-1];o.note=o.note?o.note+' '+line:line}}
-  return out}
-const ILLO_CAT={hotel:'stay',market:'shopping',art:'activity',canal:'activity',car:'transport',airport:'transport',plane:'transport',temple:'activity',cafe:'food',mountain:'activity',food:'food',shopping:'shopping'};
+function vibeOf(p){if(p.vibe)return p.vibe;if(p.kind==='travel')return'move';const kd=illoOf(p);if(ILLO_VIBE[kd])return ILLO_VIBE[kd];return p.category==='activity'?'art':['food','stay','shopping'].includes(p.category)?'chill':'move'}
+const ILLO_CAT={bar:'food',onsen:'activity',hotel:'stay',market:'shopping',art:'activity',canal:'activity',car:'transport',airport:'transport',plane:'transport',temple:'activity',cafe:'food',mountain:'activity',food:'food',shopping:'shopping'};
 const guessCat=name=>ILLO_CAT[guessIllo(name)]||'activity';
 const J_COLORS=['#5E8E69','#E08A4F','#D27392','#4E9C98','#8C76BA','#5F86C2'];
-function journalDay(tr,c,list,dayNo,date){
-  const dest=Nplain(tr,'destination','destAlt')||Nplain(tr);
-  if(!list.length)return `<div class="journal"><div class="empty" style="color:#6B655E"><svg class="illo" viewBox="0 0 200 140" style="width:160px"><g filter="url(#wc)" transform="translate(3 2)">${ILLO.pin.wash}</g><g class="inks" filter="url(#rough)">${ILLO.pin.ink}</g></svg><p>${esc(t('j.empty'))}</p><button class="btn btn-primary btn-sm" data-act="pastePlan" data-trip="${tr.id}" data-date="${date||''}">${esc(t('plan.paste'))}</button></div></div>`;
-  let delay=0;const stops=list.map((p,i)=>{const col=J_COLORS[i%J_COLORS.length],side=i%2?'r':'l';const bp=c.byPlace[p.id];const d=delay;delay+=420;
-    return `<div class="j-stop ${side} ${p.status==='cancelled'?'cancelled':''}" style="--d:${d}">
-      <div class="j-label"><span class="j-num" style="background:${col}">${i+1}</span><button class="j-name" style="background:${col}" data-act="editPlace" data-id="${p.id}">${esc(Nplain(p))}</button></div>
-      <div class="j-time num">${esc(p.time||'')}${p.endTime?'–'+esc(p.endTime):''} ${settings.lang==='th'?'น.':''}</div>
-      <div class="j-body">${illoSVG(illoOf(p))}<div class="j-note">${p.note?esc(p.note):''}${bp?`<span class="j-spent num">${money(bp.sum,tr.currency)}</span>`:''}<svg class="j-heart" viewBox="0 0 24 24"><path d="M12 20s-8-4.7-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.3 12 20 12 20z"/></svg></div></div></div>`+
-      (i<list.length-1?`<svg class="j-conn" viewBox="0 0 300 56" preserveAspectRatio="none" style="--d:${d+300}">${side==='l'?'<path class="ink" pathLength="1" d="M70 4 C 70 40, 200 20, 232 50"/><path class="ink" pathLength="1" d="M222 46 L233 51 L232 39"/>':'<path class="ink" pathLength="1" d="M230 4 C 230 40, 100 20, 68 50"/><path class="ink" pathLength="1" d="M78 46 L67 51 L68 39"/>'}</svg>`:'')}).join('');
-  return `<div class="journal draw">
-   <div class="j-head"><div><div class="j-title">${esc(dest)}<small>${esc(t('plan.day',{n:dayNo}))} · ${esc(fmtDate(date,'short'))}</small></div><div class="j-brush">${esc(t('j.loading'))} <svg class="j-heart" viewBox="0 0 24 24"><path d="M12 20s-8-4.7-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.3 12 20 12 20z"/></svg></div></div>
-    <div class="j-sticky">${esc(t('j.note'))}</div></div>
-   <svg class="j-flight" viewBox="0 0 220 60" aria-hidden="true"><g filter="url(#rough)"><path d="M6 52 C 60 54, 90 20, 150 30" fill="none" stroke="#33302E" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 8"/></g><g class="j-plane" transform="translate(168 18) rotate(-12)"><path d="M-16 4 L14 -2 Q22 -2 16 3 L-14 9Z" fill="#FFFDF7" stroke="#33302E" stroke-width="1.8"/><path d="M-2 2 L-10 -12 L-4 -12 L8 0Z M-2 6 L-8 18 L-2 18 L8 6Z" fill="#FFFDF7" stroke="#33302E" stroke-width="1.8" stroke-linejoin="round"/></g></svg>
-   <div class="j-stops">${stops}</div>
-   <div class="j-foot"><div class="j-check"><b>${esc(t('j.plan'))}</b>${list.map(p=>`<button class="j-ck ${p.status==='visited'?'on':''}" data-act="toggleVisited" data-id="${p.id}"><span class="bx">${p.status==='visited'?'<svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>':''}</span>${esc(Nplain(p))}</button>`).join('')}</div>
-    <div class="j-polaroid"><img src="${coverSrc(tr)}" alt=""><span>${esc(t('j.letsgo'))}</span></div></div>
-   <div class="j-outro">${esc(t('j.outro'))} <svg class="j-heart big" viewBox="0 0 24 24"><path d="M12 20s-8-4.7-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.3 12 20 12 20z"/></svg></div></div>`}
 function vibeCard(tr){const days=tripDays(tr);const places=db.places.filter(p=>p.tripId===tr.id&&p.status!=='cancelled').sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
   const g={mu:[],art:[],chill:[],move:[]};places.forEach(p=>g[vibeOf(p)].push(p));
   const icon3={mu:'temple',art:'art',chill:'cafe'};
-  const chip=p=>{const dn=days.indexOf(p.date)+1;return `<button class="v-chip" data-act="editPlace" data-id="${p.id}">${esc(Nplain(p))}${dn>0?`<small>D${dn}</small>`:''}</button>`};
+  const chip=p=>{const ix=days.indexOf(p.date);return `<button class="v-chip" data-act="editPlace" data-id="${p.id}">${esc(Nplain(p))}${ix>=0?`<small>D${dayNum(tr,ix)}</small>`:''}</button>`};
   return `<div class="card rv" style="--i:4"><div class="card-h"><div><div class="ttl">${L('vibe.title')}</div><div class="muted tiny">${esc(t('vibe.sub'))}</div></div></div>
    <div class="vibes">${['mu','art','chill'].map(v=>`<div class="vibe v-${v}"><div class="v-head"><svg class="illo mini" viewBox="0 0 200 140" aria-hidden="true"><g filter="url(#wc)" transform="translate(3 2)">${ILLO[icon3[v]].wash}</g><g filter="url(#rough)" class="inks">${ILLO[icon3[v]].ink}</g></svg><div><b>${L('vibe.'+v)}</b><small>${g[v].length}</small></div></div>
      <div class="v-list">${g[v].length?g[v].map(chip).join(''):`<span class="muted tiny">${esc(t('vibe.empty'))}</span>`}</div></div>`).join('')}</div>
    ${g.move.length?`<details class="v-move"><summary class="muted tiny">${esc(t('vibe.move'))} · ${g.move.length}</summary><div class="v-list">${g.move.map(chip).join('')}</div></details>`:''}</div>`}
-function pasteForm(tripId,date,prefill){const tr=tripById(tripId);if(!tr)return;const days=tripDays(tr);date=days.includes(date)?date:days[days.length-1];
-  const body=`<p class="muted tiny" style="margin:0">${esc(t('paste.hint'))}</p>
-   <div class="field"><label for="ppDay">${esc(t('paste.day'))}</label><select class="inp" id="ppDay">${days.map((d,i)=>`<option value="${d}" ${d===date?'selected':''}>${esc(t('plan.day',{n:i+1}))} · ${esc(fmtDate(d,'short'))}</option>`).join('')}</select></div>
-   <div class="row" style="gap:6px"><span class="tiny muted">${esc(t('paste.ready'))}</span><button type="button" class="chip" id="ppCnx">${icon('i-pin','sm')}${esc(t('paste.cnx3'))}</button></div>
+
+/* =========================================================
+   PLAN v2 — multi-day text import, per-person budget ranges,
+   travel segments, durations, "needs verify", transport calc
+   ========================================================= */
+const MONTHS={january:1,february:2,march:3,april:4,may:5,june:6,july:7,august:8,september:9,october:10,november:11,december:12};
+const isTravelName=n=>/^\s*(เดินทาง|กลับที่พัก|ออกเดินทาง)/.test(n||'');
+function parsePlanFull(text){const items=[],dayTitles={};const pad=n=>String(n).padStart(2,'0');let date=null,cur=null,awaitTitle=false;
+  const tre=/^\s*[-•*]?\s*(\d{1,2})[:.](\d{2})\s*(?:น\.?)?\s*(?:(?:[–\-—~]|ถึง)\s*(\d{1,2})[:.](\d{2})\s*(?:น\.?)?)?\s*[|｜:\-–·]?\s*(.*)$/;
+  const dre=/^\s*DAY\s*\d+\s*[—\-–:]\s*(?:[A-Za-z]+,?\s*)?(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/i;
+  const stop=/^\s*(สรุป|TRANSPORT|TOTAL|APP UI|ข้อมูลทริป|ยอดรวม|แนะนำให้ตั้งงบ|UPDATE TRAVEL|ช่วยเพิ่มรายละเอียด)/i;
+  for(const raw of String(text||'').split(/\r?\n/)){const line=raw.trim();if(!line||/^-{3,}$/.test(line))continue;
+    const dm=line.match(dre);if(dm&&MONTHS[dm[2].toLowerCase()]){date=dm[3]+'-'+pad(MONTHS[dm[2].toLowerCase()])+'-'+pad(dm[1]);cur=null;awaitTitle=true;continue}
+    if(stop.test(line)){cur=null;awaitTitle=false;continue}
+    const m=line.match(tre);
+    if(m&&+m[1]<24&&+m[2]<60){awaitTitle=false;const name=(m[5]||'').replace(/^[|｜·]\s*/,'').trim()||'—';
+      cur={time:pad(m[1])+':'+m[2],endTime:m[3]?pad(m[3])+':'+m[4]:'',name,note:'',date,min:null,max:null,per:'person',verify:false,kind:isTravelName(name)?'travel':'activity'};items.push(cur);continue}
+    if(awaitTitle&&date&&!/^[-•*]/.test(line)){dayTitles[date]=line;awaitTitle=false;continue}
+    if(!cur)continue;
+    const txt=line.replace(/^[-•*]\s*/,'');
+    const b=txt.match(/([\d,]+)(?:\s*[–\-]\s*([\d,]+))?\s*บาท(?:\s*\/\s*(คน|คัน|ทริป|กลุ่ม))?/);
+    if(b){const lo=+b[1].replace(/,/g,''),hi=b[2]?+b[2].replace(/,/g,''):lo;cur.min=(cur.min||0)+lo*100;cur.max=(cur.max||0)+hi*100;if(b[3]&&b[3]!=='คน')cur.per='group'}
+    if(/ตรวจสอบ|ยืนยัน|ตั๋ว|ต้องเช็ก/.test(txt))cur.verify=true;
+    cur.note=cur.note?cur.note+'\n'+txt:txt}
+  return {items,dayTitles}}
+function parsePlan(text){return parsePlanFull(text).items}
+const travelersOf=tr=>Math.max(1,+tr.travelers||tr.memberIds.length||1);
+const dayNum=(tr,i)=>i+(tr.dayStart===0?0:1);
+function estPP(p,tr,any){if(!any&&p.status==='cancelled')return{min:0,max:0};
+  if(p.estMin!=null||p.estMax!=null){let lo=p.estMin||0,hi=p.estMax!=null?p.estMax:lo;if(p.estPer==='group'){const n=travelersOf(tr);lo=Math.round(lo/n);hi=Math.round(hi/n)}return{min:lo,max:Math.max(lo,hi)}}
+  const v=Math.round((p.estimated||0)/travelersOf(tr));return{min:v,max:v}}
+function transportOf(tr,T0,n0){const T=T0||tr.transport;if(!T)return null;const n=n0||travelersOf(tr);
+  const pick=(k,act)=>T[act]!=null&&T[act]!==''&&T[act]>0?[T[act],T[act]]:(T[k]||[0,0]);
+  const car=pick('car','carActual'),fuel=pick('fuel','fuelActual'),park=T.parking||[0,0];
+  const gmin=car[0]+fuel[0]+park[0],gmax=car[1]+fuel[1]+park[1];return{n,car,fuel,park,gmin,gmax,pmin:Math.round(gmin/n),pmax:Math.round(gmax/n)}}
+function planEstimate(tr){const days=tripDays(tr);const n=travelersOf(tr);const ex=db.expenses.filter(e=>e.tripId===tr.id);
+  const rows=days.map((d,i)=>{let min=0,max=0;db.places.filter(p=>p.tripId===tr.id&&p.date===d).forEach(p=>{const e=estPP(p,tr);min+=e.min;max+=e.max});
+    return{date:d,num:dayNum(tr,i),min,max,actual:ex.filter(e=>e.date===d).reduce((s,e)=>s+e.amount,0)}});
+  const T=transportOf(tr);const verify=db.places.filter(p=>p.tripId===tr.id&&p.needsVerify&&p.status!=='cancelled').length;
+  const min=rows.reduce((s,r)=>s+r.min,0)+(T?T.pmin:0),max=rows.reduce((s,r)=>s+r.max,0)+(T?T.pmax:0);
+  return{rows,T,n,min,max,verify,actual:ex.reduce((s,e)=>s+e.amount,0)}}
+function rng(a,b,cur){return a===b?money(a,cur):money(a,cur)+'–'+money(b,cur).replace(/^[^\d]+/,'')}
+function durMin(p){if(!p.time||!p.endTime)return 0;const [h1,m1]=p.time.split(':').map(Number),[h2,m2]=p.endTime.split(':').map(Number);let d=(h2*60+m2)-(h1*60+m1);if(d<0)d+=1440;return d}
+function fmtDur(min){if(!min)return'';const h=Math.floor(min/60),m=min%60;return [h?t('dur.h',{h}):'',m?t('dur.m',{m}):''].filter(Boolean).join(' ')}
+const timeRange=p=>(p.time||'—')+(p.endTime?'–'+p.endTime:'');
+const firstLine=s=>String(s||'').split('\n')[0];
+function estChip(p,tr){const e=estPP(p,tr);return e.max?`<span class="m-chip est num">${rng(e.min,e.max,tr.currency)}${esc(t('unit.pp'))}</span>`:''}
+function verifyChip(p){return p.needsVerify?`<button class="m-chip ver" data-act="toggleVerify" data-id="${p.id}" title="${esc(t('badge.verifyHint'))}">${icon('i-alert','sm')}${esc(t('badge.verify'))}</button>`:''}
+
+/* ---------- itinerary (timeline + journal) ---------- */
+function itinerary(tr,c){const days=tripDays(tr);const places=db.places.filter(p=>p.tripId===tr.id);
+  const orphan=places.filter(p=>!days.includes(p.date));
+  const tabs=days.map((d,i)=>({k:d,label:t('plan.day',{n:dayNum(tr,i)}),sub:fmtDate(d,'dow')}));if(orphan.length)tabs.push({k:'none',label:t('plan.unscheduled'),sub:orphan.length+''});
+  let cur=ui.planDay[tr.id];if(!tabs.some(x=>x.k===cur)){const td=todayStr();cur=days.includes(td)?td:tabs[0]?.k;ui.planDay[tr.id]=cur}
+  const list=(cur==='none'?orphan:places.filter(p=>p.date===cur)).sort((a,b)=>(a.sort-b.sort)||String(a.time).localeCompare(String(b.time)));
+  const dayTotal=list.reduce((s,p)=>s+(c.byPlace[p.id]?.sum||0),0)+(cur!=='none'?c.ex.filter(e=>!e.placeId&&e.date===cur).reduce((s,e)=>s+e.amount,0):0);
+  let emin=0,emax=0;list.forEach(p=>{const e=estPP(p,tr);emin+=e.min;emax+=e.max});
+  const jv=settings.planView==='journal';const idx=days.indexOf(cur);const dayNo=idx>=0?dayNum(tr,idx):'–';const title=(tr.dayTitles||{})[cur];
+  const n=travelersOf(tr);
+  return `<div class="card-h"><div style="min-width:0"><div class="ttl">${L('plan.day',{n:dayNo})}${title?` <span class="day-sub">${esc(title)}</span>`:''}</div><div class="muted tiny">${cur&&cur!=='none'?esc(fmtDate(cur,'long')):''}</div></div>
+    <div class="row" style="gap:6px;justify-content:flex-end"><button class="btn btn-soft btn-sm" data-act="pastePlan" data-trip="${tr.id}" data-date="${cur!=='none'?cur:''}">${icon('i-copy','sm')}${esc(t('plan.paste'))}</button><button class="btn btn-primary btn-sm" data-act="addPlace" data-trip="${tr.id}" data-date="${cur!=='none'?cur:''}">${icon('i-plus','sm')}${esc(t('place.new'))}</button></div></div>
+   <div class="day-sum"><div><small>${esc(t('est.dayEst'))}</small><b class="num">${emax?rng(emin,emax,tr.currency):'—'}</b><small>${esc(t('unit.pp'))}${emax&&n>1?` · ${esc(t('est.group',{n}))} ${rng(emin*n,emax*n,tr.currency)}`:''}</small></div><div><small>${esc(t('plan.actual'))}</small><b class="num">${money(dayTotal,tr.currency)}</b><small>${esc(t('est.groupShort'))}</small></div></div>
+   <div class="row" style="justify-content:space-between;margin:12px 0 10px"><div class="seg"><button class="${jv?'':'on'}" data-act="planView" data-v="timeline">${esc(t('plan.viewTimeline'))}</button><button class="${jv?'on':''}" data-act="planView" data-v="journal">${esc(t('plan.viewJournal'))}</button></div></div>
+   <div class="daytabs" role="tablist">${tabs.map(x=>`<button role="tab" aria-selected="${x.k===cur}" class="daytab ${x.k===cur?'on':''}" data-act="planDay" data-trip="${tr.id}" data-v="${x.k}"><b>${esc(x.label)}</b><small>${esc(x.sub)}</small></button>`).join('')}</div>
+   ${jv?journalDay(tr,c,list,dayNo,cur!=='none'?cur:tr.start):list.length?`<div class="timeline">${list.map((p,i)=>{
+     if(p.kind==='travel')return `<div class="stop travel rv" style="--i:${i+4}"><div class="tm">${esc(p.time||'—')}${p.endTime?`<small>${esc(p.endTime)}</small>`:''}</div><div class="pin tv">${icon('i-car')}</div>
+       <button class="tv-body" data-act="editPlace" data-id="${p.id}"><span class="nm">${esc(Nplain(p))}</span><span class="tv-meta">${fmtDur(durMin(p))?`<span class="m-chip">${esc(fmtDur(durMin(p)))}</span>`:''}${estChip(p,tr)}${p.note?`<span class="tv-note">${esc(firstLine(p.note))}</span>`:''}</span></button></div>`;
+     const bp=c.byPlace[p.id];const m=CAT_META[p.category]||CAT_META.other;const dm=durMin(p);
+     return `<div class="stop ${p.status==='cancelled'?'cancelled':''} rv" style="--i:${i+4}"><div class="tm">${esc(p.time||'—')}${p.endTime?`<small>${esc(p.endTime)}</small>`:''}</div><div class="pin" style="background:${m.bg};color:${m.fg}">${icon(m.i)}</div>
+      <div class="body"><div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:nowrap"><div class="nm" style="min-width:0">${N(p)}</div>
+       <button class="badge ${p.status==='visited'?'b-ok':p.status==='cancelled'?'b-mute':'b-info'}" style="border:0" data-act="cyclePlace" data-id="${p.id}">${esc(t('pstatus.'+p.status))}</button></div>
+       <div class="m-row">${dm?`<span class="m-chip">${icon('i-cal','sm')}${esc(fmtDur(dm))}</span>`:''}${estChip(p,tr)}${verifyChip(p)}</div>
+       ${p.note?`<div class="note">${esc(p.note)}</div>`:''}
+       ${bp?`<div class="money"><span class="act-v">${esc(t('plan.actual'))} <b class="num">${money(bp.sum,tr.currency)}</b></span><span>${esc(t('plan.items',{n:bp.n}))}</span><span class="avs">${[...bp.payers].map(id=>av(memberById(id),'sm')).join('')}</span></div>`:''}
+       <div class="tools"><button class="btn btn-soft" data-act="addExpense" data-trip="${tr.id}" data-place="${p.id}">${icon('i-plus','sm')}${esc(t('plan.addExpense'))}</button><a class="btn btn-ghost" href="${mapURL(p,tr)}" target="_blank" rel="noopener" aria-label="map">${icon('i-pin','sm')}</a><button class="btn btn-ghost" data-act="editPlace" data-id="${p.id}" aria-label="${esc(t('plan.edit'))}">${icon('i-edit','sm')}</button>
+        <button class="btn btn-ghost" data-act="movePlace" data-id="${p.id}" data-dir="-1" ${i===0?'disabled':''} aria-label="up">${icon('i-up','sm')}</button><button class="btn btn-ghost" data-act="movePlace" data-id="${p.id}" data-dir="1" ${i===list.length-1?'disabled':''} aria-label="down">${icon('i-dn','sm')}</button></div></div></div>`}).join('')}</div>`
+   :`<div class="empty"><img src="${STK.pin}" alt="" style="width:64px"><p>${esc(t('plan.emptyDay'))}</p><button class="btn btn-soft btn-sm" data-act="addPlace" data-trip="${tr.id}" data-date="${cur!=='none'?cur:''}">${icon('i-plus','sm')}${esc(t('place.new'))}</button></div>`}`}
+const mapURL=(p,tr)=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent((p.name||'')+' '+(tr.destination||''));
+function placeSpendCard(tr,c){const n=travelersOf(tr);const g=p=>estPP(p,tr).max*n;
+  const places=db.places.filter(p=>p.tripId===tr.id&&p.kind!=='travel'&&(c.byPlace[p.id]||g(p)));
+  const max=Math.max(1,...places.map(p=>Math.max(c.byPlace[p.id]?.sum||0,g(p))));
+  return `<div class="card rv" style="--i:5"><div class="card-h"><div><div class="ttl">${L('plan.placeSpend')}</div><div class="muted tiny">${esc(t('plan.placeSpendSub'))} · ${esc(t('est.group',{n}))}</div></div></div>
+   ${places.length?`<div class="place-spend">${places.map((p,i)=>{const a=c.byPlace[p.id]?.sum||0,e=g(p),m=CAT_META[p.category]||CAT_META.other;return `<div class="ps"><span class="nm">${esc(Nplain(p))}</span><b class="num" style="color:${e&&a>e?'var(--bad)':'inherit'}">${money(a,tr.currency)}</b>
+     <div class="track">${e?`<span class="est" style="width:${e/max*100}%"></span>`:''}<span style="width:${a/max*100}%;background:${m.hex};animation-delay:${i*70+200}ms"></span></div>
+     ${e?`<small class="muted tiny" style="grid-column:1/-1">${esc(t('plan.est'))} ≤ ${money(e,tr.currency)}</small>`:''}</div>`}).join('')}</div><div class="muted tiny" style="margin-top:10px">${esc(t('plan.estNote'))}</div>`
+   :`<div class="empty"><p>${esc(t('plan.noPlaceSpend'))}</p></div>`}</div>`}
+function planBudgetCard(tr){const E=planEstimate(tr),cur=tr.currency,n=E.n;
+  if(!E.rows.some(r=>r.max)&&!E.T)return'';
+  return `<div class="card rv est-card" style="--i:3"><div class="card-h"><div><div class="ttl">${L('est.title')}</div><div class="muted tiny">${esc(t('est.sub'))}</div></div>${E.verify?`<span class="badge b-warn">${esc(t('est.verify',{n:E.verify}))}</span>`:''}</div>
+   <div class="est-total"><div><small>${esc(t('est.total'))} · ${esc(t('est.perPerson'))}</small><b class="num">${rng(E.min,E.max,cur)}</b></div><div><small>${esc(t('est.group',{n}))}</small><b class="num sm">${rng(E.min*n,E.max*n,cur)}</b></div></div>
+   ${tr.budget?`<div class="est-target tiny">${esc(t('est.target'))} <b class="num">${money(Math.round(tr.budget/n),cur)}${esc(t('unit.pp'))}</b> · ${E.max*n>tr.budget?`<span style="color:var(--warn);font-weight:600">${esc(t('est.mayOver'))}</span>`:`<span style="color:var(--ok);font-weight:600">${esc(t('est.fits'))}</span>`}</div>`:''}
+   <div class="est-rows">${E.rows.map(r=>`<button class="est-row" data-act="planDay" data-trip="${tr.id}" data-v="${r.date}"><span class="d">${esc(t('plan.day',{n:r.num}))}<small>${esc(fmtDate(r.date,'short'))}</small></span><span class="num v">${r.max?rng(r.min,r.max,cur):'—'}</span><span class="num a">${r.actual?money(r.actual,cur):''}</span></button>`).join('')}
+    ${E.T?`<button class="est-row tr" data-act="editTransport" data-id="${tr.id}"><span class="d">${esc(t('est.transport'))}<small>${esc(t('tr.split',{n}))} · ${icon('i-edit','sm')}</small></span><span class="num v">${rng(E.T.pmin,E.T.pmax,cur)}</span><span class="num a"></span></button>`:`<button class="btn btn-soft btn-sm" data-act="editTransport" data-id="${tr.id}" style="margin-top:8px">${icon('i-car','sm')}${esc(t('est.editTransport'))}</button>`}
+    <div class="est-row head"><span></span><span class="v">${esc(t('est.perPerson'))}</span><span class="a">${esc(t('est.actual'))}</span></div></div>
+   <div class="muted tiny" style="margin-top:10px">${esc(t('est.excl'))} · ${esc(t('est.actual'))} ${money(E.actual,cur)}</div></div>`}
+function transportForm(tid){const tr=tripById(tid);if(!tr)return;const cur=tr.currency;const T=JSON.parse(JSON.stringify(tr.transport||{car:[0,0],fuel:[0,0],parking:[0,0]}));let n=travelersOf(tr);
+  const inp=(id,v)=>`<input class="inp num" id="${id}" inputmode="decimal" placeholder="0" value="${esc(v?toInput(v,cur):'')}">`;
+  const row=(k,lbl)=>`<div class="field"><span class="flabel">${esc(t(lbl))}</span><div class="row" style="flex-wrap:nowrap;gap:6px">${inp('t_'+k+'0',(T[k]||[])[0])}<span class="muted">–</span>${inp('t_'+k+'1',(T[k]||[])[1])}</div></div>`;
+  const body=`<div class="field"><span class="flabel">${esc(t('tr.travelers'))}</span><div class="row stepper"><button type="button" class="btn btn-soft btn-icon" data-step="-1" aria-label="-">−</button><b id="tvN" class="num">${n}</b><button type="button" class="btn btn-soft btn-icon" data-step="1" aria-label="+">+</button></div></div>
+   ${row('car','tr.car')}${row('fuel','tr.fuel')}${row('parking','tr.parking')}
+   <div class="grid2"><div class="field"><label for="t_ca">${esc(t('tr.actualCar'))}</label>${inp('t_ca',T.carActual)}</div><div class="field"><label for="t_fa">${esc(t('tr.actualFuel'))}</label>${inp('t_fa',T.fuelActual)}</div></div>
+   <small class="muted tiny">${esc(t('tr.hint'))}</small><div class="est-total" id="tvRes"></div>`;
+  openSheet({title:esc(t('tr.title')),body,foot:`<button class="btn btn-soft" data-close>${esc(t('form.cancel'))}</button><button class="btn btn-primary" data-save>${esc(t('form.save'))}</button>`,onMount(sh,api){
+    const read=()=>{const g=id=>parseMoney($('#'+id,sh).value,cur);['car','fuel','parking'].forEach(k=>{const a=g('t_'+k+'0'),b=g('t_'+k+'1');T[k]=[a,Math.max(a,b||a)]});T.carActual=g('t_ca')||null;T.fuelActual=g('t_fa')||null};
+    const upd=()=>{read();const R=transportOf(tr,T,n);$('#tvN',sh).textContent=n;$('#tvRes',sh).innerHTML=`<div><small>${esc(t('est.perPerson'))}</small><b class="num">${rng(R.pmin,R.pmax,cur)}</b></div><div><small>${esc(t('est.group',{n}))}</small><b class="num sm">${rng(R.gmin,R.gmax,cur)}</b></div>`};
+    sh.addEventListener('input',upd);$$('[data-step]',sh).forEach(b=>b.onclick=()=>{n=Math.min(20,Math.max(1,n+(+b.dataset.step)));haptic(6);upd()});upd();
+    $('[data-save]',sh).onclick=()=>{read();tr.transport=T;tr.travelers=n;api.close();commit();toast(t('toast.saved'))}}})}
+
+/* ---------- journal ---------- */
+function journalDay(tr,c,list,dayNo,date){
+  const dest=Nplain(tr,'destination','destAlt')||Nplain(tr);const title=(tr.dayTitles||{})[date];
+  if(!list.length)return `<div class="journal"><div class="empty" style="color:#6B655E"><svg class="illo" viewBox="0 0 200 140" style="width:160px"><g filter="url(#wc)" transform="translate(3 2)">${ILLO.pin.wash}</g><g class="inks" filter="url(#rough)">${ILLO.pin.ink}</g></svg><p>${esc(t('j.empty'))}</p><button class="btn btn-primary btn-sm" data-act="pastePlan" data-trip="${tr.id}" data-date="${date||''}">${esc(t('plan.paste'))}</button></div></div>`;
+  const acts=[],pre=[];list.forEach(p=>{if(p.kind==='travel'){if(acts.length)acts[acts.length-1].after.push(p);else pre.push(p)}else acts.push({p,after:[]})});
+  if(!acts.length){pre.forEach(p=>acts.push({p,after:[]}));pre.length=0}
+  const tv=p=>`<button class="j-tv" data-act="editPlace" data-id="${p.id}"><svg viewBox="0 0 24 24"><use href="#i-car"/></svg><b class="num">${esc(timeRange(p))}</b> ${esc(Nplain(p))}${fmtDur(durMin(p))?` · ${esc(fmtDur(durMin(p)))}`:''}</button>`;
+  let delay=0;const stops=acts.map(({p,after},i)=>{const col=J_COLORS[i%J_COLORS.length],side=i%2?'r':'l';const bp=c.byPlace[p.id];const d=delay;delay+=420;const e=estPP(p,tr);const dm=durMin(p);
+    const conn=(i<acts.length-1||after.length)?`<div class="j-conn-wrap"><svg class="j-conn" viewBox="0 0 300 56" preserveAspectRatio="none" style="--d:${d+300}">${side==='l'?'<path class="ink" pathLength="1" d="M70 4 C 70 40, 200 20, 232 50"/><path class="ink" pathLength="1" d="M222 46 L233 51 L232 39"/>':'<path class="ink" pathLength="1" d="M230 4 C 230 40, 100 20, 68 50"/><path class="ink" pathLength="1" d="M78 46 L67 51 L68 39"/>'}</svg>${after.length?`<div class="j-tvs">${after.map(tv).join('')}</div>`:''}</div>`:'';
+    return `<div class="j-stop ${side} ${p.status==='cancelled'?'cancelled':''}" style="--d:${d}">
+      <div class="j-label"><span class="j-num" style="background:${col}">${i+1}</span><button class="j-name" style="background:${col}" data-act="editPlace" data-id="${p.id}">${esc(Nplain(p))}</button></div>
+      <div class="j-time num">${esc(timeRange(p))} ${settings.lang==='th'?'น.':''}${dm?`<small>${esc(fmtDur(dm))}</small>`:''}</div>
+      <div class="j-body">${illoSVG(illoOf(p))}<div class="j-note">${p.note?esc(p.note):''}<div class="j-tags">${e.max?`<span class="j-est num">${rng(e.min,e.max,tr.currency)}${esc(t('unit.pp'))}</span>`:''}${p.needsVerify?`<span class="j-ver">${esc(t('badge.verify'))}</span>`:''}${bp?`<span class="j-spent num">${esc(t('plan.actual'))} ${money(bp.sum,tr.currency)}</span>`:''}</div><svg class="j-heart" viewBox="0 0 24 24"><path d="M12 20s-8-4.7-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.3 12 20 12 20z"/></svg></div></div></div>`+conn}).join('');
+  let emin=0,emax=0;list.forEach(p=>{const e=estPP(p,tr);emin+=e.min;emax+=e.max});
+  return `<div class="journal draw">
+   <div class="j-head"><div><div class="j-title">${esc(dest)}<small>${esc(t('plan.day',{n:dayNo}))} · ${esc(fmtDate(date,'short'))}</small></div>${title?`<div class="j-sub">${esc(title)}</div>`:''}<div class="j-brush">${esc(t('j.loading'))} <svg class="j-heart" viewBox="0 0 24 24"><path d="M12 20s-8-4.7-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.3 12 20 12 20z"/></svg></div></div>
+    <div class="j-sticky">${esc(t('j.note'))}${emax?`<b class="num">${esc(t('est.dayEst'))}\n${rng(emin,emax,tr.currency)}${esc(t('unit.pp'))}</b>`:''}</div></div>
+   <svg class="j-flight" viewBox="0 0 220 60" aria-hidden="true"><path d="M6 52 C 60 54, 90 20, 150 30" fill="none" stroke="#33302E" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 8"/><g class="j-plane" transform="translate(168 18) rotate(-12)"><path d="M-16 4 L14 -2 Q22 -2 16 3 L-14 9Z" fill="#FFFDF7" stroke="#33302E" stroke-width="1.8"/><path d="M-2 2 L-10 -12 L-4 -12 L8 0Z M-2 6 L-8 18 L-2 18 L8 6Z" fill="#FFFDF7" stroke="#33302E" stroke-width="1.8" stroke-linejoin="round"/></g></svg>
+   ${pre.length?`<div class="j-tvs top">${pre.map(tv).join('')}</div>`:''}
+   <div class="j-stops">${stops}</div>
+   <div class="j-foot"><div class="j-check"><b>${esc(t('j.plan'))}</b>${acts.map(({p})=>`<button class="j-ck ${p.status==='visited'?'on':''}" data-act="toggleVisited" data-id="${p.id}"><span class="bx">${p.status==='visited'?'<svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>':''}</span>${esc(Nplain(p))}</button>`).join('')}</div>
+    <div class="j-polaroid"><img src="${coverSrc(tr)}" alt=""><span>${esc(t('j.letsgo'))}</span></div></div>
+   <div class="j-outro">${esc(t('j.outro'))} <svg class="j-heart big" viewBox="0 0 24 24"><path d="M12 20s-8-4.7-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.3 12 20 12 20z"/></svg></div></div>`}
+
+/* ---------- prepared trip: Chiang Mai 18–21 Oct 2026 ---------- */
+const CNX_TEXT=`DAY 0 — SUNDAY, 18 OCTOBER 2026
+Travel & Hotel Check-in
+23:25–00:10 | ถึงสนามบินเชียงใหม่
+- รับกระเป๋าและเดินทางไปจุดรับรถเช่า
+- ค่าใช้จ่าย: 0–100 บาท/คน ไม่รวมค่าเช่ารถ
+00:10–00:30 | รับรถและเดินทางไปที่พัก
+- ตรวจสภาพรถและตรวจเงื่อนไขประกัน
+- ค่าใช้จ่าย: รวมในงบรถเช่าและน้ำมัน
+00:30–01:00 | Check-in Grandview Residence
+- เข้าที่พัก อาบน้ำ และพักผ่อน
+- ค่าใช้จ่ายเพิ่มเติม: 0–100 บาท/คน
+DAY 1 — MONDAY, 19 OCTOBER 2026
+Spiritual Trip, Art Museum & Night Bar
+08:00–08:30 | ตื่นนอนและเตรียมตัว
+- อาบน้ำ แต่งตัว และเตรียมกล้อง
+- งบอาหารเช้า: 60–120 บาท/คน
+08:30–09:30 | เดินทางไปม่อนกุเวร
+- ใช้เวลาประมาณ 45–60 นาที
+- เวลาขับรถจริงขึ้นอยู่กับจุดที่พักและสภาพการจราจร
+09:30–11:00 | ม่อนกุเวร
+- ไหว้พระและทำบุญตามศรัทธา
+- ถ่ายภาพบรรยากาศ
+- งบประมาณ: 50–150 บาท/คน
+11:00–11:45 | เดินทางไป Meena Rice Based Cuisine
+- ตรวจสอบเวลาเปิดร้านก่อนออกเดินทาง
+- หากร้านปิด ให้เปลี่ยนเป็นร้านอาหารในเส้นทางไป MAIIAM
+11:45–12:45 | มื้อกลางวัน — Meena Rice Based Cuisine
+- งบประมาณ: 200–450 บาท/คน
+12:45–13:15 | เดินทางไป MAIIAM Contemporary Art Museum
+13:15–15:30 | MAIIAM Contemporary Art Museum
+- ชมนิทรรศการศิลปะร่วมสมัย
+- ถ่ายภาพอาคารและงานศิลปะ
+- งบค่าเข้าชมตั้งต้น: 200 บาท/คน
+- ควรตรวจสอบเวลาเปิดและนิทรรศการก่อนวันเดินทาง
+15:30–16:30 | เดินทางกลับที่พัก
+- แวะซื้อเครื่องดื่มหรือของว่างได้
+- งบประมาณ: 80–180 บาท/คน
+16:30–18:30 | พักผ่อนที่โรงแรม
+- อาบน้ำ ชาร์จแบตกล้อง และเตรียมตัวออกไปเที่ยวกลางคืน
+18:30–19:00 | เดินทางไป BWUUU
+- ตรวจสอบว่าร้านเปิดให้บริการจริงก่อนออกจากที่พัก
+- หากร้านปิด ให้ใช้ร้านดนตรีสดที่ยืนยันเวลาเปิดแล้วเป็นตัวเลือกสำรอง
+19:00–22:30 | BWUUU — Dinner & Drinks
+- นั่งกินอาหาร ดื่มเบียร์ และฟังเพลง
+- งบประมาณ: 500–800 บาท/คน
+- เวลาเปิดและแนวเพลงของคืนจริงต้องตรวจสอบกับร้านอีกครั้ง
+22:30–23:00 | เดินทางกลับที่พัก
+- หากดื่มแอลกอฮอล์ ห้ามขับรถเอง ให้ใช้รถรับจ้าง
+DAY 2 — TUESDAY, 20 OCTOBER 2026
+Temple, Art & Onsen Day
+08:00–08:30 | ตื่นนอนและอาหารเช้า
+- งบประมาณ: 60–120 บาท/คน
+08:30–09:00 | เดินทางไปวัดอุโมงค์
+09:00–10:00 | วัดอุโมงค์
+- ไหว้พระ เดินชมอุโมงค์เก่าแก่ และถ่ายภาพธรรมชาติ
+- งบทำบุญ: 20–100 บาท/คน
+10:00–10:30 | เดินทางไปบ้านข้างวัด
+10:30–12:00 | บ้านข้างวัด
+- เดินชมงานคราฟต์ ร้านเซรามิก และงานศิลปะ
+- งบกาแฟ ขนม และงานคราฟต์: 100–350 บาท/คน
+12:00–12:30 | เดินทางไปย่านเมืองเก่า
+12:30–13:30 | มื้อกลางวัน
+- เลือกร้านอาหารในเส้นทาง Kalm Village
+- งบประมาณ: 150–300 บาท/คน
+13:30–15:00 | Kalm Village
+- ชมงานศิลปะ งานออกแบบ และงานหัตถกรรม
+- งบเครื่องดื่มหรือซื้อของ: 150–400 บาท/คน
+- ตรวจสอบเวลาเปิดก่อนเดินทาง
+15:00–15:15 | เดินทางไปวัดพระสิงห์
+15:15–16:00 | วัดพระสิงห์
+- ไหว้พระและถ่ายภาพสถาปัตยกรรม
+- งบทำบุญ: 20–100 บาท/คน
+16:00–16:30 | เดินทางไป Kaikan CNX
+16:30–18:30 | Kaikan CNX Onsen
+- แช่ออนเซนและพักผ่อน
+- งบประมาณ: 200–500 บาท/คน
+- ตรวจสอบราคา แพ็กเกจ และข้อกำหนดการเข้าใช้บริการก่อนเดินทาง
+18:30–19:00 | เดินทางไปมื้อเย็น
+19:00–20:30 | มื้อเย็นอาหารเหนือ
+- เมนูแนะนำ: ไส้อั่ว น้ำพริกหนุ่ม แกงฮังเล แคบหมู หรือข้าวซอย
+- งบประมาณ: 200–400 บาท/คน
+20:30–21:00 | กลับที่พัก
+- พักผ่อนและเตรียมตัวสำหรับวันสุดท้าย
+DAY 3 — WEDNESDAY, 21 OCTOBER 2026
+Local Market, Street Art & Airport
+08:30–09:30 | ตื่นนอนและอาหารเช้า
+- งบประมาณ: 60–120 บาท/คน
+09:30–10:30 | Check-out
+- เก็บสัมภาระ ตรวจห้องพัก และฝากกระเป๋าหากที่พักอนุญาต
+10:30–11:00 | เดินทางไปกาดหลวง
+11:00–13:00 | Warorot Market (กาดหลวง)
+- ซื้อของฝาก ขนมท้องถิ่น ผลไม้อบแห้ง และอาหารเหนือ
+- งบของฝาก: 150–400 บาท/คน
+13:00–13:30 | มื้อกลางวัน
+- งบประมาณ: 100–200 บาท/คน
+13:30–14:00 | เดินทางไปจุดถ่ายภาพสตรีทอาร์ต
+14:00–14:30 | Street Art Photography
+- ถ่ายภาพแนวสตรีทและกราฟฟิตี
+- งบประมาณ: 0–100 บาท/คน
+14:30–14:45 | เดินทางไปคลองแม่ข่า
+14:45–15:45 | Khlong Mae Kha (คลองแม่ข่า)
+- เดินเล่นริมคลอง ถ่ายภาพสะพานและร้านค้า
+- งบเครื่องดื่มและของกินเล่น: 100–250 บาท/คน
+15:45–16:30 | เดินทางไปจุดคืนรถเช่าและสนามบิน
+- เผื่อเวลารถติดและการเติมน้ำมัน
+- ค่าใช้จ่าย: คำนวณในหมวดรถเช่าและน้ำมัน
+16:30–17:30 | คืนรถเช่า
+- ตรวจสภาพรถ เติมน้ำมันตามเงื่อนไข และส่งคืนกุญแจ
+- ควรยืนยันเวลาคืนรถกับบริษัทเช่ารถล่วงหน้า
+17:30–18:00 | เข้าสนามบินเชียงใหม่
+- เช็กอินและโหลดกระเป๋า
+18:00–20:00 | มื้อเย็นและรอขึ้นเครื่อง
+- งบอาหารและเครื่องดื่ม: 150–300 บาท/คน
+21:00 | เที่ยวบินกลับ
+- ให้ใช้เวลาในตั๋วเครื่องบินเป็นข้อมูลหลัก หากเวลาเที่ยวบินเปลี่ยน ให้ปรับกิจกรรมก่อนสนามบินใหม่ทั้งหมด`;
+function placeFromItem(it,tripId,i,date){return{id:uid('p'),tripId,name:it.name,nameAlt:'',category:it.kind==='travel'?'transport':guessCat(it.name),date:it.date||date,time:it.time,endTime:it.endTime,
+  estimated:0,estMin:it.min,estMax:it.max,estPer:it.per,needsVerify:!!it.verify,kind:it.kind||'activity',status:'planned',note:it.note,sort:i+1}}
+function buildCnxTrip(id,memberIds){const P=parsePlanFull(CNX_TEXT);
+  return{trip:{id,prep:'cnx2026',name:'เชียงใหม่ 18–21 ต.ค.',nameAlt:'チェンマイ 10/18–21',destination:'เชียงใหม่',destAlt:'チェンマイ',start:'2026-10-18',end:'2026-10-21',budget:1500000,currency:'THB',cover:'mountain',
+    memberIds,travelers:2,dayStart:0,dayTitles:P.dayTitles,catBudgets:{},transport:{car:[300000,600000],fuel:[80000,140000],parking:[20000,50000],carActual:null,fuelActual:null},
+    notes:'ที่พัก Grandview Residence · ถึงสนามบินเชียงใหม่ 18 ต.ค. 23:25 · เข้าที่พัก ~00:30 · บินกลับ 21 ต.ค. 21:00 (ตรวจเวลาในตั๋วจริง) · งบเป้าหมาย 6,500–7,500 บาท/คน + สำรอง 500–1,000 บาท/คน · ไม่รวมตั๋วเครื่องบินและที่พัก'},
+   places:P.items.map((it,i)=>placeFromItem(it,id,i))}}
+function importPreparedTrip(){const P=parsePlanFull(CNX_TEXT);const old=db.trips.find(x=>x.prep==='cnx2026');const nAct=P.items.filter(i=>i.kind!=='travel').length;
+  confirmSheet({title:t('prep.q'),body:t(old?'prep.bodyReplace':'prep.body',{n:nAct,m:P.items.length-nAct}),ok:t('prep.btn'),onOk(){
+    let me=db.members.find(m=>m.id===settings.me)||db.members[0];if(!me){me={id:uid('m'),name:t('common.me'),color:MEMBER_COLORS[0]};db.members.push(me);settings.me=me.id}
+    let fr=db.members.find(m=>m.name==='เพื่อน');if(!fr){fr={id:uid('m'),name:'เพื่อน',color:MEMBER_COLORS[1]};db.members.push(fr)}
+    let id=old?old.id:uid('t');const B=buildCnxTrip(id,old?old.memberIds:[me.id,fr.id]);
+    if(old){const gone=new Set(db.places.filter(p=>p.tripId===id).map(p=>p.id));db.places=db.places.filter(p=>!gone.has(p.id));db.expenses.forEach(e=>{if(gone.has(e.placeId))e.placeId=null});Object.assign(old,B.trip,{memberIds:old.memberIds})}
+    else db.trips.push(Object.assign({createdAt:new Date().toISOString()},B.trip));
+    db.places.push(...B.places);logAct({tripId:id,kind:old?'trip_edit':'trip_add',title:B.trip.name});
+    settings.planTrip=id;settings.dashTrip=id;settings.moneyTrip=id;settings.planView='journal';ui.planDay[id]=B.trip.start;saveSettings();persist();sheetStack.slice().forEach(s=>s.close());
+    toast(t('prep.done',{n:B.places.length}));go('plan',true);setTimeout(()=>burst(innerWidth/2,innerHeight/3,70),500)}})}
+
+/* ---------- paste sheet (single day or multi-day text) ---------- */
+function pasteForm(tripId,date,prefill){const tr=tripById(tripId);if(!tr){importPreparedTrip();return}const days=tripDays(tr);date=days.includes(date)?date:days[days.length-1];
+  const body=`<div class="prep"><div><b>${esc(t('prep.title'))}</b><small>${esc(t('prep.cnx'))}</small></div><button type="button" class="btn btn-primary btn-sm" id="ppPrep">${icon('i-down','sm')}${esc(t('prep.btn'))}</button></div>
+   <p class="muted tiny" style="margin:0">${esc(t('paste.hint'))}</p>
+   <div class="field" id="ppDayF"><label for="ppDay">${esc(t('paste.day'))}</label><select class="inp" id="ppDay">${days.map((d,i)=>`<option value="${d}" ${d===date?'selected':''}>${esc(t('plan.day',{n:dayNum(tr,i)}))} · ${esc(fmtDate(d,'short'))}</option>`).join('')}</select></div>
    <textarea class="inp" id="ppTxt" style="min-height:220px;font-size:14px;line-height:1.6" placeholder="${esc(DAY3_TEXT)}"></textarea>
    <div class="tg"><span>${esc(t('paste.replace'))}</span><button class="switch" role="switch" aria-checked="false" id="ppRep" aria-label="${esc(t('paste.replace'))}"></button></div>
    <div id="ppPrev" class="pp-prev"></div>`;
   openSheet({title:esc(t('paste.title')),body,foot:`<button class="btn btn-soft" data-close>${esc(t('form.cancel'))}</button><button class="btn btn-primary" data-save disabled>${esc(t('paste.save'))}</button>`,onMount(sh,api){
-    const ta=$('#ppTxt',sh),rep=$('#ppRep',sh);let items=[];
-    const upd=()=>{items=parsePlan(ta.value);$('[data-save]',sh).disabled=!items.length;
-      $('#ppPrev',sh).innerHTML=items.length?`<b class="tiny">${esc(t('paste.preview',{n:items.length}))}</b>`+items.map(it=>`<div class="pp-row">${illoSVG(guessIllo(it.name)||'pin','mini')}<div style="min-width:0"><b class="num">${esc(it.time)}${it.endTime?'–'+esc(it.endTime):''}</b> ${esc(it.name)}${it.note?`<small>${esc(it.note)}</small>`:''}</div></div>`).join(''):(ta.value.trim()?`<span class="err">${esc(t('paste.none'))}</span>`:'')};
-    ta.addEventListener('input',upd);if(prefill){ta.value=prefill;upd()}$('#ppCnx',sh).onclick=()=>{ta.value=DAY3_TEXT;upd()};rep.onclick=()=>rep.setAttribute('aria-checked',rep.getAttribute('aria-checked')!=='true');
-    $('[data-save]',sh).onclick=()=>{if(!items.length)return;const d=$('#ppDay',sh).value;
-      if(rep.getAttribute('aria-checked')==='true'){const gone=new Set(db.places.filter(p=>p.tripId===tripId&&p.date===d).map(p=>p.id));db.places=db.places.filter(p=>!gone.has(p.id));db.expenses.forEach(e=>{if(gone.has(e.placeId))e.placeId=null})}
-      let s=Math.max(0,...db.places.filter(p=>p.tripId===tripId&&p.date===d).map(p=>p.sort||0));
-      items.forEach(it=>db.places.push({id:uid('p'),tripId,name:it.name,nameAlt:'',category:guessCat(it.name),date:d,time:it.time,endTime:it.endTime,estimated:0,status:'planned',note:it.note,sort:++s}));
-      logAct({tripId,kind:'place_add',title:items.map(i=>i.name).slice(0,2).join(', ')+(items.length>2?' …':'')});
-      ui.planDay[tripId]=d;settings.planTrip=tripId;settings.planView='journal';saveSettings();api.close();persist();toast(t('paste.done',{n:items.length}));if(route!=='plan')go('plan');else render(true)}}})}
+    const ta=$('#ppTxt',sh),rep=$('#ppRep',sh);let P={items:[],dayTitles:{}};
+    const upd=()=>{P=parsePlanFull(ta.value);const multi=P.items.some(i=>i.date);$('#ppDayF',sh).hidden=multi;$('[data-save]',sh).disabled=!P.items.length;
+      $('#ppPrev',sh).innerHTML=P.items.length?`<b class="tiny">${esc(t('paste.preview',{n:P.items.length}))}</b>`+P.items.map(it=>`<div class="pp-row ${it.kind==='travel'?'tv':''}">${it.kind==='travel'?`<span class="pp-tv">${icon('i-car','sm')}</span>`:illoSVG(guessIllo(it.name)||'pin','mini')}<div style="min-width:0"><b class="num">${it.date?esc(fmtDate(it.date,'short'))+' · ':''}${esc(it.time)}${it.endTime?'–'+esc(it.endTime):''}</b> ${esc(it.name)}${it.min!=null?` <span class="m-chip est num">${rng(it.min,it.max,tr.currency)}${esc(t('unit.pp'))}</span>`:''}${it.verify?` <span class="m-chip ver">${esc(t('badge.verify'))}</span>`:''}${it.note?`<small>${esc(firstLine(it.note))}</small>`:''}</div></div>`).join(''):(ta.value.trim()?`<span class="err">${esc(t('paste.none'))}</span>`:'')};
+    ta.addEventListener('input',upd);if(prefill){ta.value=prefill;upd()}rep.onclick=()=>rep.setAttribute('aria-checked',rep.getAttribute('aria-checked')!=='true');
+    $('#ppPrep',sh).onclick=()=>{api.close();setTimeout(importPreparedTrip,300)};
+    $('[data-save]',sh).onclick=()=>{if(!P.items.length)return;const d0=$('#ppDay',sh).value;P.items.forEach(it=>{if(!it.date)it.date=d0});
+      const dates=[...new Set(P.items.map(i=>i.date))].sort();if(dates[0]<tr.start)tr.start=dates[0];if(dates[dates.length-1]>tr.end)tr.end=dates[dates.length-1];
+      if(rep.getAttribute('aria-checked')==='true'){const gone=new Set(db.places.filter(p=>p.tripId===tripId&&dates.includes(p.date)).map(p=>p.id));db.places=db.places.filter(p=>!gone.has(p.id));db.expenses.forEach(e=>{if(gone.has(e.placeId))e.placeId=null})}
+      dates.forEach(d=>{let s=Math.max(0,...db.places.filter(p=>p.tripId===tripId&&p.date===d).map(p=>p.sort||0));P.items.filter(i=>i.date===d).forEach(it=>{const pl=placeFromItem(it,tripId,s++,d);db.places.push(pl)})});
+      tr.dayTitles=Object.assign(tr.dayTitles||{},P.dayTitles);
+      logAct({tripId,kind:'place_add',title:P.items.filter(i=>i.kind!=='travel').map(i=>i.name).slice(0,2).join(', ')+(P.items.length>2?' …':'')});
+      ui.planDay[tripId]=dates[0];settings.planTrip=tripId;settings.planView='journal';saveSettings();api.close();persist();toast(t('paste.done',{n:P.items.length}));if(route!=='plan')go('plan');else render(true)}}})}
 
-let db = (()=>{const d=safeParse(store.get(DKEY));if(validDB(d)&&d.demo&&d.seedVersion!==2)return seed();return validDB(d)?normalizeDB(d):seed()})();
+let db = (()=>{const d=safeParse(store.get(DKEY));if(validDB(d)&&d.demo&&d.seedVersion!==3)return seed();return validDB(d)?normalizeDB(d):seed()})();
 let storeWarned=false;
 function persist(){const ok=store.set(DKEY,JSON.stringify(db));if(!ok&&!storeWarned){storeWarned=true;toast(t('toast.storeFail'),'warn')}}
 
@@ -1063,20 +1391,11 @@ function seed(){
   const M=(id,name,c)=>({id,name,color:MEMBER_COLORS[c]});
   const members=[M('m1','Jill',0),M('m2','May',1),M('m3','Film',2),M('m4','Ton',3)];
   const trips=[
-    {id:'t_cnx',name:'เชียงใหม่ 3 วัน 2 คืน',nameAlt:'チェンマイ 3日間2泊',destination:'เชียงใหม่',destAlt:'チェンマイ',start:'2026-10-19',end:'2026-10-21',budget:1200000,currency:'THB',cover:'mountain',memberIds:['m1','m2','m3'],
-     catBudgets:{stay:400000,food:300000,transport:200000,activity:200000,other:100000},notes:'ขอนอนดูทะเลหมอกสักเช้านะ'},
     {id:'t_hh',name:'หัวหินชิลริมทะเล',nameAlt:'ホアヒン 海辺のんびり旅',destination:'หัวหิน',destAlt:'ホアヒン',start:'2026-09-12',end:'2026-09-14',budget:900000,currency:'THB',cover:'sea',memberIds:['m1','m2','m3'],catBudgets:{},notes:''},
     {id:'t_tyo',name:'โตเกียวใบไม้เปลี่ยนสี',nameAlt:'東京 紅葉さんぽ',destination:'โตเกียว',destAlt:'東京',start:'2026-11-20',end:'2026-11-25',budget:6000000,currency:'THB',cover:'maple',memberIds:['m1','m2','m3','m4'],catBudgets:{},notes:''}
   ];
   const P=(id,tripId,name,nameAlt,category,date,time,est,status,note,sort)=>({id,tripId,name,nameAlt,category,date,time,estimated:est*100,status,note,sort});
   const places=[
-    P('p1','t_cnx','ถึงสนามบินเชียงใหม่','チェンマイ空港に到着','transport','2026-10-19','09:00',0,'planned','',1),
-    P('p2','t_cnx','คาเฟ่ริมดอย No.39','カフェ No.39','food','2026-10-19','10:30',450,'planned','ไปก่อนคนเยอะ',2),
-    P('p3','t_cnx','เช็กอินที่พักย่านนิมมาน','ニマン地区のホテル','stay','2026-10-19','13:00',0,'planned','',3),
-    P('p4','t_cnx','เดินเล่นวัดพระสิงห์ + ประตูท่าแพ','ワット・プラシン','activity','2026-10-19','17:00',200,'planned','',4),
-    P('p5','t_cnx','ข้าวซอยมื้อเย็น','カオソーイの夕食','food','2026-10-19','19:00',600,'planned','',5),
-    P('p6','t_cnx','ดอยอินทนนท์','ドイ・インタノン','activity','2026-10-20','06:00',1500,'planned','รถทัวร์มารับที่พัก',1),
-    P('p7','t_cnx','วัดพระธาตุดอยสุเทพ','ドイステープ寺院','activity','2026-10-20','17:00',100,'planned','ไหว้พระ ชมวิวเมืองตอนเย็น',2),
     P('h1','t_hh','รถตู้ไปหัวหิน','ロットゥーでホアヒンへ','transport','2026-09-12','08:00',900,'visited','',1),
     P('h2','t_hh','ที่พักริมทะเล','海辺のホテル','stay','2026-09-12','13:00',3600,'visited','',2),
     P('h3','t_hh','ร้านซีฟู้ดริมหาด','海鮮レストラン','food','2026-09-12','18:30',1800,'visited','',3),
@@ -1090,9 +1409,9 @@ function seed(){
      shares:shareArr,date,time,note:'',createdAt:date+'T'+time});
   const eq=(amt,ids)=>splitEqual(Math.round(amt*100),ids);
   const expenses=[
-    E('e1','t_cnx','p1','ตั๋วเครื่องบินไป-กลับ 3 คน',4200,'transport','m1','shared','equal',eq(4200,['m1','m2','m3']),'2026-10-02','21:10'),
-    E('e2','t_cnx','p3','ที่พักนิมมาน 2 คืน',3000,'stay','m2','shared','equal',eq(3000,['m1','m2','m3']),'2026-10-03','12:40'),
-    E('e3','t_cnx','p6','มัดจำทัวร์ดอยอินทนนท์',1500,'activity','m3','shared','exact',[{memberId:'m1',amount:50000},{memberId:'m2',amount:50000},{memberId:'m3',amount:50000}],'2026-10-08','19:05'),
+    E('e1','t_cnx',null,'มัดจำรถเช่า',1500,'transport','m1','shared','equal',eq(1500,['m1','m2']),'2026-10-02','21:10'),
+    E('e2','t_cnx',null,'ที่พัก Grandview Residence 3 คืน',3600,'stay','m2','shared','equal',eq(3600,['m1','m2']),'2026-10-03','12:40'),
+    E('e3','t_cnx',null,'บัตร MAIIAM 2 ใบ (ซื้อล่วงหน้า)',400,'activity','m1','shared','equal',eq(400,['m1','m2']),'2026-10-08','19:05'),
     E('e4','t_cnx',null,'กล้องฟิล์มใช้แล้วทิ้ง',450,'shopping','m1','personal','equal',[{memberId:'m1',amount:45000}],'2026-10-10','15:30'),
     E('h_e1','t_hh','h1','รถตู้ไปหัวหิน',900,'transport','m1','shared','equal',eq(900,['m1','m2','m3']),'2026-09-12','08:00'),
     E('h_e2','t_hh','h2','ที่พักริมทะเล 2 คืน',3600,'stay','m2','shared','equal',eq(3600,['m1','m2','m3']),'2026-09-12','13:20'),
@@ -1106,13 +1425,13 @@ function seed(){
   const settlements=[{id:'s1',tripId:'t_hh',from:'m3',to:'m2',amount:50000,paidAt:'2026-09-15T10:00:00',status:'paid',note:''}];
   const activity=[
     {id:'a1',tripId:'t_cnx',kind:'expense_add',ref:'e4',title:'กล้องฟิล์มใช้แล้วทิ้ง',amount:45000,at:'2026-10-10T15:30:00'},
-    {id:'a2',tripId:'t_cnx',kind:'expense_add',ref:'e3',title:'มัดจำทัวร์ดอยอินทนนท์',amount:150000,at:'2026-10-08T19:05:00'},
-    {id:'a3',tripId:'t_cnx',kind:'place_add',ref:'p8',title:'ถนนคนเดินวันอาทิตย์',at:'2026-10-06T21:00:00'},
+    {id:'a2',tripId:'t_cnx',kind:'expense_add',ref:'e3',title:'บัตร MAIIAM 2 ใบ (ซื้อล่วงหน้า)',amount:40000,at:'2026-10-08T19:05:00'},
+    {id:'a3',tripId:'t_cnx',kind:'trip_add',title:'เชียงใหม่ 18–21 ต.ค.',at:'2026-10-01T21:00:00'},
     {id:'a4',tripId:'t_hh',kind:'settle',ref:'s1',from:'m3',to:'m2',amount:50000,at:'2026-09-15T10:00:00'},
-    {id:'a5',tripId:'t_cnx',kind:'expense_add',ref:'e2',title:'ที่พักนิมมาน 2 คืน',amount:300000,at:'2026-10-03T12:40:00'}
+    {id:'a5',tripId:'t_cnx',kind:'expense_add',ref:'e2',title:'ที่พัก Grandview Residence 3 คืน',amount:360000,at:'2026-10-03T12:40:00'}
   ];
-  parsePlan(DAY3_TEXT).forEach((it,i)=>places.push({id:'d3_'+i,tripId:'t_cnx',name:it.name,nameAlt:'',category:guessCat(it.name),date:'2026-10-21',time:it.time,endTime:it.endTime,estimated:0,status:'planned',note:it.note,sort:i+1}));
-  return {version:1,seedVersion:2,demo:true,members,trips,places,expenses,settlements,activity};
+  const CX=buildCnxTrip('t_cnx',['m1','m2']);trips.unshift(CX.trip);places.push(...CX.places);
+  return {version:1,seedVersion:3,demo:true,members,trips,places,expenses,settlements,activity};
 }
 
 /* =========================================================
@@ -1424,7 +1743,7 @@ function bindTilt(root){if(reduce||matchMedia('(hover:none)').matches)return;$$(
    9. VIEW — PLAN
    ========================================================= */
 function renderPlan(){const tid=resolveTrip('planTrip');
-  let h=`<div class="page-head rv" style="--i:0"><div><h1>${L('plan.title')}</h1><p>${esc(t('plan.sub'))}</p></div></div>`;
+  let h=`<div class="page-head rv" style="--i:0"><div><h1>${L('plan.title')}</h1><p>${esc(t('plan.sub'))}</p></div><button class="btn btn-soft btn-sm" data-act="importPrep">${icon('i-down','sm')}${esc(t('prep.short'))}</button></div>`;
   h+=`<div class="trip-rail rv" style="--i:1">${sortedTrips().map((x,i)=>`<button class="polaroid ${x.id===tid?'on':''}" style="--rot:${[-2,1.5,-1,2][i%4]}deg" data-act="pickPlan" data-id="${x.id}"><img src="${coverSrc(x)}" alt=""><b>${esc(Nplain(x))}</b><small>${esc(fmtRange(x.start,x.end))}</small></button>`).join('')}
     <button class="polaroid new" data-act="newTrip"><span class="plus">${icon('i-plus')}</span>${esc(t('plan.newTrip'))}</button></div>`;
   if(!tid)return h+`<div class="card"><div class="empty"><img src="${STK.plane}" alt=""><p>${esc(t('plan.noTrips'))}</p></div></div>`;
@@ -1432,37 +1751,8 @@ function renderPlan(){const tid=resolveTrip('planTrip');
   h+=`<div class="trip-hero rv" style="--i:2"><img src="${coverSrc(tr)}" alt=""><div class="in"><div style="min-width:0"><span class="glass-pill">${esc(t('status.'+st))}</span><h1 style="margin-top:10px">${N(tr)}</h1>
     <div class="meta"><span class="glass-pill">${icon('i-cal','sm')}${esc(fmtRange(tr.start,tr.end))}</span><span class="glass-pill">${icon('i-pin','sm')}${esc(Nplain(tr,'destination','destAlt'))}</span><span class="glass-pill"><span class="avs">${mem.map(m=>av(m,'sm')).join('')}</span></span><span class="glass-pill num">${icon('i-wallet','sm')}${money(c.total,tr.currency)} / ${money(tr.budget,tr.currency)}</span></div></div>
     <div class="glass-bar"><button class="btn" data-act="editTrip" data-id="${tid}">${icon('i-edit','sm')}${esc(t('plan.edit'))}</button><button class="btn" data-act="dupTrip" data-id="${tid}">${icon('i-copy','sm')}<span>${esc(t('plan.duplicate'))}</span></button><button class="btn" data-act="delTrip" data-id="${tid}" aria-label="${esc(t('plan.delete'))}">${icon('i-trash','sm')}</button><button class="btn btn-primary" data-act="summarize" data-id="${tid}">${icon('i-receipt','sm')}${esc(t('plan.summary'))}</button></div></div></div>`;
-  h+=`<div class="plan-grid"><div class="card rv" style="--i:3">${itinerary(tr,c)}</div><div class="stack">${vibeCard(tr)}${placeSpendCard(tr,c)}${budgetMini(tr,c)}</div></div>`;
+  h+=`<div class="plan-grid"><div class="card rv" style="--i:3">${itinerary(tr,c)}</div><div class="stack">${planBudgetCard(tr)}${vibeCard(tr)}${placeSpendCard(tr,c)}${budgetMini(tr,c)}</div></div>`;
   return h}
-function itinerary(tr,c){const days=tripDays(tr);const places=db.places.filter(p=>p.tripId===tr.id);
-  const orphan=places.filter(p=>!days.includes(p.date));
-  const tabs=days.map((d,i)=>({k:d,label:t('plan.day',{n:i+1}),sub:fmtDate(d,'dow')}));if(orphan.length)tabs.push({k:'none',label:t('plan.unscheduled'),sub:orphan.length+''});
-  let cur=ui.planDay[tr.id];if(!tabs.some(x=>x.k===cur)){const td=todayStr();cur=days.includes(td)?td:tabs[0]?.k;ui.planDay[tr.id]=cur}
-  const list=(cur==='none'?orphan:places.filter(p=>p.date===cur)).sort((a,b)=>(a.sort-b.sort)||String(a.time).localeCompare(String(b.time)));
-  const dayTotal=list.reduce((s,p)=>s+(c.byPlace[p.id]?.sum||0),0);
-  const jv=settings.planView==='journal';const dayNo=days.indexOf(cur)+1;
-  return `<div class="card-h"><div><div class="ttl">${L('plan.day',{n:dayNo>0?dayNo:'–'})}</div><div class="muted tiny">${cur&&cur!=='none'?esc(fmtDate(cur,'long')):''}${dayTotal?` · ${esc(t('plan.actual'))} <b class="num">${money(dayTotal,tr.currency)}</b>`:''}</div></div>
-    <div class="row" style="gap:6px;justify-content:flex-end"><button class="btn btn-soft btn-sm" data-act="pastePlan" data-trip="${tr.id}" data-date="${cur!=='none'?cur:''}">${icon('i-copy','sm')}${esc(t('plan.paste'))}</button><button class="btn btn-primary btn-sm" data-act="addPlace" data-trip="${tr.id}" data-date="${cur!=='none'?cur:''}">${icon('i-plus','sm')}${esc(t('place.new'))}</button></div></div>
-   <div class="row" style="justify-content:space-between;margin-bottom:10px"><div class="seg"><button class="${jv?'':'on'}" data-act="planView" data-v="timeline">${esc(t('plan.viewTimeline'))}</button><button class="${jv?'on':''}" data-act="planView" data-v="journal">${esc(t('plan.viewJournal'))}</button></div></div>
-   <div class="daytabs" role="tablist">${tabs.map(x=>`<button role="tab" aria-selected="${x.k===cur}" class="daytab ${x.k===cur?'on':''}" data-act="planDay" data-trip="${tr.id}" data-v="${x.k}"><b>${esc(x.label)}</b><small>${esc(x.sub)}</small></button>`).join('')}</div>
-   ${jv?journalDay(tr,c,list,dayNo,cur!=='none'?cur:tr.start):list.length?`<div class="timeline">${list.map((p,i)=>{const bp=c.byPlace[p.id];const m=CAT_META[p.category]||CAT_META.other;
-     return `<div class="stop ${p.status==='cancelled'?'cancelled':''} rv" style="--i:${i+4}"><div class="tm">${esc(p.time||'—')}${p.endTime?`<small>${esc(p.endTime)}</small>`:''}</div><div class="pin" style="background:${m.bg};color:${m.fg}">${icon(m.i)}</div>
-      <div class="body"><div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:nowrap"><div class="nm" style="min-width:0">${N(p)}</div>
-       <button class="badge ${p.status==='visited'?'b-ok':p.status==='cancelled'?'b-mute':'b-info'}" style="border:0" data-act="cyclePlace" data-id="${p.id}">${esc(t('pstatus.'+p.status))}</button></div>
-       ${p.note?`<div class="note">${esc(p.note)}</div>`:''}
-       <div class="money">${p.estimated?`<span>${esc(t('plan.est'))} <b class="num">${money(p.estimated,tr.currency)}</b></span>`:''}<span class="act-v">${esc(t('plan.actual'))} <b class="num">${money(bp?.sum||0,tr.currency)}</b></span>${bp?`<span>${esc(t('plan.items',{n:bp.n}))}</span><span class="avs">${[...bp.payers].map(id=>av(memberById(id),'sm')).join('')}</span>`:''}</div>
-       <div class="tools"><button class="btn btn-soft" data-act="addExpense" data-trip="${tr.id}" data-place="${p.id}">${icon('i-plus','sm')}${esc(t('plan.addExpense'))}</button><button class="btn btn-ghost" data-act="editPlace" data-id="${p.id}" aria-label="${esc(t('plan.edit'))}">${icon('i-edit','sm')}</button>
-        <button class="btn btn-ghost" data-act="movePlace" data-id="${p.id}" data-dir="-1" ${i===0?'disabled':''} aria-label="up">${icon('i-up','sm')}</button><button class="btn btn-ghost" data-act="movePlace" data-id="${p.id}" data-dir="1" ${i===list.length-1?'disabled':''} aria-label="down">${icon('i-dn','sm')}</button></div></div></div>`}).join('')}</div>`
-   :`<div class="empty"><img src="${STK.pin}" alt="" style="width:64px"><p>${esc(t('plan.emptyDay'))}</p><button class="btn btn-soft btn-sm" data-act="addPlace" data-trip="${tr.id}" data-date="${cur!=='none'?cur:''}">${icon('i-plus','sm')}${esc(t('place.new'))}</button></div>`}`}
-function placeSpendCard(tr,c){const places=db.places.filter(p=>p.tripId===tr.id&&(c.byPlace[p.id]||p.estimated));
-  const max=Math.max(1,...places.map(p=>Math.max(c.byPlace[p.id]?.sum||0,p.estimated||0)));
-  const estTotal=db.places.filter(p=>p.tripId===tr.id&&p.status!=='cancelled').reduce((s,p)=>s+(p.estimated||0),0);
-  return `<div class="card rv" style="--i:4"><div class="card-h"><div><div class="ttl">${L('plan.placeSpend')}</div><div class="muted tiny">${esc(t('plan.placeSpendSub'))}</div></div></div>
-   ${places.length?`<div class="place-spend">${places.map((p,i)=>{const a=c.byPlace[p.id]?.sum||0,m=CAT_META[p.category]||CAT_META.other;return `<div class="ps"><span class="nm">${esc(Nplain(p))}</span><b class="num" style="color:${p.estimated&&a>p.estimated?'var(--bad)':'inherit'}">${money(a,tr.currency)}</b>
-     <div class="track">${p.estimated?`<span class="est" style="width:${p.estimated/max*100}%"></span>`:''}<span style="width:${a/max*100}%;background:${m.hex};animation-delay:${i*70+200}ms"></span></div>
-     ${p.estimated?`<small class="muted tiny" style="grid-column:1/-1">${esc(t('plan.est'))} ${money(p.estimated,tr.currency)}</small>`:''}</div>`}).join('')}</div>
-     <div class="hr"></div><div class="row" style="justify-content:space-between"><span class="muted tiny">${esc(t('plan.estTotal'))}</span><b class="num">${money(estTotal,tr.currency)}</b></div><div class="muted tiny">${esc(t('plan.estNote'))}</div>`
-   :`<div class="empty"><p>${esc(t('plan.noPlaceSpend'))}</p></div>`}</div>`}
 function budgetMini(tr,c){const cb=tr.catBudgets||{};const cats=CATS.filter(k=>cb[k]||c.byCat[k]);if(!cats.length)return'';
   return `<div class="card rv" style="--i:5"><div class="card-h"><div class="ttl">${L('budget.byCat')}</div></div><div class="catbars" style="margin-top:0">${cats.map((k,i)=>{const sp=c.byCat[k]||0,b=cb[k]||0,w=b?Math.min(100,sp/b*100):(c.total?sp/c.total*100:0);
    return `<div class="cb">${catIc(k)}<div style="min-width:0"><div class="nm"><span>${esc(t('cat.'+k))}</span><span class="muted num tiny">${b?esc(t('budget.ofCat',{x:money(b,tr.currency)})):''}</span></div><div class="track"><div class="fill" style="--i:${i};width:${w}%;background:${b&&sp>b?'var(--bad)':CAT_META[k].hex}"></div></div></div><b class="num" style="font-size:13.5px">${money(sp,tr.currency)}</b></div>`}).join('')}</div></div>`}
@@ -1587,6 +1877,7 @@ function tripForm(id){const ex=id?tripById(id):null;
    <div class="grid2"><div class="field"><label for="tDest">${esc(t('trip.dest'))}</label><input class="inp" id="tDest" value="${esc(st.destination)}"></div><div class="field"><label for="tDestAlt">${esc(t('trip.destAlt'))}</label><input class="inp" id="tDestAlt" value="${esc(st.destAlt||'')}" lang="ja"></div></div>
    <div class="grid2"><div class="field"><label for="tStart">${esc(t('trip.start'))}</label><input class="inp" type="date" id="tStart" value="${esc(st.start)}"></div><div class="field"><label for="tEnd">${esc(t('trip.end'))}</label><input class="inp" type="date" id="tEnd" value="${esc(st.end)}"></div></div>
    <div class="grid2"><div class="field"><label for="tBudget">${esc(t('trip.budget'))}</label><input class="inp num" id="tBudget" inputmode="decimal" value="${esc(toInput(st.budget,st.currency))}"></div><div class="field"><label for="tCur">${esc(t('trip.currency'))}</label><select class="inp" id="tCur">${Object.keys(SYM).map(k=>`<option ${st.currency===k?'selected':''}>${k}</option>`).join('')}</select></div></div>
+   <div class="grid2"><div class="field"><label for="tTrav">${esc(t('tr.travelers'))}</label><input class="inp num" id="tTrav" type="number" min="1" max="20" value="${esc(st.travelers||st.memberIds.length||1)}"></div><div class="tg" style="align-self:end;min-height:48px"><span>${esc(t('trip.dayZero'))}</span><button type="button" class="switch" role="switch" id="tZero" aria-checked="${st.dayStart===0}" aria-label="${esc(t('trip.dayZero'))}"></button></div></div>
    <div class="field"><span class="flabel">${esc(t('trip.cover'))}</span><div class="row" id="tCover" style="gap:8px">${Object.keys(COVERS).map(k=>`<button type="button" class="cvp" data-v="${k}" style="width:72px;height:54px;border-radius:12px;overflow:hidden;padding:0;border:2.5px solid ${st.cover===k?'var(--coral-2)':'transparent'};background:none"><img src="${COVER_URL[k]}" alt="${k}" style="width:100%;height:100%;object-fit:cover;display:block"></button>`).join('')}
      <button type="button" class="btn btn-soft btn-sm" id="tUpload">${icon('i-image','sm')}${esc(t('trip.upload'))}</button><img id="tUpPrev" alt="" style="width:72px;height:54px;border-radius:12px;object-fit:cover;${typeof st.cover==='object'?'':'display:none'};border:2.5px solid var(--coral-2)" src="${typeof st.cover==='object'?st.cover.src:''}"></div></div>
    <div class="field"><span class="flabel">${esc(t('trip.members'))}</span><div class="pick" id="tMem">${db.members.map(m=>`<button type="button" class="${st.memberIds.includes(m.id)?'on':''}" data-v="${m.id}">${av(m,'sm')}${esc(m.name)}</button>`).join('')}</div>
@@ -1594,6 +1885,7 @@ function tripForm(id){const ex=id?tripById(id):null;
    <details><summary class="flabel" style="cursor:pointer">${esc(t('trip.catBudget'))}</summary><div class="grid2" style="margin-top:10px">${CATS.map(k=>`<div class="field"><label for="cb_${k}">${esc(t('cat.'+k))}</label><input class="inp num" id="cb_${k}" inputmode="decimal" value="${esc(toInput(st.catBudgets[k]||0,st.currency))}"></div>`).join('')}</div></details>
    <div class="field"><label for="tNotes">${esc(t('trip.notes'))}</label><textarea class="inp" id="tNotes">${esc(st.notes||'')}</textarea></div><div class="err" id="tErr" role="alert"></div>`;
   openSheet({title:esc(ex?t('trip.edit'):t('trip.new')),body,foot:`<button class="btn btn-soft" data-close>${esc(t('form.cancel'))}</button><button class="btn btn-primary" data-save>${esc(t('form.save'))}</button>`,onMount(sh,api){
+    $('#tZero',sh).onclick=e=>{const b=e.currentTarget;b.setAttribute('aria-checked',b.getAttribute('aria-checked')!=='true')};
     $('#tCover',sh).addEventListener('click',e=>{const b=e.target.closest('.cvp');if(!b)return;st.cover=b.dataset.v;$$('.cvp',sh).forEach(x=>x.style.borderColor=x===b?'var(--coral-2)':'transparent');$('#tUpPrev',sh).style.display='none'});
     $('#tUpload',sh).onclick=()=>{const fi=$('#fileCover');fi.value='';fi.onchange=()=>{const f=fi.files[0];if(!f)return;readImage(f,900).then(src=>{st.cover={type:'img',src};const p=$('#tUpPrev',sh);p.src=src;p.style.display='';$$('.cvp',sh).forEach(x=>x.style.borderColor='transparent')}).catch(()=>toast(t('rc.exportFail'),'bad'))};fi.click()};
     const memBox=$('#tMem',sh);memBox.onclick=e=>{const b=e.target.closest('button');if(!b)return;const mid=b.dataset.v;
@@ -1605,7 +1897,7 @@ function tripForm(id){const ex=id?tripById(id):null;
       if(!name)err=t('trip.errName');else if(!s||!e||e<s)err=t('trip.errDates');else if(!st.memberIds.length)err=t('trip.errMembers');
       if(err){$('#tErr',sh).textContent=err;return}
       const cb={};CATS.forEach(k=>{const v=parseMoney($('#cb_'+k,sh).value,cur);if(v)cb[k]=v});
-      const rec={name,nameAlt:$('#tNameAlt',sh).value.trim(),destination:$('#tDest',sh).value.trim(),destAlt:$('#tDestAlt',sh).value.trim(),start:s,end:e,budget:parseMoney($('#tBudget',sh).value,cur),currency:cur,cover:st.cover,memberIds:st.memberIds,catBudgets:cb,notes:$('#tNotes',sh).value.trim()};
+      const rec={name,nameAlt:$('#tNameAlt',sh).value.trim(),destination:$('#tDest',sh).value.trim(),destAlt:$('#tDestAlt',sh).value.trim(),start:s,end:e,budget:parseMoney($('#tBudget',sh).value,cur),currency:cur,cover:st.cover,memberIds:st.memberIds,catBudgets:cb,notes:$('#tNotes',sh).value.trim(),travelers:Math.max(1,Math.min(20,+$('#tTrav',sh).value||st.memberIds.length||1)),dayStart:$('#tZero',sh).getAttribute('aria-checked')==='true'?0:1};
       let tid;if(ex){Object.assign(ex,rec);tid=ex.id;logAct({tripId:tid,kind:'trip_edit',title:name})}else{tid=uid('t');db.trips.push(Object.assign({id:tid,createdAt:new Date().toISOString()},rec));logAct({tripId:tid,kind:'trip_add',title:name})}
       settings.planTrip=tid;settings.dashTrip=settings.dashTrip&&tripById(settings.dashTrip)?settings.dashTrip:tid;saveSettings();api.close();persist();toast(t('toast.saved'));if(route!=='plan')go('plan');else render(true);
       if(!ex)setTimeout(()=>burst(innerWidth/2,innerHeight/3,60),300)}}})}
@@ -1616,19 +1908,23 @@ function placeForm({tripId,id,date}={}){const ex=id?db.places.find(p=>p.id===id)
   const body=`<div class="field"><label for="pName">${esc(t('place.name'))}</label><input class="inp" id="pName" value="${esc(st.name)}" placeholder="${esc(t('place.namePh'))}" autofocus></div>
    <div class="field"><label for="pAlt">${esc(t('place.nameAlt'))}</label><input class="inp" id="pAlt" lang="ja" value="${esc(st.nameAlt||'')}"></div>
    <div class="field"><span class="flabel">${esc(t('form.category'))}</span><div class="pick" id="pCat">${CATS.map(k=>`<button type="button" class="noav ${st.category===k?'on':''}" data-v="${k}">${icon(CAT_META[k].i,'sm')} ${esc(t('cat.'+k))}</button>`).join('')}</div></div>
-   <div class="grid2"><div class="field"><label for="pDay">${esc(t('place.day'))}</label><select class="inp" id="pDay">${days.map((d,i)=>`<option value="${d}" ${st.date===d?'selected':''}>${esc(t('plan.day',{n:i+1}))} · ${esc(fmtDate(d,'short'))}</option>`).join('')}${!days.includes(st.date)?`<option value="${esc(st.date)}" selected>${esc(t('plan.unscheduled'))}</option>`:''}</select></div>
+   <div class="grid2"><div class="field"><label for="pDay">${esc(t('place.day'))}</label><select class="inp" id="pDay">${days.map((d,i)=>`<option value="${d}" ${st.date===d?'selected':''}>${esc(t('plan.day',{n:dayNum(tr,i)}))} · ${esc(fmtDate(d,'short'))}</option>`).join('')}${!days.includes(st.date)?`<option value="${esc(st.date)}" selected>${esc(t('plan.unscheduled'))}</option>`:''}</select></div>
     <div class="field"><label for="pTime">${esc(t('form.time'))}</label><div class="row" style="flex-wrap:nowrap;gap:6px"><input class="inp" type="time" id="pTime" value="${esc(st.time)}" style="min-width:0"><input class="inp" type="time" id="pEnd" value="${esc(st.endTime||'')}" style="min-width:0" aria-label="${esc(t('place.end'))}"></div></div></div>
    <div class="field"><span class="flabel">${esc(t('place.vibe'))}</span><div class="pick" id="pVibe"><button type="button" class="noav ${!st.vibe?'on':''}" data-v="">${esc(t('vibe.auto'))}</button>${VIBES.map(v=>`<button type="button" class="noav ${st.vibe===v?'on':''}" data-v="${v}">${esc(t('vibe.'+v))}</button>`).join('')}</div></div>
    <div class="field"><span class="flabel">${esc(t('place.illo'))}</span><div class="illo-pick" id="pIllo"><button type="button" class="${!st.illo?'on':''}" data-v=""><span class="tiny">${esc(t('vibe.auto'))}</span></button>${Object.keys(ILLO).map(kd=>`<button type="button" class="${st.illo===kd?'on':''}" data-v="${kd}" aria-label="${kd}">${illoSVG(kd,'mini')}</button>`).join('')}</div></div>
-   <div class="grid2"><div class="field"><label for="pEst">${esc(t('place.est'))}</label><input class="inp num" id="pEst" inputmode="decimal" value="${esc(toInput(st.estimated,tr.currency))}"></div>
-    <div class="field"><label for="pStatus">${esc(t('place.status'))}</label><select class="inp" id="pStatus">${['planned','visited','cancelled'].map(k=>`<option value="${k}" ${st.status===k?'selected':''}>${esc(t('pstatus.'+k))}</option>`).join('')}</select></div></div>
-   <div class="field"><label for="pNote">${esc(t('form.note'))}</label><input class="inp" id="pNote" value="${esc(st.note||'')}"></div><div class="err" id="pErr" role="alert"></div>`;
+   <div class="field"><span class="flabel">${esc(t('place.kind'))}</span><div class="seg" id="pKind"><button type="button" data-v="activity" class="${st.kind!=='travel'?'on':''}">${esc(t('place.kindAct'))}</button><button type="button" data-v="travel" class="${st.kind==='travel'?'on':''}">${icon('i-car','sm')} ${esc(t('place.kindTravel'))}</button></div></div>
+   <div class="field"><span class="flabel">${esc(t('place.budgetPP'))}</span><div class="row" style="flex-wrap:nowrap;gap:6px"><input class="inp num" id="pMin" inputmode="decimal" placeholder="0" value="${esc(toInput(estPP(st,tr,true).min,tr.currency))}" aria-label="min"><span class="muted">–</span><input class="inp num" id="pMax" inputmode="decimal" placeholder="0" value="${esc(toInput(estPP(st,tr,true).max,tr.currency))}" aria-label="max"></div></div>
+   <div class="tg"><span>${esc(t('place.verify'))}</span><button type="button" class="switch" role="switch" id="pVer" aria-checked="${!!st.needsVerify}" aria-label="${esc(t('place.verify'))}"></button></div>
+   <div class="grid2"><div class="field"><label for="pStatus">${esc(t('place.status'))}</label><select class="inp" id="pStatus">${['planned','visited','cancelled'].map(k=>`<option value="${k}" ${st.status===k?'selected':''}>${esc(t('pstatus.'+k))}</option>`).join('')}</select></div></div>
+   <div class="field"><label for="pNote">${esc(t('form.note'))}</label><textarea class="inp" id="pNote" rows="3">${esc(st.note||'')}</textarea></div><a class="btn btn-ghost btn-sm" href="${mapURL(st,tr)}" target="_blank" rel="noopener" style="align-self:flex-start">${icon('i-pin','sm')}${esc(t('place.map'))}</a><div class="err" id="pErr" role="alert"></div>`;
   openSheet({title:esc(ex?t('place.edit'):t('place.new')),body,foot:`${ex?`<button class="btn btn-danger btn-icon" data-del style="flex:none" aria-label="${esc(t('plan.delete'))}">${icon('i-trash')}</button>`:''}<button class="btn btn-soft" data-close>${esc(t('form.cancel'))}</button><button class="btn btn-primary" data-save>${esc(t('form.save'))}</button>`,onMount(sh,api){
     $('#pCat',sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;st.category=b.dataset.v;$$('#pCat button',sh).forEach(x=>x.classList.toggle('on',x===b))};
+    $('#pKind',sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;st.kind=b.dataset.v;$$('#pKind button',sh).forEach(x=>x.classList.toggle('on',x===b))};
+    $('#pVer',sh).onclick=e=>{const b=e.currentTarget;b.setAttribute('aria-checked',b.getAttribute('aria-checked')!=='true')};
     $('#pVibe',sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;st.vibe=b.dataset.v;$$('#pVibe button',sh).forEach(x=>x.classList.toggle('on',x===b))};
     $('#pIllo',sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;st.illo=b.dataset.v;$$('#pIllo button',sh).forEach(x=>x.classList.toggle('on',x===b))};
     $('[data-save]',sh).onclick=()=>{const name=$('#pName',sh).value.trim();if(!name){$('#pErr',sh).textContent=t('place.errName');return}
-      const rec={name,nameAlt:$('#pAlt',sh).value.trim(),category:st.category,date:$('#pDay',sh).value,time:$('#pTime',sh).value,endTime:$('#pEnd',sh).value,vibe:st.vibe||'',illo:st.illo||'',estimated:parseMoney($('#pEst',sh).value,tr.currency),status:$('#pStatus',sh).value,note:$('#pNote',sh).value.trim()};
+      const rec={name,nameAlt:$('#pAlt',sh).value.trim(),category:st.category,date:$('#pDay',sh).value,time:$('#pTime',sh).value,endTime:$('#pEnd',sh).value,vibe:st.vibe||'',illo:st.illo||'',estimated:0,estMin:parseMoney($('#pMin',sh).value,tr.currency),estMax:Math.max(parseMoney($('#pMin',sh).value,tr.currency),parseMoney($('#pMax',sh).value,tr.currency)),estPer:'person',kind:st.kind==='travel'?'travel':'activity',needsVerify:$('#pVer',sh).getAttribute('aria-checked')==='true',status:$('#pStatus',sh).value,note:$('#pNote',sh).value.trim()};
       if(ex){const moved=ex.date!==rec.date;Object.assign(ex,rec);if(moved)ex.sort=nextSort(tripId,rec.date,rec.time,ex.id)}
       else{const p=Object.assign({id:uid('p'),tripId},rec);p.sort=nextSort(tripId,rec.date,rec.time);db.places.push(p);logAct({tripId,kind:'place_add',ref:p.id,title:name})}
       ui.planDay[tripId]=rec.date;settings.planTrip=tripId;saveSettings();api.close();persist();toast(t('toast.saved'));if(route!=='plan')go('plan');else render(false)};
@@ -1797,6 +2093,9 @@ const A={
  planDay:el=>{ui.planDay[el.dataset.trip]=el.dataset.v;ui.jDraw=true;render(false);if(!reduce)$$('.stop.rv').forEach((s,i)=>{s.style.animation='rise .5s var(--ease-out) both';s.style.animationDelay=i*60+'ms'})},
  planView:el=>{settings.planView=el.dataset.v;ui.jDraw=true;saveSettings();render(false);if(el.dataset.v==='journal'){const j=$('.journal');j&&j.scrollIntoView({behavior:'smooth',block:'nearest'})}},
  pastePlan:el=>pasteForm(el.dataset.trip||resolveTrip('planTrip'),el.dataset.date),
+ editTransport:el=>transportForm(el.dataset.id),
+ importPrep:()=>importPreparedTrip(),
+ toggleVerify:el=>{const p=db.places.find(x=>x.id===el.dataset.id);if(!p)return;p.needsVerify=!p.needsVerify;haptic(8);commit();toast(t(p.needsVerify?'badge.verify':'badge.verified'))},
  toggleVisited:el=>{const p=db.places.find(x=>x.id===el.dataset.id);if(!p)return;p.status=p.status==='visited'?'planned':'visited';if(p.status==='visited'){const r=el.getBoundingClientRect();burst(r.left+20,r.top,22);haptic(10)}persist();render(false);$$('.journal').forEach(j=>j.classList.remove('draw'))},
  cyclePlace:el=>{const p=db.places.find(x=>x.id===el.dataset.id);const o=['planned','visited','cancelled'];p.status=o[(o.indexOf(p.status)+1)%3];if(p.status==='visited'){const r=el.getBoundingClientRect();burst(r.left+r.width/2,r.top,24)}commit()},
  movePlace:el=>{const p=db.places.find(x=>x.id===el.dataset.id);const list=db.places.filter(x=>x.tripId===p.tripId&&x.date===p.date).sort((a,b)=>a.sort-b.sort);list.forEach((x,i)=>x.sort=i);
@@ -1865,6 +2164,7 @@ applyTheme();
   if(reduce){s.classList.add('done');return}setTimeout(()=>s.classList.add('done'),1250)})();
 render(true);
 /* deep link: #plan=<name> loads plans/<name>.txt into the paste sheet (works on the hosted app) */
+(function tripLink(){if(/^#trip=chiangmai-2026$/.test(location.hash||'')){try{history.replaceState(null,'','#plan')}catch(e){}setTimeout(importPreparedTrip,1400)}})();
 (async function planLink(){const m=(location.hash||'').match(/^#plan=([\w\-]+)$/);if(!m)return;
   let txt='';try{const r=await fetch('plans/'+m[1]+'.txt',{cache:'no-store'});if(r.ok)txt=await r.text()}catch(e){}
   if(!txt&&m[1]==='chiangmai-day3')txt=DAY3_TEXT;if(!txt)return;

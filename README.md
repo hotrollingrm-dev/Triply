@@ -34,4 +34,4 @@ fonts/                 ฟอนต์ Mali (ไทย + ละติน) สำ
 เมื่อแก้ไฟล์แล้ว ให้เปลี่ยนค่า `V` ใน `sw.js` (เช่น `triply-v2`) เพื่อให้มือถือโหลดเวอร์ชันใหม่
 
 ## แพลนที่เตรียมไว้
-- เชียงใหม่ วันที่ 3 (วันกลับ) — [ดูแพลน](plans/README.md) · เปิดแล้วใส่ลงแอปอัตโนมัติ: https://hotrollingrm-dev.github.io/Triply/#plan=chiangmai-day3
+- **เชียงใหม่ 18–21 ต.ค. 2026** (Day 0–3 พร้อมงบต่อคน ค่าเดินทาง และสรุปสถานที่) — [ดูแพลน](plans/README.md) · นำเข้าทั้งทริปลงแอป: https://hotrollingrm-dev.github.io/Triply/#trip=chiangmai-2026

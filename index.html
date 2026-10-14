@@ -1035,7 +1035,7 @@ function vibeCard(tr){const days=tripDays(tr);const places=db.places.filter(p=>p
    <div class="vibes">${['mu','art','chill'].map(v=>`<div class="vibe v-${v}"><div class="v-head"><svg class="illo mini" viewBox="0 0 200 140" aria-hidden="true"><g filter="url(#wc)" transform="translate(3 2)">${ILLO[icon3[v]].wash}</g><g filter="url(#rough)" class="inks">${ILLO[icon3[v]].ink}</g></svg><div><b>${L('vibe.'+v)}</b><small>${g[v].length}</small></div></div>
      <div class="v-list">${g[v].length?g[v].map(chip).join(''):`<span class="muted tiny">${esc(t('vibe.empty'))}</span>`}</div></div>`).join('')}</div>
    ${g.move.length?`<details class="v-move"><summary class="muted tiny">${esc(t('vibe.move'))} · ${g.move.length}</summary><div class="v-list">${g.move.map(chip).join('')}</div></details>`:''}</div>`}
-function pasteForm(tripId,date){const tr=tripById(tripId);if(!tr)return;const days=tripDays(tr);date=days.includes(date)?date:days[days.length-1];
+function pasteForm(tripId,date,prefill){const tr=tripById(tripId);if(!tr)return;const days=tripDays(tr);date=days.includes(date)?date:days[days.length-1];
   const body=`<p class="muted tiny" style="margin:0">${esc(t('paste.hint'))}</p>
    <div class="field"><label for="ppDay">${esc(t('paste.day'))}</label><select class="inp" id="ppDay">${days.map((d,i)=>`<option value="${d}" ${d===date?'selected':''}>${esc(t('plan.day',{n:i+1}))} · ${esc(fmtDate(d,'short'))}</option>`).join('')}</select></div>
    <textarea class="inp" id="ppTxt" style="min-height:220px;font-size:14px;line-height:1.6" placeholder="${esc(DAY3_TEXT)}"></textarea>
@@ -1045,7 +1045,7 @@ function pasteForm(tripId,date){const tr=tripById(tripId);if(!tr)return;const da
     const ta=$('#ppTxt',sh),rep=$('#ppRep',sh);let items=[];
     const upd=()=>{items=parsePlan(ta.value);$('[data-save]',sh).disabled=!items.length;
       $('#ppPrev',sh).innerHTML=items.length?`<b class="tiny">${esc(t('paste.preview',{n:items.length}))}</b>`+items.map(it=>`<div class="pp-row">${illoSVG(guessIllo(it.name)||'pin','mini')}<div style="min-width:0"><b class="num">${esc(it.time)}${it.endTime?'–'+esc(it.endTime):''}</b> ${esc(it.name)}${it.note?`<small>${esc(it.note)}</small>`:''}</div></div>`).join(''):(ta.value.trim()?`<span class="err">${esc(t('paste.none'))}</span>`:'')};
-    ta.addEventListener('input',upd);rep.onclick=()=>rep.setAttribute('aria-checked',rep.getAttribute('aria-checked')!=='true');
+    ta.addEventListener('input',upd);if(prefill){ta.value=prefill;upd()}rep.onclick=()=>rep.setAttribute('aria-checked',rep.getAttribute('aria-checked')!=='true');
     $('[data-save]',sh).onclick=()=>{if(!items.length)return;const d=$('#ppDay',sh).value;
       if(rep.getAttribute('aria-checked')==='true'){const gone=new Set(db.places.filter(p=>p.tripId===tripId&&p.date===d).map(p=>p.id));db.places=db.places.filter(p=>!gone.has(p.id));db.expenses.forEach(e=>{if(gone.has(e.placeId))e.placeId=null})}
       let s=Math.max(0,...db.places.filter(p=>p.tripId===tripId&&p.date===d).map(p=>p.sort||0));
@@ -1863,6 +1863,13 @@ applyTheme();
 (function splash(){const s=$('#splash');$('#splashIcon').src=ICON_URL;$('#splashWord').innerHTML=[...'Triply'].map((ch,i)=>`<span style="--i:${i}">${ch}</span>`).join('');$('#splashTag').textContent='Plan · Travel · Together';
   if(reduce){s.classList.add('done');return}setTimeout(()=>s.classList.add('done'),1250)})();
 render(true);
+/* deep link: #plan=<name> loads plans/<name>.txt into the paste sheet (works on the hosted app) */
+(async function planLink(){const m=(location.hash||'').match(/^#plan=([\w\-]+)$/);if(!m)return;
+  let txt='';try{const r=await fetch('plans/'+m[1]+'.txt',{cache:'no-store'});if(r.ok)txt=await r.text()}catch(e){}
+  if(!txt&&m[1]==='chiangmai-day3')txt=DAY3_TEXT;if(!txt)return;
+  try{history.replaceState(null,'','#plan')}catch(e){}
+  setTimeout(()=>{if(!db.trips.length){toast(t('form.noTrip'),'warn');tripForm();return}
+    const tid=resolveTrip('planTrip');const tr=tripById(tid);route='plan';render(true);pasteForm(tid,tripDays(tr).slice(-1)[0],txt)},1400)})();
 if('serviceWorker' in navigator&&!inFrame&&/^https?:/.test(location.protocol)){addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
 </script>
 

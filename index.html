@@ -916,6 +916,35 @@ h1,h2,h3,.ttl,.page-head h1,.hero-scene h1,.trip-hero h1,.pass-txt h2,.j-title,.
 .trip-hero::after{background:linear-gradient(180deg,rgba(35,22,15,.1) 0%,rgba(35,22,15,.35) 45%,rgba(35,22,15,.72) 100%)}
 .trip-hero h1{text-shadow:0 2px 14px rgba(0,0,0,.45)}
 @media (max-width:640px){.polaroid{width:132px;padding:6px 6px 8px}.polaroid b{font-size:12.5px}.polaroid small{font-size:11px}.polaroid.new{min-height:132px}.trip-hero{min-height:200px}.trip-hero .in{padding:16px}.page-head p{font-size:13px}}
+
+/* pre-trip */
+.av.xs{width:20px;height:20px;font-size:9px}
+.daytab.pre{border-style:dashed}
+.pre-sec{display:flex;flex-direction:column;gap:12px;margin-top:4px}
+.pre-head b{display:block;font-size:15px}.pre-head small{color:var(--ink-2);font-size:12px}
+.pre-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pre-tile{display:flex;flex-direction:column;align-items:stretch;text-align:left;gap:4px;padding:10px 12px 12px;border-radius:18px;border:1.5px dashed var(--line-2);background:var(--surface-2);color:var(--ink);min-width:0;transition:transform .2s var(--ease-out),border-color .2s}
+.pre-tile:active{transform:scale(.97)}
+.pre-tile.has{border-style:solid;border-color:var(--line);background:var(--surface);box-shadow:0 1px 0 var(--line)}
+.pre-tile .pre-art{width:72%;max-width:120px;align-self:center;margin:-2px 0 2px}
+.pre-txt{display:flex;flex-direction:column;gap:3px;min-width:0;line-height:1.4}
+.pre-txt b{font-size:13.5px}
+.pre-amt{font-size:17px;font-weight:700;color:var(--brand)}
+.pre-who{display:flex;align-items:center;gap:4px;flex-wrap:wrap;min-width:0}.pre-who small{font-size:11px;color:var(--ink-2);line-height:1.35}
+.pre-empty{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;color:var(--ink-2)}
+.pre-sum{display:flex;flex-direction:column;gap:10px;padding:12px;border-radius:18px;background:var(--sunken)}
+.pre-tot{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pre-tot small{display:block;font-size:11.5px;color:var(--ink-2)}.pre-tot b{font-size:17px}
+.pre-mem{display:flex;flex-direction:column;gap:6px}
+.pre-m{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;padding:8px 10px;border-radius:14px;background:var(--surface)}
+.pre-m .nm{min-width:0;line-height:1.35}.pre-m .nm b{display:block;font-size:13px}.pre-m .nm small{font-size:11px;color:var(--ink-2)}
+.pre-m .pos{color:var(--ok);font-weight:700}.pre-m .neg{color:var(--bad);font-weight:700}
+.pre-box{border:1.5px dashed var(--line-2);border-radius:16px;padding:8px 12px;display:flex;flex-direction:column;gap:8px}
+.pre-box .pre-kinds{display:none}.pre-box.on{border-style:solid;border-color:var(--brand);background:var(--surface-2)}.pre-box.on .pre-kinds{display:flex}
+.badge.b-pre{background:var(--coral-soft);color:var(--brand);gap:3px}
+.mm-pre{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:8px;width:100%;margin:10px 0 2px;padding:9px 12px;border-radius:14px;border:1.5px dashed var(--line-2);background:var(--surface-2);color:var(--ink);text-align:left;line-height:1.35}
+.mm-pre span{font-size:13px;font-weight:600;min-width:0}.mm-pre small{display:block;font-size:11px;font-weight:400;color:var(--ink-2)}
+.pre-tag{display:inline-flex;align-items:center;gap:3px;padding:1px 8px;border-radius:99px;background:var(--coral-soft);color:var(--brand);font-weight:600;font-size:11px;line-height:1.5}
+@media (min-width:700px){.pre-grid{grid-template-columns:repeat(4,1fr)}}
 </style>
 
 <div class="splash" id="splash" aria-hidden="true"><div class="sp"><img id="splashIcon" alt=""><b id="splashWord"></b><small id="splashTag"></small></div></div>
@@ -1053,6 +1082,14 @@ th:{
  'place.vibe':'กลุ่มสถานที่','place.illo':'ภาพวาด','place.end':'เวลาสิ้นสุด',
  'j.note':'ที่ใหม่ ๆ\nของกินใหม่ ๆ\nความทรงจำใหม่ ๆ ♡','j.loading':'กำลังโหลดความสนุก…','j.plan':'เช็กลิสต์วันนี้','j.letsgo':'ไปกันเลย!','j.outro':'ต่างที่ ต่างเวลา\nแต่ความทรงจำเดียวกัน','j.empty':'หน้านี้ยังว่าง ลองวางแพลนหรือเพิ่มสถานที่ดูนะ',
  'est.title':'งบประมาณคาดการณ์','est.sub':'รวมจากงบของทุกกิจกรรม แยกจากค่าใช้จ่ายจริง','est.perPerson':'ต่อคน','est.group':'ทั้งกลุ่ม {n} คน','est.groupShort':'ทั้งกลุ่ม','est.actual':'จ่ายจริง','est.dayEst':'งบคาดการณ์วันนี้',
+ 'pre.tab':'ก่อนเดินทาง','pre.tabSub':'ตั๋ว · ที่พัก · รถ','pre.title':'จ่ายก่อนเดินทาง','pre.sub':'ใครจ่าย หารกันยังไง','pre.when':'ของที่จองก่อนวันที่ {d}','pre.rowSub':'ตั๋ว ที่พัก ที่หารกัน',
+ 'pre.flight':'ตั๋วเครื่องบิน','pre.stay':'ที่พัก','pre.car':'รถเช่า','pre.other':'อื่น ๆ','pre.add':'เพิ่ม','pre.addMore':'เพิ่มอีกรายการ','pre.addShort':'เพิ่ม',
+ 'pre.flightTitle':'ตั๋วเครื่องบิน {r} ไป-กลับ','pre.stayTitle':'ที่พัก {n} คืน','pre.carTitle':'ค่าเช่ารถ {n} วัน','pre.otherTitle':'',
+ 'pre.own':'จ่ายเอง ไม่หาร','pre.split':'หาร {n} คน · คนละ {x}','pre.mixed':'หาร {n} คน (ไม่เท่ากัน)','pre.items':'{n} รายการ',
+ 'pre.total':'รวมก่อนเดินทาง','pre.pp':'ต่อคน','pre.paidX':'จ่าย {x}','pre.shareX':'ส่วน {x}',
+ 'pre.note':'ยอดพวกนี้รวมอยู่ในหน้าเคลียร์เงินแล้ว ไม่ต้องคิดแยก','pre.hint':'แตะช่องด้านบนเพื่อใส่ค่าตั๋ว ที่พัก หรือรถเช่า แล้วเลือกว่าใครจ่าย',
+ 'pre.toggle':'จ่ายก่อนเดินทาง','pre.toggleSub':'ตั๋ว ที่พัก รถเช่า มัดจำ','pre.badge':'ก่อนเดินทาง','pre.mm':'จ่ายก่อนเดินทาง',
+ 'est.inclPre':'รวมตั๋วและที่พักที่จ่ายแล้ว','tr.fromPre':'จ่ายแล้ว {x}',
  'est.transport':'ค่าเดินทางร่วม','est.total':'รวมทั้งทริป','est.excl':'ไม่รวมตั๋วเครื่องบินและที่พัก','est.target':'งบเป้าหมาย','est.verify':'{n} รายการยังไม่ยืนยัน','est.editTransport':'ใส่ค่าเดินทางร่วม (รถเช่า น้ำมัน)',
  'est.mayOver':'ถ้าใช้เต็มงบสูงสุดอาจเกินเป้า','est.fits':'อยู่ในเป้า',
  'tr.title':'ค่าเดินทางร่วมกัน','tr.travelers':'จำนวนผู้เดินทาง (ใช้หารงบ)','tr.car':'รถเช่า (ทั้งคัน)','tr.fuel':'น้ำมัน','tr.parking':'ที่จอดรถและค่าใช้จ่ายระหว่างทาง','tr.actualCar':'ราคาเช่ารถจริง','tr.actualFuel':'ค่าน้ำมันจริง',
@@ -1138,6 +1175,14 @@ ja:{
  'place.vibe':'分類','place.illo':'イラスト','place.end':'終了時間',
  'j.note':'新しい場所\n新しいごはん\n新しい思い出 ♡','j.loading':'わくわく読み込み中…','j.plan':'今日のチェックリスト','j.letsgo':'Let\'s go!','j.outro':'場所も時間もちがっても\n思い出はいっしょ','j.empty':'まだ白紙です。プランを貼り付けてみよう',
  'est.title':'予算見積もり','est.sub':'各アクティビティの予算を合計（実費とは別）','est.perPerson':'1人あたり','est.group':'グループ {n}人','est.groupShort':'グループ','est.actual':'実費','est.dayEst':'今日の見積もり',
+ 'pre.tab':'出発前','pre.tabSub':'航空券・宿・車','pre.title':'出発前の支払い','pre.sub':'予約済みのもの・誰が払ったか・割り方','pre.when':'{d}より前に予約したもの','pre.rowSub':'割り勘の航空券・宿',
+ 'pre.flight':'航空券','pre.stay':'宿泊','pre.car':'レンタカー','pre.other':'その他','pre.add':'追加','pre.addMore':'もう1件追加','pre.addShort':'追加',
+ 'pre.flightTitle':'航空券 {r} 往復','pre.stayTitle':'宿泊 {n}泊','pre.carTitle':'レンタカー {n}日','pre.otherTitle':'',
+ 'pre.own':'個人払い','pre.split':'{n}人で割り勘・1人 {x}','pre.mixed':'{n}人で割り勘（不均等）','pre.items':'{n}件',
+ 'pre.total':'出発前の合計','pre.pp':'1人あたり','pre.paidX':'支払 {x}','pre.shareX':'負担 {x}',
+ 'pre.note':'精算画面にすでに含まれています','pre.hint':'上の枠をタップして航空券・宿・レンタカーを入力し、誰が払ったか選んでください',
+ 'pre.toggle':'出発前の支払い','pre.toggleSub':'航空券・宿・レンタカー・前金','pre.badge':'出発前','pre.mm':'出発前の支払い',
+ 'est.inclPre':'支払済みの航空券・宿を含む','tr.fromPre':'支払済 {x}',
  'est.transport':'共有の交通費','est.total':'旅行全体','est.excl':'航空券・宿泊費は含みません','est.target':'目標予算','est.verify':'未確認 {n}件','est.editTransport':'交通費を入力（レンタカー・ガソリン）',
  'est.mayOver':'上限まで使うと目標を超える可能性','est.fits':'目標内',
  'tr.title':'共有の交通費','tr.travelers':'人数（予算の割り勘用）','tr.car':'レンタカー（1台）','tr.fuel':'ガソリン','tr.parking':'駐車場・道中の費用','tr.actualCar':'実際のレンタカー代','tr.actualFuel':'実際のガソリン代',
@@ -1292,14 +1337,16 @@ function estPP(p,tr,any){if(!any&&p.status==='cancelled')return{min:0,max:0};
   const v=Math.round((p.estimated||0)/travelersOf(tr));return{min:v,max:v}}
 function transportOf(tr,T0,n0){const T=T0||tr.transport;if(!T)return null;const n=n0||travelersOf(tr);
   const pick=(k,act)=>T[act]!=null&&T[act]!==''&&T[act]>0?[T[act],T[act]]:(T[k]||[0,0]);
-  const car=pick('car','carActual'),fuel=pick('fuel','fuelActual'),park=T.parking||[0,0];
-  const gmin=car[0]+fuel[0]+park[0],gmax=car[1]+fuel[1]+park[1];return{n,car,fuel,park,gmin,gmax,pmin:Math.round(gmin/n),pmax:Math.round(gmax/n)}}
+  let car=pick('car','carActual');const paid=tr.id?preOf(tr.id).filter(e=>e.preKind==='car').reduce((s,e)=>s+e.amount,0):0;
+  if(paid&&!(T.carActual>0))car=[Math.max(car[0],paid),Math.max(car[1],paid)];const fuel=pick('fuel','fuelActual'),park=T.parking||[0,0];
+  const gmin=car[0]+fuel[0]+park[0],gmax=car[1]+fuel[1]+park[1];return{n,car,fuel,park,gmin,gmax,pmin:Math.round(gmin/n),pmax:Math.round(gmax/n),paid}}
 function planEstimate(tr){const days=tripDays(tr);const n=travelersOf(tr);const ex=db.expenses.filter(e=>e.tripId===tr.id);
   const rows=days.map((d,i)=>{let min=0,max=0;db.places.filter(p=>p.tripId===tr.id&&p.date===d).forEach(p=>{const e=estPP(p,tr);min+=e.min;max+=e.max});
     return{date:d,num:dayNum(tr,i),min,max,actual:ex.filter(e=>e.date===d).reduce((s,e)=>s+e.amount,0)}});
   const T=transportOf(tr);const verify=db.places.filter(p=>p.tripId===tr.id&&p.needsVerify&&p.status!=='cancelled').length;
-  const min=rows.reduce((s,r)=>s+r.min,0)+(T?T.pmin:0),max=rows.reduce((s,r)=>s+r.max,0)+(T?T.pmax:0);
-  return{rows,T,n,min,max,verify,actual:ex.reduce((s,e)=>s+e.amount,0)}}
+  const preX=preOf(tr.id).filter(e=>e.preKind!=='car'&&e.type!=='personal').reduce((s,e)=>s+e.amount,0);const prePP=Math.round(preX/n);
+  const min=rows.reduce((s,r)=>s+r.min,0)+(T?T.pmin:0)+prePP,max=rows.reduce((s,r)=>s+r.max,0)+(T?T.pmax:0)+prePP;
+  return{rows,T,n,min,max,verify,prePP,actual:ex.reduce((s,e)=>s+e.amount,0)}}
 function rng(a,b,cur){return a===b?money(a,cur):money(a,cur)+'–'+money(b,cur).replace(/^[^\d]+/,'')}
 function durMin(p){if(!p.time||!p.endTime)return 0;const [h1,m1]=p.time.split(':').map(Number),[h2,m2]=p.endTime.split(':').map(Number);let d=(h2*60+m2)-(h1*60+m1);if(d<0)d+=1440;return d}
 function fmtDur(min){if(!min)return'';const h=Math.floor(min/60),m=min%60;return [h?t('dur.h',{h}):'',m?t('dur.m',{m}):''].filter(Boolean).join(' ')}
@@ -1308,11 +1355,43 @@ const firstLine=s=>String(s||'').split('\n')[0];
 function estChip(p,tr){const e=estPP(p,tr);return e.max?`<span class="m-chip est num">${rng(e.min,e.max,tr.currency)}${esc(t('unit.pp'))}</span>`:''}
 function verifyChip(p){return p.needsVerify?`<button class="m-chip ver" data-act="toggleVerify" data-id="${p.id}" title="${esc(t('badge.verifyHint'))}">${icon('i-alert','sm')}${esc(t('badge.verify'))}</button>`:''}
 
+/* =========================================================
+   PRE-TRIP COSTS — flights, stay, car rental, other bookings
+   (ordinary expenses flagged pre:true, so splitting & settle-up just work)
+   ========================================================= */
+const PRE_KINDS={flight:{illo:'plane',cat:'transport',ic:'i-plane'},stay:{illo:'hotel',cat:'stay',ic:'i-bed'},car:{illo:'car',cat:'transport',ic:'i-car'},other:{illo:'pin',cat:'other',ic:'i-ticket'}};
+const preOf=tid=>db.expenses.filter(e=>e.tripId===tid&&e.pre);
+function airportCode(tr){const d=(tr.destination||'')+' '+(tr.destAlt||'');return /เชียงใหม่|chiang ?mai|チェンマイ/i.test(d)?'CNX':/ภูเก็ต|phuket/i.test(d)?'HKT':/โตเกียว|tokyo|東京/i.test(d)?'NRT':/เชียงราย|chiang ?rai/i.test(d)?'CEI':''}
+function preTitle(kind,tr){if(kind==='flight'){const c=airportCode(tr);return t('pre.flightTitle',{r:c?'BKK ⇄ '+c:''}).replace(/\s+\(/,' (').trim()}
+  if(kind==='stay')return t('pre.stayTitle',{n:Math.max(1,tripDays(tr).length-1)});if(kind==='car')return t('pre.carTitle',{n:tripDays(tr).length});return t('pre.otherTitle')}
+function preSplitText(e,tr){if(e.type==='personal')return t('pre.own');const a=e.shares.map(s=>s.amount);return a.every(x=>x===a[0])?t('pre.split',{n:a.length,x:money(a[0]||0,tr.currency)}):t('pre.mixed',{n:a.length})}
+function preSection(tr){const n=travelersOf(tr),cur=tr.currency;const list=preOf(tr.id);const total=list.reduce((s,e)=>s+e.amount,0);
+  const per={};tr.memberIds.forEach(id=>per[id]={paid:0,share:0});list.forEach(e=>{(per[e.payerId]||(per[e.payerId]={paid:0,share:0})).paid+=e.amount;e.shares.forEach(s=>{(per[s.memberId]||(per[s.memberId]={paid:0,share:0})).share+=s.amount})});
+  const tile=k=>{const items=list.filter(e=>(e.preKind||'other')===k);const sum=items.reduce((s,e)=>s+e.amount,0);
+    return `<button class="pre-tile ${items.length?'has':''}" data-act="${items.length?'preList':'preAdd'}" data-trip="${tr.id}" data-v="${k}">
+      ${illoSVG(PRE_KINDS[k].illo,'pre-art')}<span class="pre-txt"><b>${esc(t('pre.'+k))}</b>${items.length?`<span class="num pre-amt">${money(sum,cur)}</span>
+      <span class="pre-who">${[...new Set(items.map(e=>e.payerId))].map(id=>av(memberById(id),'xs')).join('')}<small>${esc(items.length>1?t('pre.items',{n:items.length}):preSplitText(items[0],tr))}</small></span>`
+      :`<span class="pre-empty">${icon('i-plus','sm')}${esc(t('pre.add'))}</span>`}</span></button>`};
+  return `<div class="pre-sec">
+   <div class="pre-grid">${['flight','stay','car','other'].map(tile).join('')}</div>
+   ${list.length?`<div class="pre-sum"><div class="pre-tot"><div><small>${esc(t('pre.total'))}</small><b class="num">${money(total,cur)}</b></div><div><small>${esc(t('pre.pp'))} (${n})</small><b class="num">${money(Math.round(total/n),cur)}</b></div></div>
+    <div class="pre-mem">${Object.entries(per).filter(([,p])=>p.paid||p.share).map(([id,p])=>{const m=memberById(id),d=p.paid-p.share;return `<div class="pre-m">${av(m,'sm')}<span class="nm"><b>${esc(m.name)}</b><small class="num">${esc(t('pre.paidX',{x:money(p.paid,cur)}))} · ${esc(t('pre.shareX',{x:money(p.share,cur)}))}</small></span><span class="num ${d>0?'pos':d<0?'neg':''}">${d>0?'+':d<0?'−':''}${money(Math.abs(d),cur)}</span></div>`}).join('')}</div>
+    <div class="muted tiny">${icon('i-swap','sm')} ${esc(t('pre.note'))}</div></div>`:`<p class="muted tiny" style="margin:0">${esc(t('pre.hint'))}</p>`}
+  </div>`}
+function preListSheet(tid,kind){const tr=tripById(tid);const items=preOf(tid).filter(e=>(e.preKind||'other')===kind);
+  openSheet({title:esc(t('pre.'+kind)),small:true,body:items.map(e=>`<button class="exp" data-act="editExpense" data-id="${e.id}">${catIc(e.category)}<div style="min-width:0"><div class="t">${esc(e.title)}</div><div class="m">${av(memberById(e.payerId),'xs')}<span>${esc(memberById(e.payerId).name)}</span><span class="sep">•</span><span>${esc(preSplitText(e,tr))}</span></div>${e.note?`<div class="m">${esc(firstLine(e.note))}</div>`:''}</div><div class="a"><b class="num">${money(e.amount,tr.currency)}</b></div></button>`).join(''),
+   foot:`<button class="btn btn-soft" data-close>${esc(t('common.close'))}</button><button class="btn btn-primary" data-preadd>${icon('i-plus','sm')}${esc(t('pre.addMore'))}</button>`,
+   onMount(sh,api){sh.addEventListener('click',e=>{if(e.target.closest('[data-act="editExpense"]'))api.close();if(e.target.closest('[data-preadd]')){api.close();setTimeout(()=>expenseForm({tripId:tid,preset:{pre:true,preKind:kind}}),280)}})}})}
+
 /* ---------- itinerary (timeline + journal) ---------- */
 function itinerary(tr,c){const days=tripDays(tr);const places=db.places.filter(p=>p.tripId===tr.id);
   const orphan=places.filter(p=>!days.includes(p.date));
-  const tabs=days.map((d,i)=>({k:d,label:t('plan.day',{n:dayNum(tr,i)}),sub:fmtDate(d,'dow')}));if(orphan.length)tabs.push({k:'none',label:t('plan.unscheduled'),sub:orphan.length+''});
-  let cur=ui.planDay[tr.id];if(!tabs.some(x=>x.k===cur)){const td=todayStr();cur=days.includes(td)?td:tabs[0]?.k;ui.planDay[tr.id]=cur}
+  const preTot=preOf(tr.id).reduce((s,e)=>s+e.amount,0);
+  const tabs=[{k:'pre',label:t('pre.tab'),sub:preTot?money(preTot,tr.currency):t('pre.tabSub'),cls:'pre'},...days.map((d,i)=>({k:d,label:t('plan.day',{n:dayNum(tr,i)}),sub:fmtDate(d,'dow')}))];if(orphan.length)tabs.push({k:'none',label:t('plan.unscheduled'),sub:orphan.length+''});
+  let cur=ui.planDay[tr.id];if(!tabs.some(x=>x.k===cur)){const td=todayStr();cur=days.includes(td)?td:(days[0]||tabs[0].k);ui.planDay[tr.id]=cur}
+  const tabBar=`<div class="daytabs" role="tablist">${tabs.map(x=>`<button role="tab" aria-selected="${x.k===cur}" class="daytab ${x.cls||''} ${x.k===cur?'on':''}" data-act="planDay" data-trip="${tr.id}" data-v="${x.k}"><b>${esc(x.label)}</b><small class="${x.k==='pre'&&preTot?'num':''}">${esc(x.sub)}</small></button>`).join('')}</div>`;
+  if(cur==='pre')return `<div class="card-h"><div style="min-width:0"><div class="ttl">${L('pre.title')}</div><div class="muted tiny">${esc(t('pre.sub'))}</div></div>
+    <div class="row" style="gap:6px;justify-content:flex-end"><button class="btn btn-ghost btn-sm btn-icon" data-act="tripMenu" data-id="${tr.id}" aria-label="${esc(t('menu.more'))}">${icon('i-dots','sm')}</button><button class="btn btn-primary btn-sm" data-act="preAdd" data-trip="${tr.id}" data-v="other">${icon('i-plus','sm')}${esc(t('pre.addShort'))}</button></div></div>${tabBar}${preSection(tr)}`;
   const list=(cur==='none'?orphan:places.filter(p=>p.date===cur)).sort((a,b)=>(a.sort-b.sort)||String(a.time).localeCompare(String(b.time)));
   const dayTotal=list.reduce((s,p)=>s+(c.byPlace[p.id]?.sum||0),0)+(cur!=='none'?c.ex.filter(e=>!e.placeId&&e.date===cur).reduce((s,e)=>s+e.amount,0):0);
   let emin=0,emax=0;list.forEach(p=>{const e=estPP(p,tr);emin+=e.min;emax+=e.max});
@@ -1322,7 +1401,7 @@ function itinerary(tr,c){const days=tripDays(tr);const places=db.places.filter(p
     <div class="row" style="gap:6px;justify-content:flex-end"><button class="btn btn-ghost btn-sm btn-icon" data-act="tripMenu" data-id="${tr.id}" aria-label="${esc(t('menu.more'))}">${icon('i-dots','sm')}</button><button class="btn btn-primary btn-sm" data-act="addPlace" data-trip="${tr.id}" data-date="${cur!=='none'?cur:''}">${icon('i-plus','sm')}${esc(t('place.new'))}</button></div></div>
    <div class="day-sum"><div><small>${esc(t('est.dayEst'))}</small><b class="num">${emax?rng(emin,emax,tr.currency):'—'}</b><small>${esc(t('unit.pp'))}${emax&&n>1?` · ${esc(t('est.group',{n}))} ${rng(emin*n,emax*n,tr.currency)}`:''}</small></div><div><small>${esc(t('plan.actual'))}</small><b class="num">${money(dayTotal,tr.currency)}</b><small>${esc(t('est.groupShort'))}</small></div></div>
    <div class="row" style="justify-content:space-between;margin:12px 0 10px"><div class="seg"><button class="${jv?'':'on'}" data-act="planView" data-v="timeline">${esc(t('plan.viewTimeline'))}</button><button class="${jv?'on':''}" data-act="planView" data-v="journal">${esc(t('plan.viewJournal'))}</button></div></div>
-   <div class="daytabs" role="tablist">${tabs.map(x=>`<button role="tab" aria-selected="${x.k===cur}" class="daytab ${x.k===cur?'on':''}" data-act="planDay" data-trip="${tr.id}" data-v="${x.k}"><b>${esc(x.label)}</b><small>${esc(x.sub)}</small></button>`).join('')}</div>
+   ${tabBar}
    ${jv?journalDay(tr,c,list,dayNo,cur!=='none'?cur:tr.start):list.length?`<div class="timeline">${list.map((p,i)=>{
      if(p.kind==='travel')return `<div class="stop travel rv" style="--i:${i+4}"><div class="tm">${esc(p.time||'—')}${p.endTime?`<small>${esc(p.endTime)}</small>`:''}</div><div class="pin tv">${icon('i-car')}</div>
        <button class="tv-body" data-act="openStop" data-id="${p.id}"><span class="nm">${esc(Nplain(p))}</span><span class="tv-meta">${fmtDur(durMin(p))?`<span class="m-chip">${esc(fmtDur(durMin(p)))}</span>`:''}${estChip(p,tr)}${p.note?`<span class="tv-note">${esc(firstLine(p.note))}</span>`:''}</span></button></div>`;
@@ -1350,10 +1429,10 @@ function planBudgetCard(tr){const E=planEstimate(tr),cur=tr.currency,n=E.n;
   return `<div class="card rv est-card" style="--i:3"><div class="card-h"><div><div class="ttl">${L('est.title')}</div><div class="muted tiny">${esc(t('est.sub'))}</div></div>${E.verify?`<span class="badge b-warn">${esc(t('est.verify',{n:E.verify}))}</span>`:''}</div>
    <div class="est-total"><div><small>${esc(t('est.total'))} · ${esc(t('est.perPerson'))}</small><b class="num">${rng(E.min,E.max,cur)}</b></div><div><small>${esc(t('est.group',{n}))}</small><b class="num sm">${rng(E.min*n,E.max*n,cur)}</b></div></div>
    ${tr.budget?`<div class="est-target tiny">${esc(t('est.target'))} <b class="num">${money(Math.round(tr.budget/n),cur)}${esc(t('unit.pp'))}</b> · ${E.max*n>tr.budget?`<span style="color:var(--warn);font-weight:600">${esc(t('est.mayOver'))}</span>`:`<span style="color:var(--ok);font-weight:600">${esc(t('est.fits'))}</span>`}</div>`:''}
-   <div class="est-rows">${E.rows.map(r=>`<button class="est-row" data-act="planDay" data-trip="${tr.id}" data-v="${r.date}"><span class="d">${esc(t('plan.day',{n:r.num}))}<small>${esc(fmtDate(r.date,'short'))}</small></span><span class="num v">${r.max?rng(r.min,r.max,cur):'—'}</span><span class="num a">${r.actual?money(r.actual,cur):''}</span></button>`).join('')}
-    ${E.T?`<button class="est-row tr" data-act="editTransport" data-id="${tr.id}"><span class="d">${esc(t('est.transport'))}<small>${esc(t('tr.split',{n}))} · ${icon('i-edit','sm')}</small></span><span class="num v">${rng(E.T.pmin,E.T.pmax,cur)}</span><span class="num a"></span></button>`:`<button class="btn btn-soft btn-sm" data-act="editTransport" data-id="${tr.id}" style="margin-top:8px">${icon('i-car','sm')}${esc(t('est.editTransport'))}</button>`}
+   <div class="est-rows">${E.prePP?`<button class="est-row" data-act="goPre" data-id="${tr.id}"><span class="d">${esc(t('pre.title'))}<small>${esc(t('pre.rowSub'))}</small></span><span class="num v">${money(E.prePP,cur)}</span><span class="num a"></span></button>`:''}${E.rows.map(r=>`<button class="est-row" data-act="planDay" data-trip="${tr.id}" data-v="${r.date}"><span class="d">${esc(t('plan.day',{n:r.num}))}<small>${esc(fmtDate(r.date,'short'))}</small></span><span class="num v">${r.max?rng(r.min,r.max,cur):'—'}</span><span class="num a">${r.actual?money(r.actual,cur):''}</span></button>`).join('')}
+    ${E.T?`<button class="est-row tr" data-act="editTransport" data-id="${tr.id}"><span class="d">${esc(t('est.transport'))}<small>${esc(t('tr.split',{n}))}${E.T.paid?' · '+esc(t('tr.fromPre',{x:money(E.T.paid,cur)})):''} · ${icon('i-edit','sm')}</small></span><span class="num v">${rng(E.T.pmin,E.T.pmax,cur)}</span><span class="num a"></span></button>`:`<button class="btn btn-soft btn-sm" data-act="editTransport" data-id="${tr.id}" style="margin-top:8px">${icon('i-car','sm')}${esc(t('est.editTransport'))}</button>`}
     <div class="est-row head"><span></span><span class="v">${esc(t('est.perPerson'))}</span><span class="a">${esc(t('est.actual'))}</span></div></div>
-   <div class="muted tiny" style="margin-top:10px">${esc(t('est.excl'))} · ${esc(t('est.actual'))} ${money(E.actual,cur)}</div></div>`}
+   <div class="muted tiny" style="margin-top:10px">${esc(t(E.prePP?'est.inclPre':'est.excl'))} · ${esc(t('est.actual'))} ${money(E.actual,cur)}</div></div>`}
 function transportForm(tid){const tr=tripById(tid);if(!tr)return;const cur=tr.currency;const T=JSON.parse(JSON.stringify(tr.transport||{car:[0,0],fuel:[0,0],parking:[0,0]}));let n=travelersOf(tr);
   const inp=(id,v)=>`<input class="inp num" id="${id}" inputmode="decimal" placeholder="0" value="${esc(v?toInput(v,cur):'')}">`;
   const row=(k,lbl)=>`<div class="field"><span class="flabel">${esc(t(lbl))}</span><div class="row" style="flex-wrap:nowrap;gap:6px">${inp('t_'+k+'0',(T[k]||[])[0])}<span class="muted">–</span>${inp('t_'+k+'1',(T[k]||[])[1])}</div></div>`;
@@ -1547,7 +1626,7 @@ function pasteForm(tripId,date,prefill){const tr=tripById(tripId);if(!tr){import
       logAct({tripId,kind:'place_add',title:P.items.filter(i=>i.kind!=='travel').map(i=>i.name).slice(0,2).join(', ')+(P.items.length>2?' …':'')});
       ui.planDay[tripId]=dates[0];settings.planTrip=tripId;settings.planView='journal';saveSettings();api.close();persist();toast(t('paste.done',{n:P.items.length}));if(route!=='plan')go('plan');else render(true)}}})}
 
-let db = (()=>{const d=safeParse(store.get(DKEY));if(validDB(d)&&d.demo&&d.seedVersion!==3)return seed();return validDB(d)?normalizeDB(d):seed()})();
+let db = (()=>{const d=safeParse(store.get(DKEY));if(validDB(d)&&d.demo&&d.seedVersion!==4)return seed();return validDB(d)?normalizeDB(d):seed()})();
 let storeWarned=false;
 function persist(){const ok=store.set(DKEY,JSON.stringify(db));if(!ok&&!storeWarned){storeWarned=true;toast(t('toast.storeFail'),'warn')}}
 
@@ -1574,8 +1653,9 @@ function seed(){
      shares:shareArr,date,time,note:'',createdAt:date+'T'+time});
   const eq=(amt,ids)=>splitEqual(Math.round(amt*100),ids);
   const expenses=[
-    E('e1','t_cnx',null,'มัดจำรถเช่า',1500,'transport','m1','shared','equal',eq(1500,['m1','m2']),'2026-10-02','21:10'),
-    E('e2','t_cnx',null,'ที่พัก Grandview Residence 3 คืน',3600,'stay','m2','shared','equal',eq(3600,['m1','m2']),'2026-10-03','12:40'),
+    Object.assign(E('e1','t_cnx',null,'มัดจำรถเช่า 4 วัน (Chic Car Rent)',1500,'transport','m1','shared','equal',eq(1500,['m1','m2']),'2026-10-02','21:10'),{pre:true,preKind:'car'}),
+    Object.assign(E('e5','t_cnx',null,'ตั๋วเครื่องบิน BKK ⇄ CNX ไป-กลับ 2 ที่',4380,'transport','m1','shared','equal',eq(4380,['m1','m2']),'2026-09-28','22:15'),{pre:true,preKind:'flight'}),
+    Object.assign(E('e2','t_cnx',null,'ที่พัก Grandview Residence 3 คืน',3600,'stay','m2','shared','equal',eq(3600,['m1','m2']),'2026-10-03','12:40'),{pre:true,preKind:'stay'}),
     E('e3','t_cnx',null,'บัตร MAIIAM 2 ใบ (ซื้อล่วงหน้า)',400,'activity','m1','shared','equal',eq(400,['m1','m2']),'2026-10-08','19:05'),
     E('e4','t_cnx',null,'กล้องฟิล์มใช้แล้วทิ้ง',450,'shopping','m1','personal','equal',[{memberId:'m1',amount:45000}],'2026-10-10','15:30'),
     E('h_e1','t_hh','h1','รถตู้ไปหัวหิน',900,'transport','m1','shared','equal',eq(900,['m1','m2','m3']),'2026-09-12','08:00'),
@@ -1596,7 +1676,7 @@ function seed(){
     {id:'a5',tripId:'t_cnx',kind:'expense_add',ref:'e2',title:'ที่พัก Grandview Residence 3 คืน',amount:360000,at:'2026-10-03T12:40:00'}
   ];
   const CX=buildCnxTrip('t_cnx',['m1','m2']);trips.unshift(CX.trip);places.push(...CX.places);
-  return {version:1,seedVersion:3,demo:true,members,trips,places,expenses,settlements,activity};
+  return {version:1,seedVersion:4,demo:true,members,trips,places,expenses,settlements,activity};
 }
 
 /* =========================================================
@@ -1926,6 +2006,7 @@ function moneyMini(c){const tr=c.trip,cur=tr.currency;const pct=tr.budget?Math.m
   return `<div class="card mm rv" style="--i:4"><div class="card-h"><div><div class="ttl">${L('mm.title')}</div><div class="muted tiny">${esc(Nplain(tr))}</div></div><button class="btn btn-ghost btn-sm" data-act="go" data-v="money">${esc(t('mm.more'))}${icon('i-arrow','sm')}</button></div>
    <div class="mm-top"><div><small>${esc(t('budget.spent'))}</small><b class="num" data-count="${c.total}" data-cur="${cur}" data-key="mm-${tr.id}">${money(c.total,cur)}</b></div><div class="r"><small>${esc(over?t('budget.over'):t('budget.remaining'))}</small><b class="num" style="color:${over?'var(--bad)':'var(--ok)'}">${money(Math.abs(c.remaining),cur)}</b></div></div>
    ${tr.budget?`<div class="mm-bar"><span style="width:${pct}%;background:${pct>=100?'var(--bad)':pct>=80?'var(--warn)':'var(--ok)'}"></span></div><div class="muted tiny num">${Math.round(c.total/tr.budget*100)}% · ${esc(t('budget.total'))} ${money(tr.budget,cur)}</div>`:''}
+   ${(()=>{const pl=preOf(tr.id);if(!pl.length)return '';const sum=pl.reduce((s,e)=>s+e.amount,0);return `<button class="mm-pre" data-act="goPre" data-id="${tr.id}">${icon('i-plane','sm')}<span>${esc(t('pre.mm'))}<small>${esc(t('pre.items',{n:pl.length}))}</small></span><b class="num">${money(sum,cur)}</b>${icon('i-arrow','sm')}</button>`})()}
    <div class="mm-mem">${ids.map(id=>{const m=memberById(id),p=c.per[id];return `<button class="mm-p" data-act="memberDetail" data-id="${id}" data-trip="${tr.id}">${av(m,'sm')}<span><b>${esc(m.name)}</b><small class="num">${esc(t('paid.paid'))} ${money(p.paid,cur)}</small></span></button>`}).join('')}</div></div>`}
 
 /* ---------- trip actions menu (keeps the plan screen calm) ---------- */
@@ -2151,20 +2232,20 @@ function renderMoney(){const tid=resolveTrip('moneyTrip');
 function expenseList(c){const tr=c.trip,f=ui.filters;const mem=c.memberIds.map(memberById);const places=db.places.filter(p=>p.tripId===tr.id);
   let list=[...c.ex];const q=f.q.trim().toLowerCase();
   if(q)list=list.filter(e=>(e.title+' '+(db.places.find(p=>p.id===e.placeId)?.name||'')+' '+(e.note||'')).toLowerCase().includes(q));
-  if(f.payer)list=list.filter(e=>e.payerId===f.payer);if(f.cat)list=list.filter(e=>e.category===f.cat);if(f.type)list=list.filter(e=>e.type===f.type);if(f.place)list=list.filter(e=>e.placeId===f.place);
+  if(f.payer)list=list.filter(e=>e.payerId===f.payer);if(f.cat)list=list.filter(e=>e.category===f.cat);if(f.type)list=list.filter(e=>f.type==='pre'?e.pre:e.type===f.type);if(f.place)list=list.filter(e=>e.placeId===f.place);
   list.sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time));
   const groups={};list.forEach(e=>(groups[e.date]=groups[e.date]||[]).push(e));
   const anyF=f.q||f.payer||f.cat||f.type||f.place;
   let h=`<div class="card rv" style="--i:3"><div class="filters"><div class="search">${icon('i-search','sm')}<input class="inp" id="fq" placeholder="${esc(t('money.search'))}" value="${esc(f.q)}" data-input="filterQ" aria-label="${esc(t('money.search'))}"></div>
    <select class="inp" data-change="filter" data-k="payer" aria-label="${esc(t('form.payer'))}"><option value="">${esc(t('money.allMembers'))}</option>${mem.map(m=>`<option value="${m.id}" ${f.payer===m.id?'selected':''}>${esc(m.name)}</option>`).join('')}</select>
-   <select class="inp" data-change="filter" data-k="type" aria-label="${esc(t('form.type'))}"><option value="">${esc(t('money.allTypes'))}</option><option value="shared" ${f.type==='shared'?'selected':''}>${esc(t('form.typeShared'))}</option><option value="personal" ${f.type==='personal'?'selected':''}>${esc(t('form.typePersonal'))}</option></select>
+   <select class="inp" data-change="filter" data-k="type" aria-label="${esc(t('form.type'))}"><option value="">${esc(t('money.allTypes'))}</option><option value="shared" ${f.type==='shared'?'selected':''}>${esc(t('form.typeShared'))}</option><option value="personal" ${f.type==='personal'?'selected':''}>${esc(t('form.typePersonal'))}</option><option value="pre" ${f.type==='pre'?'selected':''}>${esc(t('pre.tab'))}</option></select>
    ${places.length?`<select class="inp" data-change="filter" data-k="place" aria-label="${esc(t('form.place'))}"><option value="">${esc(t('money.allPlaces'))}</option>${places.map(p=>`<option value="${p.id}" ${f.place===p.id?'selected':''}>${esc(Nplain(p))}</option>`).join('')}</select>`:''}</div>
    <div class="chips" style="margin-top:12px"><button class="chip ${!f.cat?'on':''}" data-act="filterCat" data-v="">${esc(t('money.allCats'))}</button>${CATS.map(k=>`<button class="chip ${f.cat===k?'on':''}" data-act="filterCat" data-v="${k}">${icon(CAT_META[k].i,'sm')}${esc(t('cat.'+k))}</button>`).join('')}</div></div>`;
   if(!c.ex.length)return h+`<div class="card"><div class="empty"><img src="${STK.cat}" alt="" style="width:80px"><p>${esc(t('money.empty'))}</p><button class="btn btn-primary" data-act="addExpense" data-trip="${tr.id}">${icon('i-plus')}${esc(t('money.addExpense'))}</button></div></div>`;
   if(!list.length)return h+`<div class="card"><div class="empty"><p>${esc(t('money.noMatch'))}</p><button class="btn btn-soft btn-sm" data-act="clearFilters">${esc(t('money.clearFilter'))}</button></div></div>`;
   h+=Object.keys(groups).map((d,gi)=>`<div class="day-group rv" style="--i:${gi+4}"><h4><span>${esc(fmtDate(d,'dow'))}</span><span class="num">${esc(t('money.dayTotal',{x:money(groups[d].reduce((s,e)=>s+e.amount,0),tr.currency)}))}</span></h4>
    ${groups[d].map(e=>{const p=db.places.find(x=>x.id===e.placeId);const payer=memberById(e.payerId);return `<button class="exp ${ui.flashId===e.id?'flash':''}" data-act="editExpense" data-id="${e.id}">${catIc(e.category)}
-     <div style="min-width:0"><div class="t">${esc(e.title)}</div><div class="m">${av(payer,'sm')}<span>${esc(payer.name)}</span>${p?`<span class="sep">•</span><span>${icon('i-pin','sm')} ${esc(Nplain(p))}</span>`:''}<span class="sep">•</span><span>${esc(e.time||'')}</span></div></div>
+     <div style="min-width:0"><div class="t">${esc(e.title)}</div><div class="m">${e.pre?`<span class="pre-tag">${icon(PRE_KINDS[e.preKind||'other'].ic,'sm')}${esc(t('pre.badge'))}</span>`:''}${av(payer,'sm')}<span>${esc(payer.name)}</span>${p?`<span class="sep">•</span><span>${icon('i-pin','sm')} ${esc(Nplain(p))}</span>`:''}<span class="sep">•</span><span>${esc(e.time||'')}</span></div></div>
      <div class="a"><b class="num">${money(e.amount,tr.currency)}</b>${e.type==='personal'?`<span class="badge b-lav">${esc(t('money.self'))}</span>`:`<span class="badge b-info">${esc(t('money.splitN',{n:e.shares.length}))}</span>`}</div></button>`}).join('')}</div>`).join('');
   ui.flashId=null;return h}
 function settleView(c){const tr=c.trip;const ids=c.memberIds;
@@ -2183,17 +2264,21 @@ function settleView(c){const tr=c.trip;const ids=c.memberIds;
 /* =========================================================
    11. FORMS — expense, trip, place
    ========================================================= */
-function expenseForm({tripId,placeId,id}={}){
+function expenseForm({tripId,placeId,id,preset}={}){
   const existing=id?db.expenses.find(e=>e.id===id):null;tripId=existing?.tripId||tripId||resolveTrip('moneyTrip');
   if(!tripId||!tripById(tripId)){toast(t('form.noTrip'),'warn');return}
   const tr=tripById(tripId),mem=tripMembers(tr);
   const st=existing?JSON.parse(JSON.stringify(existing)):{tripId,placeId:placeId||null,title:'',amount:0,category:placeId?(db.places.find(p=>p.id===placeId)?.category||'food'):'food',
     payerId:tr.memberIds.includes(settings.me)?settings.me:tr.memberIds[0],type:'shared',split:'equal',shares:[],date:(todayStr()>=tr.start&&todayStr()<=tr.end)?todayStr():(todayStr()<tr.start?todayStr():tr.end),time:nowTime(),note:''};
+  if(!existing&&preset){st.pre=!!preset.pre;st.preKind=preset.preKind||'other';if(st.pre){st.category=PRE_KINDS[st.preKind].cat;st.title=preTitle(st.preKind,tr);st.date=todayStr()<tr.start?todayStr():tr.start;st.time=nowTime()}}
+  st.preKind=st.preKind||'other';
   st.amountStr=toInput(st.amount,tr.currency);
   st.who=existing&&existing.type==='shared'?existing.shares.map(s=>s.memberId):[...tr.memberIds];
   st.exact={};st.pct={};if(existing&&existing.type==='shared'){existing.shares.forEach(s=>{st.exact[s.memberId]=toInput(s.amount,tr.currency);if(s.pct!=null)st.pct[s.memberId]=String(s.pct)})}
   const places=db.places.filter(p=>p.tripId===tripId);
   const body=`<div class="amount-inp"><span>${SYM[tr.currency]||''}</span><input id="xAmt" inputmode="decimal" placeholder="0" value="${esc(st.amountStr)}" autofocus aria-label="${esc(t('form.amount'))}"></div>
+   <div class="pre-box ${st.pre?'on':''}" id="xPreBox"><div class="tg"><span><b>${esc(t('pre.toggle'))}</b><small class="muted tiny" style="display:block">${esc(t('pre.toggleSub'))}</small></span><button type="button" class="switch" role="switch" id="xPre" aria-checked="${!!st.pre}" aria-label="${esc(t('pre.toggle'))}"></button></div>
+    <div class="pick pre-kinds" id="xPreKind">${['flight','stay','car','other'].map(k=>`<button type="button" class="noav ${st.preKind===k?'on':''}" data-v="${k}">${icon(PRE_KINDS[k].ic,'sm')} ${esc(t('pre.'+k))}</button>`).join('')}</div></div>
    <div class="field"><label for="xTitle">${esc(t('form.title'))}</label><input class="inp" id="xTitle" value="${esc(st.title)}" placeholder="${esc(t('form.titlePh'))}"></div>
    <div class="field"><span class="flabel">${esc(t('form.category'))}</span><div class="pick" id="xCat">${CATS.map(k=>`<button type="button" class="noav ${st.category===k?'on':''}" data-v="${k}">${icon(CAT_META[k].i,'sm')} ${esc(t('cat.'+k))}</button>`).join('')}</div></div>
    <div class="field"><label for="xPlace">${esc(t('form.place'))}</label><select class="inp" id="xPlace"><option value="">${esc(t('form.noPlace'))}</option>${places.map(p=>`<option value="${p.id}" ${st.placeId===p.id?'selected':''}>${esc(Nplain(p))}</option>`).join('')}</select></div>
@@ -2208,6 +2293,10 @@ function expenseForm({tripId,placeId,id}={}){
     const amt=()=>parseMoney($('#xAmt',sh).value,tr.currency);
     const pickOne=(id,key)=>$(id,sh).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;st[key]=b.dataset.v;$$(id+' button',sh).forEach(x=>x.classList.toggle('on',x===b));if(key==='type')drawSplit();validate()});
     pickOne('#xCat','category');pickOne('#xPayer','payerId');pickOne('#xType','type');
+    const preBox=$('#xPreBox',sh);$('#xPre',sh).onclick=e=>{st.pre=!st.pre;e.currentTarget.setAttribute('aria-checked',st.pre);preBox.classList.toggle('on',st.pre)};
+    $('#xPreKind',sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;const old=st.preKind;st.preKind=b.dataset.v;$$('#xPreKind button',sh).forEach(x=>x.classList.toggle('on',x===b));
+      st.category=PRE_KINDS[st.preKind].cat;$$('#xCat button',sh).forEach(x=>x.classList.toggle('on',x.dataset.v===st.category));
+      const ti=$('#xTitle',sh);if(!ti.value.trim()||ti.value===preTitle(old,tr)){ti.value=preTitle(st.preKind,tr)}validate()};
     function drawSplit(){const w=$('#xSplitWrap',sh);
       if(st.type==='personal'){w.innerHTML=`<div class="alert ok" style="margin:0">${icon('i-heart','sm')}${esc(t('form.personalHint',{n:memberById(st.payerId).name}))}</div>`;return}
       w.innerHTML=`<div class="stack" style="gap:12px"><div class="field"><span class="flabel">${esc(t('form.split'))}</span><div class="seg" id="xSplit">${['equal','exact','percent'].map(k=>`<button type="button" data-v="${k}" class="${st.split===k?'on':''}">${esc(t('form.split'+k[0].toUpperCase()+k.slice(1)))}</button>`).join('')}</div></div>
@@ -2239,8 +2328,8 @@ function expenseForm({tripId,placeId,id}={}){
     let saving=false;
     $('[data-save]',sh).onclick=e=>{if(saving)return;const {err,s}=validate(true);if(err)return;saving=true;
       const rec={tripId,placeId:$('#xPlace',sh).value||null,title:$('#xTitle',sh).value.trim(),amount:amt(),category:st.category,payerId:st.payerId,type:st.type,split:st.type==='personal'?'equal':st.split,
-        shares:s.shares,date:$('#xDate',sh).value||todayStr(),time:$('#xTime',sh).value||'',note:$('#xNote',sh).value.trim(),updatedAt:new Date().toISOString()};
-      if(existing){Object.assign(db.expenses.find(x=>x.id===existing.id),rec);logAct({tripId,kind:'expense_edit',ref:existing.id,title:rec.title,amount:rec.amount});ui.flashId=existing.id}
+        shares:s.shares,date:$('#xDate',sh).value||todayStr(),time:$('#xTime',sh).value||'',note:$('#xNote',sh).value.trim(),pre:!!st.pre,preKind:st.pre?st.preKind:undefined,updatedAt:new Date().toISOString()};if(!rec.pre)delete rec.preKind;
+      if(existing){const tgt=db.expenses.find(x=>x.id===existing.id);if(!rec.pre)delete tgt.preKind;Object.assign(tgt,rec);logAct({tripId,kind:'expense_edit',ref:existing.id,title:rec.title,amount:rec.amount});ui.flashId=existing.id}
       else{const ne=Object.assign({id:uid('e'),createdAt:new Date().toISOString()},rec);db.expenses.push(ne);logAct({tripId,kind:'expense_add',ref:ne.id,title:rec.title,amount:rec.amount});ui.flashId=ne.id}
       flyCoin(e.currentTarget);haptic(18);api.close();settings.moneyTrip=tripId;saveSettings();commit();toast(t('toast.saved'),'ok')};
     const del=$('[data-del]',sh);if(del)del.onclick=()=>{confirmSheet({title:t('expense.deleteQ',{t:existing.title}),body:t('expense.deleteBody'),ok:t('common.yesDelete'),danger:true,onOk(){
@@ -2462,6 +2551,9 @@ const A={
  installLater:()=>{store.set('triply.installDismissed','1');render(false)},
  addExpense:el=>expenseForm({tripId:el.dataset.trip||(route==='plan'?resolveTrip('planTrip'):route==='home'?resolveTrip('dashTrip'):resolveTrip('moneyTrip')),placeId:el.dataset.place}),
  editExpense:el=>expenseForm({id:el.dataset.id}),
+ preAdd:el=>expenseForm({tripId:el.dataset.trip,preset:{pre:true,preKind:el.dataset.v}}),
+ preList:el=>preListSheet(el.dataset.trip,el.dataset.v),
+ goPre:el=>{const id=el.dataset.id;ui.planDay[id]='pre';settings.planTrip=id;saveSettings();sheetStack.slice().forEach(s=>s.close());if(route!=='plan')go('plan');else render(true)},
  newTrip:()=>tripForm(), editTrip:el=>tripForm(el.dataset.id),
  openTrip:el=>{settings.planTrip=el.dataset.id;saveSettings();go('plan',true)},
  pickPlan:el=>{settings.planTrip=el.dataset.id;saveSettings();render(true)},

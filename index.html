@@ -945,6 +945,83 @@ h1,h2,h3,.ttl,.page-head h1,.hero-scene h1,.trip-hero h1,.pass-txt h2,.j-title,.
 .mm-pre span{font-size:13px;font-weight:600;min-width:0}.mm-pre small{display:block;font-size:11px;font-weight:400;color:var(--ink-2)}
 .pre-tag{display:inline-flex;align-items:center;gap:3px;padding:1px 8px;border-radius:99px;background:var(--coral-soft);color:var(--brand);font-weight:600;font-size:11px;line-height:1.5}
 @media (min-width:700px){.pre-grid{grid-template-columns:repeat(4,1fr)}}
+
+/* bank accounts */
+.bank-chip{display:inline-grid;place-items:center;min-width:44px;height:22px;padding:0 6px;border-radius:7px;background:var(--bk);color:#fff;font:700 10.5px/1 var(--f-display,inherit);letter-spacing:.2px;flex:none}
+.bank-pick{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:6px;margin:6px 0 8px}
+.bank-pick button{display:flex;align-items:center;gap:8px;min-height:40px;padding:6px 8px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font-size:12.5px;line-height:1.3;text-align:left}
+.bank-pick button.on{border-color:var(--brand);box-shadow:0 0 0 3px var(--coral-soft)}
+.acct-f .inp+.inp{margin-top:8px}
+.acct{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:8px 8px 8px 10px;border-radius:14px;background:var(--surface-2);border:1px solid var(--line)}
+.acct-t{min-width:0;line-height:1.35}.acct-t b{display:block;font-size:15px;letter-spacing:.3px}.acct-t small{display:block;font-size:11.5px;color:var(--ink-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.acct-add{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:12px;border:1.5px dashed var(--line-2);background:none;color:var(--ink-2);font-size:12.5px;line-height:1.35}
+.xf-acct{grid-column:1/-1;margin-top:2px}
+.line-cta{display:grid;grid-template-columns:1.5fr 1fr;gap:8px;margin:0 0 12px}.line-cta .btn{width:auto;min-width:0}
+.xf .acct .acct-cp{grid-column:auto!important;width:auto!important;justify-self:end}
+.btn-line{background:#06C755!important;border-color:#06C755!important;color:#fff!important;box-shadow:0 6px 16px rgba(6,199,85,.25)!important}
+.alert.info{background:var(--sunken);color:var(--ink-2)}
+/* bill breakdown */
+.bb-list{display:flex;flex-direction:column;gap:8px}
+.bb-m{border-radius:16px;background:var(--surface-2);border:1px solid var(--line);overflow:hidden}
+.bb-m summary{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:10px 12px;cursor:pointer;list-style:none}
+.bb-m summary::-webkit-details-marker{display:none}
+.bb-n{min-width:0;line-height:1.35}.bb-n b{display:block;font-size:14px}.bb-n small{font-size:11.5px;color:var(--ink-2)}
+.bb-net{font-weight:700;font-size:15px}.bb-net.pos,.tot.pos{color:var(--ok)}.bb-net.neg,.tot.neg{color:var(--bad)}.bb-net.zero{color:var(--ink-2)}
+.bb-body{padding:0 12px 12px;display:flex;flex-direction:column;gap:4px}
+.bb-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:8px 10px;border-radius:12px;background:var(--surface);border:0;text-align:left;color:var(--ink)}
+.bb-it{min-width:0;font-size:13px;line-height:1.4;display:flex;flex-wrap:wrap;align-items:center;gap:4px}.bb-it small{flex-basis:100%;font-size:11px;color:var(--ink-2)}
+.bb-sum{margin-top:6px;padding:8px 10px;border-radius:12px;border:1.5px dashed var(--line-2);font-size:12.5px;display:flex;flex-direction:column;gap:3px}
+.bb-sum>div{display:flex;justify-content:space-between;gap:10px}.bb-sum span{color:var(--ink-2)}.bb-sum .tot{margin-top:4px;padding-top:6px;border-top:1px solid var(--line);font-weight:700}.bb-sum .tot span{color:inherit}
+/* photos */
+.ph-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px}.ph-row.sm{margin-top:6px}.ph-row.sm .ph{width:44px;height:44px}
+.ph{position:relative;width:72px;height:72px;border-radius:12px;overflow:hidden;background:var(--sunken);flex:none;box-shadow:inset 0 0 0 1px var(--line)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}.ph.missing{opacity:.4}
+.ph-open{all:unset;display:block;width:100%;height:100%;cursor:pointer}
+.ph-x{position:absolute;top:3px;right:3px;width:24px;height:24px;border-radius:50%;border:0;background:rgba(30,20,15,.6);color:#fff;display:grid;place-items:center;padding:0}
+.ph-add{width:72px;height:72px;border-radius:12px;border:1.5px dashed var(--line-2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--ink-2);font-size:11px;line-height:1.3;text-align:center;cursor:pointer;background:var(--surface-2)}
+.ph-tag{display:inline-flex;align-items:center;gap:2px;font-size:11px;color:var(--ink-2)}
+.ph-view img{width:100%;max-height:68vh;object-fit:contain;border-radius:14px;background:var(--sunken);display:block}.ph-nav{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:8px}
+/* deposits */
+.dep-sec{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:18px;border:1.5px dashed var(--line-2)}
+.dep-h{display:flex;justify-content:space-between;align-items:center;gap:10px}.dep-h b{display:block;font-size:14px}.dep-h small{font-size:11.5px;color:var(--ink-2)}
+.dep{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:8px;border-radius:14px;background:var(--surface)}
+.dep.done{opacity:.75}.dep.done .dep-t b{text-decoration:line-through;text-decoration-color:var(--ok)}
+.dep-main{all:unset;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;min-width:0;cursor:pointer}
+.illo.dep-mini{width:52px}.illo.dep-art{width:96px;flex:none}
+.dep-t{min-width:0;line-height:1.35}.dep-t b{display:block;font-size:13px}.dep-t small{display:flex;flex-wrap:wrap;align-items:center;gap:3px;font-size:11px;color:var(--ink-2)}
+.dep-amt{font-weight:700;font-size:14px;text-align:right}.dep-amt small{display:block;font-size:10.5px;color:var(--bad);font-weight:600}
+.dep-btn{white-space:nowrap}
+.dep-pill{display:inline-flex;align-items:center;gap:3px;align-self:flex-start;margin-top:2px;padding:1px 8px;border-radius:99px;background:var(--sunken);font-size:11px;color:var(--ink-2)}
+.dep-hero{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:16px;background:var(--surface-2)}.dep-hero b{display:block}.dep-hero small{font-size:12px;color:var(--ink-2)}
+.dep-info{display:flex;flex-direction:column;gap:8px}
+.amount-inp.sm input{font-size:26px}
+.dep-nudge{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;width:100%;margin:0 0 12px;padding:8px 14px 8px 8px;border-radius:18px;border:1.5px solid var(--brand);background:var(--surface);color:var(--ink);text-align:left;line-height:1.35}
+.dep-nudge b{display:block;font-size:13.5px;color:var(--brand)}.dep-nudge small{font-size:11.5px;color:var(--ink-2)}
+@media (max-width:420px){.dep{grid-template-columns:1fr}.dep-btn{justify-self:end}}
+/* image preview */
+.img-prev{max-height:62vh;overflow:auto;border-radius:16px;background:var(--sunken);padding:8px}.img-prev img{width:100%;display:block;border-radius:10px;-webkit-touch-callout:default;user-select:auto}
+#receiptCapture[data-act]{cursor:zoom-in}
+/* LINE summary card (rendered offscreen, then rasterised) */
+.lc-host{position:fixed;left:-10000px;top:0;width:420px;pointer-events:none}
+.lc{width:420px;background:#FFF9F0;color:#3A2A21;font-family:var(--f-body,'Mali',sans-serif);border-radius:28px;overflow:hidden;padding-bottom:16px}
+.lc-top{position:relative;background:#F3E3CC;overflow:hidden}.lc-art{position:relative;height:118px}.lc-art svg{width:100%;height:100%;display:block}
+.lc-hd{padding:12px 18px 2px;background:#FFF9F0;color:#3A2A21;line-height:1.35}.lc-hd small{color:#A63D2A;font-weight:700}.lc-hd small{font-size:10px;letter-spacing:1.2px;opacity:.9}.lc-hd b{display:block;font-size:21px}.lc-hd span{font-size:12px}
+.lc-tot{display:flex;gap:8px;padding:14px 16px 4px}.lc-tot>div{flex:1;padding:10px 12px;border-radius:16px;background:#F3E8D7;line-height:1.3}.lc-tot>div:first-child{background:#A63D2A;color:#fff}
+.lc-tot small{display:block;font-size:10.5px;opacity:.8}.lc-tot b{font-size:17px}
+.lc-sec{margin:14px 18px 8px;font-weight:700;font-size:13px;color:#A63D2A;letter-spacing:.3px;display:flex;align-items:center;gap:8px}.lc-sec::after{content:'';flex:1;border-top:1.5px dashed #D9C5A7}
+.lc-x{margin:0 16px 10px;padding:12px;border-radius:18px;background:#fff;border:1.5px solid #E9DBC5}
+.lc-xr{display:flex;align-items:center;gap:10px}.lc-arrow{flex:1;position:relative;text-align:center}.lc-arrow b{font-size:20px;color:#A63D2A;display:block;line-height:1.3}
+.lc-arrow i{display:block;height:2px;background:#D9C5A7;margin:4px 6px 0;position:relative}.lc-arrow i::after{content:'';position:absolute;right:-2px;top:-4px;border:5px solid transparent;border-left:8px solid #D9C5A7;border-right:0}
+.lc-xn{display:flex;justify-content:space-between;font-size:12px;color:#7D6A5C;margin-top:4px;line-height:1.35}.lc-xn b{color:#3A2A21}
+.lc-acct{display:flex;align-items:center;gap:10px;margin-top:10px;padding:8px 10px;border-radius:12px;background:#FBF3E7;line-height:1.3}.lc-acct b{display:block;font-size:17px;letter-spacing:.5px}.lc-acct small{font-size:11px;color:#7D6A5C}.lc-acct.none{font-size:12px;color:#B4A291;justify-content:center}
+.lc-done{margin:0 16px;padding:14px;border-radius:16px;background:#E6F0DF;color:#3E7A3A;text-align:center;font-weight:700}
+.lc-tbl{margin:0 16px;border-radius:16px;background:#fff;border:1.5px solid #E9DBC5;padding:4px 10px}
+.lc-tr{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:6px;align-items:center;padding:7px 0;font-size:12.5px;border-top:1px dashed #E9DBC5;line-height:1.3}.lc-tr:first-child{border-top:0}
+.lc-tr.h{font-size:10.5px;color:#7D6A5C}.lc-tr span:not(.nm){text-align:right}.lc-tr .nm{display:flex;align-items:center;gap:6px;font-weight:700;min-width:0}.lc-tr .pos{color:#3E7A3A;font-weight:700}.lc-tr .neg{color:#B23A2A;font-weight:700}
+.lc-items{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin:10px 16px 0}.lc-it{padding:8px 10px;border-radius:14px;background:#FBF3E7;font-size:11px;line-height:1.35}.lc-it>b{display:block;font-size:11.5px;margin-bottom:3px;color:#A63D2A}
+.lc-it>div{display:flex;justify-content:space-between;gap:6px}.lc-it>div span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.lc-it .more{color:#B4A291}
+.lc-dep{margin:10px 16px 0;padding:8px 10px;border-radius:12px;border:1.5px dashed #D9C5A7;font-size:11.5px;color:#7D6A5C;line-height:1.5}
+.lc-ft{text-align:center;font-size:11px;color:#B4A291;margin-top:12px}
 </style>
 
 <div class="splash" id="splash" aria-hidden="true"><div class="sp"><img id="splashIcon" alt=""><b id="splashWord"></b><small id="splashTag"></small></div></div>
@@ -1090,6 +1167,21 @@ th:{
  'pre.note':'ยอดพวกนี้รวมอยู่ในหน้าเคลียร์เงินแล้ว ไม่ต้องคิดแยก','pre.hint':'แตะช่องด้านบนเพื่อใส่ค่าตั๋ว ที่พัก หรือรถเช่า แล้วเลือกว่าใครจ่าย',
  'pre.toggle':'จ่ายก่อนเดินทาง','pre.toggleSub':'ตั๋ว ที่พัก รถเช่า มัดจำ','pre.badge':'ก่อนเดินทาง','pre.mm':'จ่ายก่อนเดินทาง',
  'est.inclPre':'รวมตั๋วและที่พักที่จ่ายแล้ว','tr.fromPre':'จ่ายแล้ว {x}',
+ 'acct.title':'บัญชีรับเงิน','acct.sub':'เพื่อนจะเห็นตอนต้องโอนคืน กดคัดลอกเลขได้เลย','acct.num':'เลขบัญชี','acct.numPh':'เลขบัญชี / เบอร์พร้อมเพย์','acct.name':'ชื่อบัญชี','acct.namePh':'ชื่อบัญชี (ไม่ใส่ก็ได้)',
+ 'acct.errBank':'เลือกธนาคารก่อนนะ','acct.copy':'คัดลอก','acct.copied':'คัดลอกแล้ว','acct.copiedX':'คัดลอกเลขบัญชี {n} แล้ว','acct.addFor':'ใส่เลขบัญชีของ {n}',
+ 'photo.label':'รูปบิล / สลิป','photo.add':'แนบรูปบิล','photo.more':'เพิ่มรูป','photo.hint':'ถ่ายหรือเลือกจากอัลบั้ม เก็บไว้ในเครื่องนี้เท่านั้น','photo.fail':'แนบรูปไม่สำเร็จ','photo.view':'ดูรูป','photo.title':'รูปบิล','photo.save':'บันทึกรูป',
+ 'dep.sec':'มัดจำ (ได้คืน)','dep.secSub':'ไม่นับเป็นค่าใช้จ่าย ไม่เอาไปหาร','dep.add':'มัดจำ','dep.new':'เพิ่มเงินมัดจำ','dep.edit':'แก้เงินมัดจำ','dep.short':'มัดจำ',
+ 'dep.explain':'เงินมัดจำจะได้คืนตอนคืนรถหรือเช็กเอาต์ เลยไม่นับรวมในยอดหาร ถ้าโดนหักค่อยกดบันทึกตอนรับคืน','dep.kind':'มัดจำอะไร','dep.payer':'ใครวางมัดจำ','dep.refundDate':'วันที่ได้คืน','dep.notePh':'เช่น คืนรถที่สนามบิน ต้องเติมน้ำมันเต็มถัง',
+ 'dep.title.car':'มัดจำรถเช่า','dep.title.stay':'มัดจำที่พัก','dep.title.other':'มัดจำ','dep.delQ':'ลบเงินมัดจำนี้?','dep.delBody':'รายการหักมัดจำที่บันทึกไว้จะถูกลบด้วย',
+ 'dep.paidShort':'{n} วางไว้','dep.backOn':'ได้คืน {d}','dep.gotOn':'ได้คืนแล้ว {d}','dep.ded':'หัก {x}','dep.got':'ได้คืนแล้ว','dep.markGot':'ได้คืนแล้ว','dep.empty':'มีมัดจำรถหรือที่พักไหม ใส่ไว้จะได้ไม่ลืมทวงคืน','dep.pill':'มัดจำ {x}',
+ 'dep.refundTitle':'รับเงินมัดจำคืน','dep.paidBy':'{n} วางไว้ {x}','dep.gotBack':'ได้คืนมาเท่าไหร่','dep.to':'เงินคืนเข้าใคร','dep.confirm':'บันทึกรับคืน','dep.done':'บันทึกรับมัดจำคืนแล้ว',
+ 'dep.dedNote':'โดนหัก {x} → บันทึกเป็นค่าใช้จ่ายร่วม หาร {n} คนให้อัตโนมัติ','dep.otherNote':'{a} รับเงินคืนแทน → {a} ต้องโอน {x} ให้ {b} (รวมในหน้าเคลียร์เงินแล้ว)','dep.fullNote':'ได้คืนเต็มเข้าบัญชี {n} ไม่กระทบการหาร',
+ 'dep.dedTitle':'หักจาก{t}','dep.dedAuto':'บันทึกอัตโนมัติตอนรับมัดจำคืน','dep.undoQ':'ยกเลิกการรับคืน?','dep.undoBody':'จะกลับเป็นสถานะรอคืน และลบรายการหักมัดจำ (ถ้ามี)','dep.undo':'ยกเลิกการรับคืน',
+ 'dep.nudgeToday':'วันนี้คืนรถ อย่าลืมรับมัดจำคืน','dep.nudgeLate':'ยังไม่ได้รับมัดจำคืน','dep.nudgeSub':'{t} {x} · {n} วางไว้','dep.settleNote':'{t} {x} ยังรอคืน ({n} วางไว้) ไม่นับในยอดหาร',
+ 'bb.title':'ใครจ่ายอะไรไปบ้าง','bb.sub':'แตะชื่อเพื่อดูรายการที่จ่าย','bb.line':'จ่าย {a} · ส่วนที่ต้องออก {b}','bb.none':'ยังไม่ได้จ่ายอะไร','bb.paid':'จ่ายไป','bb.personal':'ของส่วนตัว','bb.share':'ส่วนที่ต้องออก','bb.dep':'เงินมัดจำที่รับแทน',
+ 'line.make':'ทำรูปสรุปส่ง LINE','line.copyTxt':'คัดลอกข้อความ','line.title':'สรุปเคลียร์เงิน','line.kicker':'สรุปเคลียร์เงิน','line.people':'{n} คน','line.total':'ใช้ไปทั้งหมด','line.pp':'เฉลี่ยต่อคน','line.xfers':'ใครโอนให้ใคร',
+ 'line.payTo':'โอนให้','line.noAcct':'{n} ยังไม่ได้ใส่เลขบัญชี','line.net':'สุทธิ','line.paidBy':'{n} จ่าย','line.more':'+ อีก {n} รายการ','line.foot':'สรุปจาก Triply · {d}','line.hold':'กดค้างที่รูปเพื่อบันทึกหรือส่งต่อได้',
+ 'line.send':'ส่งเข้า LINE','line.copiedOpen':'คัดลอกข้อความแล้ว กำลังเปิด LINE','rc.view':'ดูเป็นรูป','err.view':'หน้านี้เปิดไม่ขึ้น','err.fix':'รีเซ็ตค่าสลิปแล้วกลับหน้าแรก',
  'est.transport':'ค่าเดินทางร่วม','est.total':'รวมทั้งทริป','est.excl':'ไม่รวมตั๋วเครื่องบินและที่พัก','est.target':'งบเป้าหมาย','est.verify':'{n} รายการยังไม่ยืนยัน','est.editTransport':'ใส่ค่าเดินทางร่วม (รถเช่า น้ำมัน)',
  'est.mayOver':'ถ้าใช้เต็มงบสูงสุดอาจเกินเป้า','est.fits':'อยู่ในเป้า',
  'tr.title':'ค่าเดินทางร่วมกัน','tr.travelers':'จำนวนผู้เดินทาง (ใช้หารงบ)','tr.car':'รถเช่า (ทั้งคัน)','tr.fuel':'น้ำมัน','tr.parking':'ที่จอดรถและค่าใช้จ่ายระหว่างทาง','tr.actualCar':'ราคาเช่ารถจริง','tr.actualFuel':'ค่าน้ำมันจริง',
@@ -1183,6 +1275,21 @@ ja:{
  'pre.note':'精算画面にすでに含まれています','pre.hint':'上の枠をタップして航空券・宿・レンタカーを入力し、誰が払ったか選んでください',
  'pre.toggle':'出発前の支払い','pre.toggleSub':'航空券・宿・レンタカー・前金','pre.badge':'出発前','pre.mm':'出発前の支払い',
  'est.inclPre':'支払済みの航空券・宿を含む','tr.fromPre':'支払済 {x}',
+ 'acct.title':'受取口座','acct.sub':'精算のとき友だちに表示され、番号をコピーできます','acct.num':'口座番号','acct.numPh':'口座番号 / PromptPay番号','acct.name':'口座名義','acct.namePh':'口座名義（任意）',
+ 'acct.errBank':'銀行を選んでください','acct.copy':'コピー','acct.copied':'コピーしました','acct.copiedX':'{n}の口座番号をコピーしました','acct.addFor':'{n}の口座を追加',
+ 'photo.label':'レシート写真','photo.add':'レシートを添付','photo.more':'写真を追加','photo.hint':'撮影またはアルバムから。この端末にのみ保存されます','photo.fail':'写真を添付できませんでした','photo.view':'写真を見る','photo.title':'レシート','photo.save':'画像を保存',
+ 'dep.sec':'デポジット（返金あり）','dep.secSub':'割り勘には含めません','dep.add':'デポジット','dep.new':'デポジットを追加','dep.edit':'デポジットを編集','dep.short':'デポジット',
+ 'dep.explain':'デポジットは返却時に戻るので割り勘に含めません。差し引かれた場合は返金時に記録してください','dep.kind':'種類','dep.payer':'支払った人','dep.refundDate':'返金日','dep.notePh':'例：空港で返却、満タン返し',
+ 'dep.title.car':'レンタカーのデポジット','dep.title.stay':'宿のデポジット','dep.title.other':'デポジット','dep.delQ':'このデポジットを削除しますか？','dep.delBody':'差し引き分の記録も削除されます',
+ 'dep.paidShort':'{n}が支払い','dep.backOn':'{d}に返金','dep.gotOn':'{d}に返金済み','dep.ded':'差引 {x}','dep.got':'返金済み','dep.markGot':'返金を受けた','dep.empty':'レンタカーや宿のデポジットを入れておくと返金を忘れません','dep.pill':'デポジット {x}',
+ 'dep.refundTitle':'デポジットの返金','dep.paidBy':'{n}が{x}支払い','dep.gotBack':'戻ってきた金額','dep.to':'誰が受け取った？','dep.confirm':'返金を記録','dep.done':'返金を記録しました',
+ 'dep.dedNote':'{x}差し引き → 共有の支出として{n}人で割り勘します','dep.otherNote':'{a}が受け取り → {a}は{b}に{x}を返します（精算に反映済み）','dep.fullNote':'全額{n}に返金。割り勘に影響なし',
+ 'dep.dedTitle':'{t}からの差し引き','dep.dedAuto':'返金時に自動記録','dep.undoQ':'返金の記録を取り消しますか？','dep.undoBody':'返金待ちに戻し、差し引き分の記録を削除します','dep.undo':'取り消す',
+ 'dep.nudgeToday':'今日は車の返却日。デポジットを受け取ろう','dep.nudgeLate':'デポジットがまだ戻っていません','dep.nudgeSub':'{t} {x}・{n}が支払い','dep.settleNote':'{t} {x}は返金待ち（{n}が支払い）割り勘には含めません',
+ 'bb.title':'誰が何を払った？','bb.sub':'名前をタップして明細を表示','bb.line':'支払 {a}・負担 {b}','bb.none':'まだ支払いなし','bb.paid':'支払い','bb.personal':'個人の買い物','bb.share':'負担分','bb.dep':'代わりに受け取った返金',
+ 'line.make':'LINE用の画像を作る','line.copyTxt':'テキストをコピー','line.title':'精算まとめ','line.kicker':'精算まとめ','line.people':'{n}人','line.total':'合計','line.pp':'1人あたり','line.xfers':'送金リスト',
+ 'line.payTo':'→','line.noAcct':'{n}の口座が未登録','line.net':'差額','line.paidBy':'{n}の支払い','line.more':'ほか{n}件','line.foot':'Triplyで作成・{d}','line.hold':'画像を長押しで保存・共有できます',
+ 'line.send':'LINEで送る','line.copiedOpen':'テキストをコピーしました。LINEを開きます','rc.view':'画像で見る','err.view':'このページを表示できません','err.fix':'レシート設定をリセットしてホームへ',
  'est.transport':'共有の交通費','est.total':'旅行全体','est.excl':'航空券・宿泊費は含みません','est.target':'目標予算','est.verify':'未確認 {n}件','est.editTransport':'交通費を入力（レンタカー・ガソリン）',
  'est.mayOver':'上限まで使うと目標を超える可能性','est.fits':'目標内',
  'tr.title':'共有の交通費','tr.travelers':'人数（予算の割り勘用）','tr.car':'レンタカー（1台）','tr.fuel':'ガソリン','tr.parking':'駐車場・道中の費用','tr.actualCar':'実際のレンタカー代','tr.actualFuel':'実際のガソリン代',
@@ -1370,18 +1477,169 @@ function preSection(tr){const n=travelersOf(tr),cur=tr.currency;const list=preOf
   const tile=k=>{const items=list.filter(e=>(e.preKind||'other')===k);const sum=items.reduce((s,e)=>s+e.amount,0);
     return `<button class="pre-tile ${items.length?'has':''}" data-act="${items.length?'preList':'preAdd'}" data-trip="${tr.id}" data-v="${k}">
       ${illoSVG(PRE_KINDS[k].illo,'pre-art')}<span class="pre-txt"><b>${esc(t('pre.'+k))}</b>${items.length?`<span class="num pre-amt">${money(sum,cur)}</span>
-      <span class="pre-who">${[...new Set(items.map(e=>e.payerId))].map(id=>av(memberById(id),'xs')).join('')}<small>${esc(items.length>1?t('pre.items',{n:items.length}):preSplitText(items[0],tr))}</small></span>`
-      :`<span class="pre-empty">${icon('i-plus','sm')}${esc(t('pre.add'))}</span>`}</span></button>`};
+      <span class="pre-who">${[...new Set(items.map(e=>e.payerId))].map(id=>av(memberById(id),'xs')).join('')}<small>${esc(items.length>1?t('pre.items',{n:items.length}):preSplitText(items[0],tr))}</small>${items.some(e=>(e.photos||[]).length)?`<span class="ph-tag">${icon('i-image','sm')}${items.reduce((s,e)=>s+(e.photos||[]).length,0)}</span>`:''}</span>`
+      :`<span class="pre-empty">${icon('i-plus','sm')}${esc(t('pre.add'))}</span>`}${(()=>{const dd=depositsOf(tr).filter(d=>d.kind===k);return dd.length?`<span class="dep-pill">${icon('i-undo','sm')}${esc(t('dep.pill',{x:money(dd.reduce((s,d)=>s+d.amount,0),cur)}))}</span>`:''})()}</span></button>`};
   return `<div class="pre-sec">
    <div class="pre-grid">${['flight','stay','car','other'].map(tile).join('')}</div>
+   ${depositBlock(tr)}
    ${list.length?`<div class="pre-sum"><div class="pre-tot"><div><small>${esc(t('pre.total'))}</small><b class="num">${money(total,cur)}</b></div><div><small>${esc(t('pre.pp'))} (${n})</small><b class="num">${money(Math.round(total/n),cur)}</b></div></div>
     <div class="pre-mem">${Object.entries(per).filter(([,p])=>p.paid||p.share).map(([id,p])=>{const m=memberById(id),d=p.paid-p.share;return `<div class="pre-m">${av(m,'sm')}<span class="nm"><b>${esc(m.name)}</b><small class="num">${esc(t('pre.paidX',{x:money(p.paid,cur)}))} · ${esc(t('pre.shareX',{x:money(p.share,cur)}))}</small></span><span class="num ${d>0?'pos':d<0?'neg':''}">${d>0?'+':d<0?'−':''}${money(Math.abs(d),cur)}</span></div>`}).join('')}</div>
     <div class="muted tiny">${icon('i-swap','sm')} ${esc(t('pre.note'))}</div></div>`:`<p class="muted tiny" style="margin:0">${esc(t('pre.hint'))}</p>`}
   </div>`}
 function preListSheet(tid,kind){const tr=tripById(tid);const items=preOf(tid).filter(e=>(e.preKind||'other')===kind);
-  openSheet({title:esc(t('pre.'+kind)),small:true,body:items.map(e=>`<button class="exp" data-act="editExpense" data-id="${e.id}">${catIc(e.category)}<div style="min-width:0"><div class="t">${esc(e.title)}</div><div class="m">${av(memberById(e.payerId),'xs')}<span>${esc(memberById(e.payerId).name)}</span><span class="sep">•</span><span>${esc(preSplitText(e,tr))}</span></div>${e.note?`<div class="m">${esc(firstLine(e.note))}</div>`:''}</div><div class="a"><b class="num">${money(e.amount,tr.currency)}</b></div></button>`).join(''),
+  openSheet({title:esc(t('pre.'+kind)),small:true,body:items.map(e=>`<button class="exp" data-act="editExpense" data-id="${e.id}">${catIc(e.category)}<div style="min-width:0"><div class="t">${esc(e.title)}</div><div class="m">${av(memberById(e.payerId),'xs')}<span>${esc(memberById(e.payerId).name)}</span><span class="sep">•</span><span>${esc(preSplitText(e,tr))}</span></div>${e.note?`<div class="m">${esc(firstLine(e.note))}</div>`:''}${(e.photos||[]).length?`<div class="ph-row sm">${e.photos.map(id=>`<span class="ph"><img data-ph="${id}" alt=""></span>`).join('')}</div>`:''}</div><div class="a"><b class="num">${money(e.amount,tr.currency)}</b></div></button>`).join(''),
    foot:`<button class="btn btn-soft" data-close>${esc(t('common.close'))}</button><button class="btn btn-primary" data-preadd>${icon('i-plus','sm')}${esc(t('pre.addMore'))}</button>`,
    onMount(sh,api){sh.addEventListener('click',e=>{if(e.target.closest('[data-act="editExpense"]'))api.close();if(e.target.closest('[data-preadd]')){api.close();setTimeout(()=>expenseForm({tripId:tid,preset:{pre:true,preKind:kind}}),280)}})}})}
+
+/* =========================================================
+   BANK ACCOUNTS · BILL PHOTOS · DEPOSITS · SETTLE SUMMARY · LINE IMAGE
+   ========================================================= */
+const BANKS=[['kbank','กสิกรไทย','KBank','#138F2D'],['scb','ไทยพาณิชย์','SCB','#4E2A84'],['bbl','กรุงเทพ','BBL','#1E4598'],['ktb','กรุงไทย','KTB','#1BA5E1'],
+ ['bay','กรุงศรี','Krungsri','#D9A400'],['ttb','ทีทีบี','ttb','#0050F0'],['gsb','ออมสิน','GSB','#EB198D'],['baac','ธ.ก.ส.','BAAC','#4B9B3A'],['uob','ยูโอบี','UOB','#0B3B7C'],
+ ['cimb','ซีไอเอ็มบี','CIMB','#7E2F36'],['kkp','เกียรตินาคินภัทร','KKP','#635CA5'],['lhb','แลนด์ แอนด์ เฮ้าส์','LH Bank','#6D6E71'],['pp','พร้อมเพย์','PromptPay','#113566']];
+const bankOf=k=>BANKS.find(b=>b[0]===k);
+const bankName=k=>{const b=bankOf(k);return b?(settings.lang==='ja'?b[2]:b[1]):''};
+const digits=s=>String(s||'').replace(/\D/g,'');
+function fmtAcct(num,bank){const d=digits(num);if(!d)return '';
+  if(bank==='pp'&&d.length===10)return d.replace(/(\d{3})(\d{3})(\d{4})/,'$1-$2-$3');
+  if(d.length===13)return d.replace(/(\d)(\d{4})(\d{5})(\d{2})(\d)/,'$1-$2-$3-$4-$5');
+  if(d.length===10)return d.replace(/(\d{3})(\d)(\d{5})(\d)/,'$1-$2-$3-$4');
+  if(d.length===12)return d.replace(/(\d{3})(\d{6})(\d{3})/,'$1-$2-$3');return d}
+const bankChip=(k,cls='')=>{const b=bankOf(k);return b?`<span class="bank-chip ${cls}" style="--bk:${b[3]}">${esc(b[2])}</span>`:''};
+const hasAcct=m=>m&&m.bank&&digits(m.acct).length>=6;
+function copyText(s,okMsg){const done=()=>{toast(okMsg||t('acct.copied'),'ok');haptic(10)};
+  const fb=()=>{try{const ta=document.createElement('textarea');ta.value=s;ta.setAttribute('readonly','');ta.style.cssText='position:fixed;top:-100px;opacity:0';document.body.appendChild(ta);ta.select();ta.setSelectionRange(0,s.length);const ok=document.execCommand('copy');ta.remove();ok?done():toast(t('rc.copyFail'),'warn')}catch(e){toast(t('rc.copyFail'),'warn')}};
+  try{if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(s).then(done,fb);else fb()}catch(e){fb()}}
+function acctLine(m,{copy=true,add=true}={}){
+  if(!hasAcct(m))return add?`<button class="acct-add" data-act="memEdit" data-id="${m.id}">${icon('i-plus','sm')}${esc(t('acct.addFor',{n:m.name}))}</button>`:'';
+  return `<div class="acct">${bankChip(m.bank)}<span class="acct-t"><b class="num">${esc(fmtAcct(m.acct,m.bank))}</b><small>${esc(bankName(m.bank))}${m.acctName?' · '+esc(m.acctName):''}</small></span>${copy?`<button class="btn btn-soft btn-sm acct-cp" data-act="copyAcct" data-id="${m.id}">${icon('i-copy','sm')}${esc(t('acct.copy'))}</button>`:''}</div>`}
+
+/* ---------- bill photos: IndexedDB (keeps localStorage small) ---------- */
+const PH={db:null,urls:{},open(){if(this.db)return this.db;this.db=new Promise((res,rej)=>{try{const r=indexedDB.open('triply-photos',1);r.onupgradeneeded=()=>r.result.createObjectStore('p');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)}catch(e){rej(e)}});return this.db},
+ async tx(mode,fn){const d=await this.open();return new Promise((res,rej)=>{const tx=d.transaction('p',mode);const st=tx.objectStore('p');const r=fn(st);tx.oncomplete=()=>res(r&&r.result);tx.onerror=()=>rej(tx.error)})},
+ put(id,blob){return this.tx('readwrite',s=>s.put(blob,id))},
+ async url(id){if(this.urls[id])return this.urls[id];const b=await this.tx('readonly',s=>s.get(id));if(!b)return null;return this.urls[id]=URL.createObjectURL(b)},
+ del(id){if(this.urls[id]){URL.revokeObjectURL(this.urls[id]);delete this.urls[id]}return this.tx('readwrite',s=>s.delete(id)).catch(()=>{})},
+ async gc(){try{const keep=new Set();db.expenses.forEach(e=>(e.photos||[]).forEach(p=>keep.add(p)));db.trips.forEach(tr=>(tr.deposits||[]).forEach(d=>(d.photos||[]).forEach(p=>keep.add(p))));
+   const keys=await this.tx('readonly',s=>s.getAllKeys());(keys||[]).filter(k=>!keep.has(k)).forEach(k=>this.del(k))}catch(e){}}};
+function hydratePhotos(root){$$('img[data-ph]:not([data-ok])',root||document).forEach(img=>{img.dataset.ok='1';PH.url(img.dataset.ph).then(u=>{if(u)img.src=u;else img.closest('.ph')?.classList.add('missing')}).catch(()=>{})})}
+new MutationObserver(ms=>{for(const m of ms)for(const n of m.addedNodes)if(n.nodeType===1&&(n.matches?.('img[data-ph]')||n.querySelector?.('img[data-ph]')))hydratePhotos(n)}).observe(document.body,{childList:true,subtree:true});
+function compressImage(file,maxW=1500,q=.8){return new Promise((res,rej)=>{const u=URL.createObjectURL(file);const img=new Image();img.onerror=()=>{URL.revokeObjectURL(u);rej(new Error('img'))};
+  img.onload=()=>{const sc=Math.min(1,maxW/Math.max(img.width,img.height));const c=document.createElement('canvas');c.width=Math.round(img.width*sc);c.height=Math.round(img.height*sc);
+    const g=c.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,c.width,c.height);g.drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(u);c.toBlob(b=>b?res(b):rej(new Error('blob')),'image/jpeg',q)};img.src=u})}
+const phThumb=(id,removable)=>`<span class="ph" data-phid="${id}"><button type="button" class="ph-open" data-phview="${id}" aria-label="${esc(t('photo.view'))}"><img data-ph="${id}" alt=""></button>${removable?`<button type="button" class="ph-x" data-phdel="${id}" aria-label="${esc(t('form.delete'))}">${icon('i-x','sm')}</button>`:''}</span>`;
+/* photo field used by expense + deposit forms; returns live array */
+function photoField(sh,host,list){const draw=()=>{host.innerHTML=`<div class="ph-row">${list.map(id=>phThumb(id,true)).join('')}<label class="ph-add">${icon('i-image')}<span>${esc(t(list.length?'photo.more':'photo.add'))}</span><input type="file" accept="image/*" multiple hidden></label></div><small class="muted tiny">${esc(t('photo.hint'))}</small>`;
+  $('input',host).onchange=async e=>{const files=[...e.target.files].slice(0,6);for(const f of files){try{const b=await compressImage(f);const id=uid('ph');await PH.put(id,b);list.push(id)}catch(err){toast(t('photo.fail'),'bad')}}draw()}};
+  host.addEventListener('click',e=>{const d=e.target.closest('[data-phdel]');if(d){const id=d.dataset.phdel;list.splice(list.indexOf(id),1);draw();return}const v=e.target.closest('[data-phview]');if(v)photoViewer(list,v.dataset.phview)});
+  draw();return list}
+function photoViewer(list,start){let i=Math.max(0,list.indexOf(start));
+  openSheet({title:esc(t('photo.title')),body:`<div class="ph-view"><img id="phBig" alt=""><div class="ph-nav">${list.length>1?`<button class="btn btn-soft btn-sm" data-prev>‹</button><span class="num" id="phIdx"></span><button class="btn btn-soft btn-sm" data-next>›</button>`:''}</div></div>`,
+   foot:`<button class="btn btn-soft" data-close>${esc(t('common.close'))}</button><button class="btn btn-primary" data-save>${icon('i-down','sm')}${esc(t('photo.save'))}</button>`,
+   onMount(sh){const show=async()=>{const u=await PH.url(list[i]);$('#phBig',sh).src=u||'';const ix=$('#phIdx',sh);if(ix)ix.textContent=(i+1)+' / '+list.length};show();
+    sh.addEventListener('click',e=>{if(e.target.closest('[data-prev]')){i=(i-1+list.length)%list.length;show()}if(e.target.closest('[data-next]')){i=(i+1)%list.length;show()}});
+    $('[data-save]',sh).onclick=async()=>{const b=await PH.tx('readonly',s=>s.get(list[i]));if(b)offerFile('bill-'+(i+1)+'.jpg',b,null,'image/jpeg')}}})}
+
+/* ---------- deposits (money that comes back — never part of the split) ---------- */
+const depositsOf=tr=>(tr&&tr.deposits)||[];
+const depPending=tr=>depositsOf(tr).filter(d=>d.status!=='refunded');
+function depositForm(tid,id,kind){const tr=tripById(tid);if(!tr)return;tr.deposits=tr.deposits||[];const ex=id?tr.deposits.find(d=>d.id===id):null;const mem=tripMembers(tr);
+  const st=ex?JSON.parse(JSON.stringify(ex)):{kind:kind||'car',title:'',amount:0,payerId:tr.memberIds.includes(settings.me)?settings.me:tr.memberIds[0],refundDate:tr.end,note:'',photos:[],status:'pending'};
+  st.photos=st.photos||[];if(!st.title)st.title=t('dep.title.'+st.kind);
+  const body=`<div class="alert info" style="margin:0">${icon('i-undo','sm')}${esc(t('dep.explain'))}</div>
+   <div class="amount-inp"><span>${SYM[tr.currency]||''}</span><input id="dAmt" inputmode="decimal" placeholder="0" value="${esc(toInput(st.amount,tr.currency))}" autofocus aria-label="${esc(t('form.amount'))}"></div>
+   <div class="field"><span class="flabel">${esc(t('dep.kind'))}</span><div class="pick" id="dKind">${['car','stay','other'].map(k=>`<button type="button" class="noav ${st.kind===k?'on':''}" data-v="${k}">${icon(PRE_KINDS[k].ic,'sm')} ${esc(t('pre.'+k))}</button>`).join('')}</div></div>
+   <div class="field"><label for="dTitle">${esc(t('form.title'))}</label><input class="inp" id="dTitle" value="${esc(st.title)}"></div>
+   <div class="field"><span class="flabel">${esc(t('dep.payer'))}</span><div class="pick" id="dPayer">${mem.map(m=>`<button type="button" class="${st.payerId===m.id?'on':''}" data-v="${m.id}">${av(m,'sm')}${esc(m.name)}</button>`).join('')}</div></div>
+   <div class="field"><label for="dDate">${esc(t('dep.refundDate'))}</label><input class="inp" type="date" id="dDate" value="${esc(st.refundDate||tr.end)}"></div>
+   <div class="field"><span class="flabel">${esc(t('photo.label'))}</span><div id="dPh"></div></div>
+   <div class="field"><label for="dNote">${esc(t('form.note'))}</label><input class="inp" id="dNote" value="${esc(st.note||'')}" placeholder="${esc(t('dep.notePh'))}"></div><div class="err" id="dErr" role="alert"></div>`;
+  openSheet({title:esc(ex?t('dep.edit'):t('dep.new')),body,foot:`${ex?`<button class="btn btn-danger btn-icon" data-del style="flex:none" aria-label="${esc(t('form.delete'))}">${icon('i-trash')}</button>`:''}<button class="btn btn-soft" data-close>${esc(t('form.cancel'))}</button><button class="btn btn-primary" data-save>${esc(t('form.save'))}</button>`,onMount(sh,api){
+    const one=(sel,key,cb)=>$(sel,sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;const old=st[key];st[key]=b.dataset.v;$$(sel+' button',sh).forEach(x=>x.classList.toggle('on',x===b));cb&&cb(old)};
+    one('#dKind','kind',old=>{const ti=$('#dTitle',sh);if(!ti.value.trim()||ti.value===t('dep.title.'+old))ti.value=t('dep.title.'+st.kind)});one('#dPayer','payerId');
+    photoField(sh,$('#dPh',sh),st.photos);
+    $('[data-save]',sh).onclick=()=>{const amount=parseMoney($('#dAmt',sh).value,tr.currency),title=$('#dTitle',sh).value.trim();
+      if(!(amount>0)){$('#dErr',sh).textContent=t('form.errAmount');return}if(!title){$('#dErr',sh).textContent=t('form.errTitle');return}
+      const rec={kind:st.kind,title,amount,payerId:st.payerId,refundDate:$('#dDate',sh).value||tr.end,note:$('#dNote',sh).value.trim(),photos:st.photos};
+      if(ex)Object.assign(tr.deposits.find(d=>d.id===ex.id),rec);else tr.deposits.push(Object.assign({id:uid('d'),status:'pending',createdAt:new Date().toISOString()},rec));
+      logAct({tripId:tid,kind:'expense_add',title:t('dep.short')+' · '+title,amount});api.close();commit();toast(t('toast.saved'),'ok')};
+    const del=$('[data-del]',sh);if(del)del.onclick=()=>confirmSheet({title:t('dep.delQ'),body:t('dep.delBody'),ok:t('common.yesDelete'),danger:true,onOk(){
+      const d=tr.deposits.find(x=>x.id===ex.id);if(d&&d.dedExpId)db.expenses=db.expenses.filter(e=>e.id!==d.dedExpId);tr.deposits=tr.deposits.filter(x=>x.id!==ex.id);(ex.photos||[]).forEach(p=>PH.del(p));api.close();commit();toast(t('toast.deleted'))}})}})}
+function refundSheet(tid,id){const tr=tripById(tid),d=depositsOf(tr).find(x=>x.id===id);if(!d)return;const mem=tripMembers(tr),cur=tr.currency;
+  if(d.status==='refunded'){confirmSheet({title:t('dep.undoQ'),body:t('dep.undoBody'),ok:t('dep.undo'),onOk(){if(d.dedExpId)db.expenses=db.expenses.filter(e=>e.id!==d.dedExpId);Object.assign(d,{status:'pending',refundAmt:0,refundTo:null,refundedAt:null,dedExpId:null});commit();toast(t('toast.saved'))}});return}
+  const st={to:d.payerId};
+  const body=`<div class="dep-hero">${illoSVG(PRE_KINDS[d.kind]?.illo||'car','dep-art')}<div><b>${esc(d.title)}</b><small>${esc(t('dep.paidBy',{n:memberById(d.payerId).name,x:money(d.amount,cur)}))}</small></div></div>
+   <div class="field"><label for="rAmt">${esc(t('dep.gotBack'))}</label><div class="amount-inp sm"><span>${SYM[cur]||''}</span><input id="rAmt" inputmode="decimal" value="${esc(toInput(d.amount,cur))}"></div></div>
+   <div class="field"><span class="flabel">${esc(t('dep.to'))}</span><div class="pick" id="rTo">${mem.map(m=>`<button type="button" class="${st.to===m.id?'on':''}" data-v="${m.id}">${av(m,'sm')}${esc(m.name)}</button>`).join('')}</div></div>
+   <div id="rInfo" class="dep-info"></div>`;
+  openSheet({title:esc(t('dep.refundTitle')),small:true,body,foot:`<button class="btn btn-soft" data-close>${esc(t('form.cancel'))}</button><button class="btn btn-primary" data-save>${icon('i-check','sm')}${esc(t('dep.confirm'))}</button>`,onMount(sh,api){
+    const info=()=>{const got=Math.min(d.amount,parseMoney($('#rAmt',sh).value,cur));const ded=d.amount-got;const lines=[];
+      if(ded>0)lines.push(`<div class="alert warn" style="margin:0">${icon('i-alert','sm')}${esc(t('dep.dedNote',{x:money(ded,cur),n:tr.memberIds.length}))}</div>`);
+      if(st.to!==d.payerId&&got>0)lines.push(`<div class="alert info" style="margin:0">${icon('i-swap','sm')}${esc(t('dep.otherNote',{a:memberById(st.to).name,b:memberById(d.payerId).name,x:money(got,cur)}))}</div>`);
+      if(!lines.length)lines.push(`<div class="alert ok" style="margin:0">${icon('i-heart','sm')}${esc(t('dep.fullNote',{n:memberById(d.payerId).name}))}</div>`);$('#rInfo',sh).innerHTML=lines.join('')};
+    $('#rAmt',sh).oninput=info;$('#rTo',sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;st.to=b.dataset.v;$$('#rTo button',sh).forEach(x=>x.classList.toggle('on',x===b));info()};info();
+    $('[data-save]',sh).onclick=()=>{const got=Math.max(0,Math.min(d.amount,parseMoney($('#rAmt',sh).value,cur)));const ded=d.amount-got;
+      Object.assign(d,{status:'refunded',refundAmt:got,refundTo:st.to,refundedAt:new Date().toISOString()});
+      if(ded>0){const ids=[...tr.memberIds];const e={id:uid('e'),tripId:tid,placeId:null,title:t('dep.dedTitle',{t:d.title}),amount:ded,category:PRE_KINDS[d.kind]?.cat||'other',payerId:d.payerId,type:'shared',split:'equal',shares:splitEqual(ded,ids),date:todayStr()<tr.start?tr.start:todayStr()>tr.end?tr.end:todayStr(),time:nowTime(),note:t('dep.dedAuto'),pre:false,createdAt:new Date().toISOString()};db.expenses.push(e);d.dedExpId=e.id}
+      logAct({tripId:tid,kind:'settle',title:t('dep.short'),from:st.to,to:d.payerId,amount:got});api.close();commit();burst(innerWidth/2,innerHeight/3,40);toast(t('dep.done'),'ok')}}})}
+function depositBlock(tr){const list=depositsOf(tr),cur=tr.currency;
+  return `<div class="dep-sec"><div class="dep-h"><div><b>${esc(t('dep.sec'))}</b><small>${esc(t('dep.secSub'))}</small></div><button class="btn btn-soft btn-sm" data-act="depNew" data-trip="${tr.id}" data-v="car">${icon('i-plus','sm')}${esc(t('dep.add'))}</button></div>
+   ${list.length?list.map(d=>{const m=memberById(d.payerId),done=d.status==='refunded';const late=!done&&todayStr()>(d.refundDate||tr.end);
+     return `<div class="dep ${done?'done':''}"><button class="dep-main" data-act="depEdit" data-trip="${tr.id}" data-id="${d.id}">${illoSVG(PRE_KINDS[d.kind]?.illo||'car','dep-mini')}<span class="dep-t"><b>${esc(d.title)}</b><small>${av(m,'xs')} ${esc(t('dep.paidShort',{n:m.name}))} · ${esc(done?t('dep.gotOn',{d:fmtDate(d.refundedAt.slice(0,10),'short')}):t('dep.backOn',{d:fmtDate(d.refundDate||tr.end,'short')}))}${(d.photos||[]).length?` · ${icon('i-image','sm')}${d.photos.length}`:''}</small></span>
+       <span class="dep-amt num">${money(d.amount,cur)}${done&&d.refundAmt<d.amount?`<small>${esc(t('dep.ded',{x:money(d.amount-d.refundAmt,cur)}))}</small>`:''}</span></button>
+       <button class="btn btn-sm ${done?'btn-ghost':late?'btn-primary':'btn-soft'} dep-btn" data-act="depRefund" data-trip="${tr.id}" data-id="${d.id}">${done?`${icon('i-check','sm')}${esc(t('dep.got'))}`:`${icon('i-undo','sm')}${esc(t('dep.markGot'))}`}</button></div>`}).join('')
+    :`<p class="muted tiny" style="margin:0">${esc(t('dep.empty'))}</p>`}</div>`}
+function depositNudge(){const td=todayStr();const items=[];db.trips.forEach(tr=>depPending(tr).forEach(d=>{const rd=d.refundDate||tr.end;if(td>=rd&&daysBetween(rd,td)<=14)items.push({tr,d})}));
+  if(!items.length)return '';const {tr,d}=items[0];
+  return `<button class="dep-nudge rv" style="--i:0" data-act="depRefund" data-trip="${tr.id}" data-id="${d.id}">${illoSVG(PRE_KINDS[d.kind]?.illo||'car','dep-mini')}<span><b>${esc(td===(d.refundDate||tr.end)?t('dep.nudgeToday'):t('dep.nudgeLate'))}</b><small>${esc(t('dep.nudgeSub',{t:d.title,x:money(d.amount,tr.currency),n:memberById(d.payerId).name}))}</small></span>${icon('i-arrow','sm')}</button>`}
+
+/* ---------- settle summary: who paid what, how it splits ---------- */
+function billBreakdown(c){const tr=c.trip,cur=tr.currency;const ex=c.ex;
+  return `<div class="card rv bbk" style="--i:6"><div class="card-h"><div><div class="ttl">${L('bb.title')}</div><div class="muted tiny">${esc(t('bb.sub'))}</div></div></div>
+   <div class="bb-list">${c.memberIds.map(id=>{const m=memberById(id),p=c.per[id];const mine=ex.filter(e=>e.payerId===id).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
+    const cls=p.net>0?'pos':p.net<0?'neg':'zero';
+    return `<details class="bb-m"><summary>${av(m)}<span class="bb-n"><b>${esc(m.name)}</b><small>${esc(t('bb.line',{a:money(p.paid,cur),b:money(p.owed,cur)}))}</small></span><span class="bb-net ${cls} num">${p.net>0?'+':p.net<0?'−':''}${money(Math.abs(p.net),cur)}</span></summary>
+     <div class="bb-body">${mine.length?mine.map(e=>`<button class="bb-row" data-act="editExpense" data-id="${e.id}"><span class="bb-it">${e.pre?`<span class="pre-tag">${icon(PRE_KINDS[e.preKind||'other'].ic,'sm')}${esc(t('pre.badge'))}</span>`:''}${esc(e.title)}${(e.photos||[]).length?` ${icon('i-image','sm')}`:''}<small>${esc(fmtDate(e.date,'short'))} · ${esc(e.type==='personal'?t('money.self'):preSplitText(e,tr))}</small></span><b class="num">${money(e.amount,cur)}</b></button>`).join(''):`<p class="muted tiny" style="margin:4px 0">${esc(t('bb.none'))}</p>`}
+      <div class="bb-sum"><div><span>${esc(t('bb.paid'))}</span><b class="num">${money(p.paid,cur)}</b></div>${p.personal?`<div><span>${esc(t('bb.personal'))}</span><b class="num">− ${money(p.personal,cur)}</b></div>`:''}<div><span>${esc(t('bb.share'))}</span><b class="num">− ${money(p.owed,cur)}</b></div>${p.sent||p.recv?`<div><span>${esc(t('settle.settledIn'))}</span><b class="num">${money(p.sent-p.recv,cur,{sign:true})}</b></div>`:''}${p.depAdj?`<div><span>${esc(t('bb.dep'))}</span><b class="num">${money(p.depAdj,cur,{sign:true})}</b></div>`:''}
+      <div class="tot ${cls}"><span>${esc(p.net>0?t('settle.get'):p.net<0?t('settle.owe'):t('settle.even'))}</span><b class="num">${money(Math.abs(p.net),cur)}</b></div></div></div></details>`}).join('')}</div></div>`}
+function lineSummaryText(c){const tr=c.trip,cur=tr.currency,M=v=>money(v,cur);
+  let s=`🧾 ${Nplain(tr)}\n${t('line.total')}: ${M(c.total)} · ${t('line.pp')} ${M(Math.round(c.shared/Math.max(1,tr.memberIds.length)))}\n\n`;
+  s+=c.memberIds.map(id=>{const m=memberById(id),p=c.per[id];return `${m.name} ${t('bb.line',{a:M(p.paid),b:M(p.owed)})}`}).join('\n');
+  s+='\n\n'+(c.transfers.length?`💸 ${t('line.xfers')}\n`+c.transfers.map(f=>{const to=memberById(f.to);return `${memberById(f.from).name} → ${to.name} ${M(f.amount)}`+(hasAcct(to)?`\n   ${bankName(to.bank)} ${fmtAcct(to.acct,to.bank)}${to.acctName?' ('+to.acctName+')':''}`:'')}).join('\n'):`✅ ${t('settle.allDone')}`);
+  const dp=depPending(tr);if(dp.length)s+='\n\n'+dp.map(d=>`↩︎ ${d.title} ${M(d.amount)} (${t('dep.backOn',{d:fmtDate(d.refundDate||tr.end,'short')})})`).join('\n');
+  return s+'\n— Triply'}
+function lineCardHTML(c){const tr=c.trip,cur=tr.currency,M=v=>money(v,cur);const n=Math.max(1,tr.memberIds.length);
+  const pre=c.ex.filter(e=>e.pre);
+  return `<div class="lc" id="lcCap"><div class="lc-top"><div class="lc-art">${cmHero?cmHero():''}</div><div class="lc-hd"><small>TRIPLY · ${esc(t('line.kicker'))}</small><b>${esc(Nplain(tr))}</b><span>${esc(fmtRange(tr.start,tr.end))} · ${esc(t('line.people',{n}))}</span></div></div>
+   <div class="lc-tot"><div><small>${esc(t('line.total'))}</small><b class="num">${M(c.total)}</b></div><div><small>${esc(t('line.pp'))}</small><b class="num">${M(Math.round(c.shared/n))}</b></div>${pre.length?`<div><small>${esc(t('pre.tab'))}</small><b class="num">${M(pre.reduce((s,e)=>s+e.amount,0))}</b></div>`:''}</div>
+   <div class="lc-sec">${esc(t('line.xfers'))}</div>
+   ${c.transfers.length?c.transfers.map(f=>{const a=memberById(f.from),b=memberById(f.to);return `<div class="lc-x"><div class="lc-xr">${av(a,'lg')}<span class="lc-arrow"><b class="num">${M(f.amount)}</b><i></i></span>${av(b,'lg')}</div>
+     <div class="lc-xn"><span>${esc(a.name)}</span><span>${esc(t('line.payTo'))} <b>${esc(b.name)}</b></span></div>
+     ${hasAcct(b)?`<div class="lc-acct">${bankChip(b.bank)}<span><b class="num">${esc(fmtAcct(b.acct,b.bank).replace(/-/g,' '))}</b><small>${esc(bankName(b.bank))}${b.acctName?' · '+esc(b.acctName):''}</small></span></div>`:`<div class="lc-acct none">${esc(t('line.noAcct',{n:b.name}))}</div>`}</div>`}).join('')
+    :`<div class="lc-done">${esc(t('settle.allDone'))}</div>`}
+   <div class="lc-sec">${esc(t('bb.title'))}</div>
+   <div class="lc-tbl"><div class="lc-tr h"><span></span><span>${esc(t('bb.paid'))}</span><span>${esc(t('bb.share'))}</span><span>${esc(t('line.net'))}</span></div>
+    ${c.memberIds.map(id=>{const m=memberById(id),p=c.per[id];return `<div class="lc-tr"><span class="nm">${av(m,'sm')}${esc(m.name)}</span><span class="num">${M(p.paidShared)}</span><span class="num">${M(p.owed)}</span><span class="num ${p.net>0?'pos':p.net<0?'neg':''}">${p.net>0?'+':p.net<0?'−':''}${M(Math.abs(p.net))}</span></div>`}).join('')}</div>
+   <div class="lc-items">${c.memberIds.map(id=>{const m=memberById(id);const mine=c.ex.filter(e=>e.payerId===id&&e.type!=='personal').sort((a,b)=>b.amount-a.amount);if(!mine.length)return '';const top=mine.slice(0,6);
+     return `<div class="lc-it"><b>${esc(t('line.paidBy',{n:m.name}))}</b>${top.map(e=>`<div><span>${esc(e.title)}</span><span class="num">${M(e.amount)}</span></div>`).join('')}${mine.length>6?`<div class="more">${esc(t('line.more',{n:mine.length-6}))}</div>`:''}</div>`}).join('')}</div>
+   ${depPending(tr).length?`<div class="lc-dep">${depPending(tr).map(d=>`↩︎ ${esc(d.title)} <b class="num">${M(d.amount)}</b> · ${esc(t('dep.backOn',{d:fmtDate(d.refundDate||tr.end,'short')}))}`).join('<br>')}</div>`:''}
+   <div class="lc-ft">${esc(t('line.foot',{d:fmtDate(todayStr(),'short')}))} ♡</div></div>`}
+async function makeLineImage(tid,btn){const c=computeTrip(tid);if(!c)return;busy(btn,true);const host=document.createElement('div');host.className='lc-host';host.innerHTML=lineCardHTML(c);document.body.appendChild(host);
+  try{await document.fonts.ready;await new Promise(r=>setTimeout(r,60));
+    if(!window.html2canvas)throw new Error('h2c');
+    const cv=await html2canvas($('#lcCap',host),{backgroundColor:null,scale:2.6,logging:false,useCORS:true});
+    imageSheet({canvas:cv,filename:'triply-'+(Nplain(c.trip)||'trip').replace(/[\\/:*?"<>|\s]+/g,'-').slice(0,30)+'-เคลียร์เงิน.png',text:lineSummaryText(c),title:t('line.title')})}
+  catch(e){console.error(e);toast(t('rc.exportFail'),'bad')}finally{host.remove();busy(btn,false)}}
+/* preview the image; sharing happens on a fresh tap so iOS allows it */
+function imageSheet({canvas,filename,text,title}){const url=canvas.toDataURL('image/png');let blob=null;canvas.toBlob(b=>blob=b,'image/png');
+  const getBlob=()=>blob?Promise.resolve(blob):new Promise(r=>canvas.toBlob(r,'image/png'));
+  openSheet({title:esc(title||t('rc.png')),body:`<div class="img-prev"><img src="${url}" alt=""></div><p class="muted tiny" style="margin:0;text-align:center">${esc(t('line.hold'))}</p>`,
+   foot:`<button class="btn btn-soft btn-icon" data-copytxt aria-label="${esc(t('line.copyTxt'))}" style="flex:none">${icon('i-copy')}</button><button class="btn btn-soft" data-saveimg>${icon('i-down','sm')}${esc(t('photo.save'))}</button><button class="btn btn-primary btn-line" data-shareimg>${icon('i-share','sm')}${esc(t('line.send'))}</button>`,
+   onMount(sh){$('[data-copytxt]',sh).onclick=()=>copyText(text||'',t('rc.copied'));
+    $('[data-saveimg]',sh).onclick=async()=>{const b=await getBlob();offerFile(filename,b,null,'image/png')};
+    $('[data-shareimg]',sh).onclick=async()=>{const b=await getBlob();const f=new File([b],filename,{type:'image/png'});
+      if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f]});return}catch(e){if(e&&e.name==='AbortError')return}}
+      copyText(text||'',t('line.copiedOpen'));setTimeout(()=>{try{window.open('https://line.me/R/share?text='+encodeURIComponent(text||''),'_blank','noopener')}catch(e){}},400)}}})}
 
 /* ---------- itinerary (timeline + journal) ---------- */
 function itinerary(tr,c){const days=tripDays(tr);const places=db.places.filter(p=>p.tripId===tr.id);
@@ -1626,7 +1884,12 @@ function pasteForm(tripId,date,prefill){const tr=tripById(tripId);if(!tr){import
       logAct({tripId,kind:'place_add',title:P.items.filter(i=>i.kind!=='travel').map(i=>i.name).slice(0,2).join(', ')+(P.items.length>2?' …':'')});
       ui.planDay[tripId]=dates[0];settings.planTrip=tripId;settings.planView='journal';saveSettings();api.close();persist();toast(t('paste.done',{n:P.items.length}));if(route!=='plan')go('plan');else render(true)}}})}
 
-let db = (()=>{const d=safeParse(store.get(DKEY));if(validDB(d)&&d.demo&&d.seedVersion!==4)return seed();return validDB(d)?normalizeDB(d):seed()})();
+let db = (()=>{const d=safeParse(store.get(DKEY));return validDB(d)?migrateDB(normalizeDB(d)):seed()})();
+function migrateDB(d){if(d.demo&&(d.seedVersion||0)<5){const cx=d.trips.find(x=>x.id==='t_cnx');
+   const bank={m1:['kbank','1234567890','Jill (ตัวอย่าง)'],m2:['scb','9876543210','May (ตัวอย่าง)']};d.members.forEach(m=>{if(bank[m.id]&&!m.bank){[m.bank,m.acct,m.acctName]=bank[m.id]}});
+   const e1=d.expenses.find(e=>e.id==='e1'&&e.amount===150000&&/^มัดจำรถ/.test(e.title));
+   if(cx&&e1&&!(cx.deposits||[]).length){d.expenses=d.expenses.filter(e=>e!==e1);cx.deposits=[{id:'d1',kind:'car',title:'มัดจำรถเช่า (Chic Car Rent)',amount:150000,payerId:'m1',refundDate:cx.end,note:'ได้คืนตอนคืนรถที่สนามบิน',photos:[],status:'pending'}]}
+   d.seedVersion=5}return d}
 let storeWarned=false;
 function persist(){const ok=store.set(DKEY,JSON.stringify(db));if(!ok&&!storeWarned){storeWarned=true;toast(t('toast.storeFail'),'warn')}}
 
@@ -1653,7 +1916,7 @@ function seed(){
      shares:shareArr,date,time,note:'',createdAt:date+'T'+time});
   const eq=(amt,ids)=>splitEqual(Math.round(amt*100),ids);
   const expenses=[
-    Object.assign(E('e1','t_cnx',null,'มัดจำรถเช่า 4 วัน (Chic Car Rent)',1500,'transport','m1','shared','equal',eq(1500,['m1','m2']),'2026-10-02','21:10'),{pre:true,preKind:'car'}),
+    Object.assign(E('e1','t_cnx',null,'ค่าเช่ารถ 4 วัน (Chic Car Rent)',3600,'transport','m1','shared','equal',eq(3600,['m1','m2']),'2026-10-02','21:10'),{pre:true,preKind:'car'}),
     Object.assign(E('e5','t_cnx',null,'ตั๋วเครื่องบิน BKK ⇄ CNX ไป-กลับ 2 ที่',4380,'transport','m1','shared','equal',eq(4380,['m1','m2']),'2026-09-28','22:15'),{pre:true,preKind:'flight'}),
     Object.assign(E('e2','t_cnx',null,'ที่พัก Grandview Residence 3 คืน',3600,'stay','m2','shared','equal',eq(3600,['m1','m2']),'2026-10-03','12:40'),{pre:true,preKind:'stay'}),
     E('e3','t_cnx',null,'บัตร MAIIAM 2 ใบ (ซื้อล่วงหน้า)',400,'activity','m1','shared','equal',eq(400,['m1','m2']),'2026-10-08','19:05'),
@@ -1675,8 +1938,9 @@ function seed(){
     {id:'a4',tripId:'t_hh',kind:'settle',ref:'s1',from:'m3',to:'m2',amount:50000,at:'2026-09-15T10:00:00'},
     {id:'a5',tripId:'t_cnx',kind:'expense_add',ref:'e2',title:'ที่พัก Grandview Residence 3 คืน',amount:360000,at:'2026-10-03T12:40:00'}
   ];
-  const CX=buildCnxTrip('t_cnx',['m1','m2']);trips.unshift(CX.trip);places.push(...CX.places);
-  return {version:1,seedVersion:4,demo:true,members,trips,places,expenses,settlements,activity};
+  const CX=buildCnxTrip('t_cnx',['m1','m2']);CX.trip.deposits=[{id:'d1',kind:'car',title:'มัดจำรถเช่า (Chic Car Rent)',amount:300000,payerId:'m1',refundDate:CX.trip.end,note:'ได้คืนตอนคืนรถที่สนามบิน',photos:[],status:'pending'}];trips.unshift(CX.trip);places.push(...CX.places);
+  Object.assign(members.find(m=>m.id==='m1')||{},{bank:'kbank',acct:'1234567890',acctName:'Jill (ตัวอย่าง)'});Object.assign(members.find(m=>m.id==='m2')||{},{bank:'scb',acct:'9876543210',acctName:'May (ตัวอย่าง)'});
+  return {version:1,seedVersion:5,demo:true,members,trips,places,expenses,settlements,activity};
 }
 
 /* =========================================================
@@ -1700,7 +1964,8 @@ function computeTrip(tid){
   const trip=tripById(tid);if(!trip)return null;
   const ex=db.expenses.filter(e=>e.tripId===tid);
   const ids=new Set(trip.memberIds);ex.forEach(e=>{ids.add(e.payerId);e.shares.forEach(s=>ids.add(s.memberId))});
-  const per={};ids.forEach(id=>per[id]={paid:0,paidShared:0,owed:0,personal:0,sent:0,recv:0,net:0});
+  const per={};ids.forEach(id=>per[id]={paid:0,paidShared:0,owed:0,personal:0,sent:0,recv:0,net:0,depAdj:0});
+  (trip.deposits||[]).forEach(d=>{if(d.status==='refunded'&&d.refundTo&&d.refundTo!==d.payerId&&d.refundAmt>0){(per[d.payerId]||(per[d.payerId]={paid:0,paidShared:0,owed:0,personal:0,sent:0,recv:0,net:0,depAdj:0})).depAdj+=d.refundAmt;(per[d.refundTo]||(per[d.refundTo]={paid:0,paidShared:0,owed:0,personal:0,sent:0,recv:0,net:0,depAdj:0})).depAdj-=d.refundAmt}});
   let total=0,shared=0,personal=0;const byCat={},byPlace={},byDay={};
   ex.forEach(e=>{total+=e.amount;byCat[e.category]=(byCat[e.category]||0)+e.amount;byDay[e.date]=(byDay[e.date]||0)+e.amount;
     if(e.placeId){const b=byPlace[e.placeId]||(byPlace[e.placeId]={sum:0,n:0,payers:new Set()});b.sum+=e.amount;b.n++;b.payers.add(e.payerId)}
@@ -1709,7 +1974,7 @@ function computeTrip(tid){
     else{shared+=e.amount;p.paidShared+=e.amount;e.shares.forEach(s=>per[s.memberId].owed+=s.amount)}});
   const setts=db.settlements.filter(s=>s.tripId===tid);
   setts.filter(s=>s.status==='paid').forEach(s=>{if(per[s.from])per[s.from].sent+=s.amount;if(per[s.to])per[s.to].recv+=s.amount});
-  const netMap={};Object.entries(per).forEach(([id,p])=>{p.net=p.paidShared-p.owed+p.sent-p.recv;p.resp=p.owed+p.personal;netMap[id]=p.net});
+  const netMap={};Object.entries(per).forEach(([id,p])=>{p.net=p.paidShared-p.owed+p.sent-p.recv+(p.depAdj||0);p.resp=p.owed+p.personal;netMap[id]=p.net});
   const transfers=optimizeTransfers(netMap);
   return {trip,ex,per,memberIds:[...ids],total,shared,personal,byCat,byPlace,byDay,transfers,setts,
     remaining:trip.budget-total,pct:trip.budget>0?total/trip.budget*100:0};
@@ -1984,15 +2249,23 @@ function memberSheet(id,onDone){const ex=id?db.members.find(m=>m.id===id):null;c
   const body=`<div class="mem-prev" id="mPrev">${av(st,'xl')}</div>
    <div class="field"><label for="mName">${esc(t('mem.name'))}</label><input class="inp" id="mName" maxlength="24" value="${esc(st.name)}" placeholder="${esc(t('mem.namePh'))}" autofocus></div>
    <div class="field"><span class="flabel">${esc(t('mem.avatar'))}</span><div class="av-grid" id="mAv"><button type="button" class="${!st.avatar?'on':''}" data-v=""><span class="av" style="--c:${st.color}">${esc((st.name||'A').slice(0,1).toUpperCase())}</span></button>${AV_KEYS.map(k=>`<button type="button" class="${st.avatar===k?'on':''}" data-v="${k}" aria-label="${k}"><span class="av av-art" style="--c:${st.color}">${avatarSVG(k)}</span></button>`).join('')}</div></div>
+   <div class="field acct-f"><span class="flabel">${esc(t('acct.title'))}</span><small class="muted tiny" style="margin-top:-4px">${esc(t('acct.sub'))}</small>
+    <div class="bank-pick" id="mBank">${BANKS.map(b=>`<button type="button" class="${st.bank===b[0]?'on':''}" data-v="${b[0]}">${bankChip(b[0])}<span>${esc(settings.lang==='ja'?b[2]:b[1])}</span></button>`).join('')}</div>
+    <input class="inp num" id="mAcct" inputmode="numeric" maxlength="20" value="${esc(fmtAcct(st.acct,st.bank))}" placeholder="${esc(t('acct.numPh'))}" aria-label="${esc(t('acct.num'))}">
+    <input class="inp" id="mAcctName" maxlength="40" value="${esc(st.acctName||'')}" placeholder="${esc(t('acct.namePh'))}" aria-label="${esc(t('acct.name'))}"></div>
    <div class="field"><span class="flabel">${esc(t('mem.color'))}</span><div class="swatches wrap" id="mCol">${MEMBER_PALETTE.map(c=>`<button type="button" class="${st.color===c?'on':''}" data-v="${c}" style="background:${c}" aria-label="${c}"></button>`).join('')}</div></div>
    <div class="err" id="mErr" role="alert"></div>`;
   openSheet({title:esc(ex?t('mem.edit'):t('mem.new')),small:true,body,foot:`${ex?`<button class="btn btn-danger btn-icon" data-del style="flex:none" aria-label="${esc(t('plan.delete'))}">${icon('i-trash')}</button>`:''}<button class="btn btn-soft" data-close>${esc(t('form.cancel'))}</button><button class="btn btn-primary" data-save>${esc(t('form.save'))}</button>`,onMount(sh,api){
     const prev=()=>{st.name=$('#mName',sh).value;$('#mPrev',sh).innerHTML=av(st,'xl');$$('#mAv .av',sh).forEach(a=>a.style.setProperty('--c',st.color));const f=$('#mAv button[data-v=""] .av',sh);if(f)f.textContent=(st.name||'A').trim().slice(0,1).toUpperCase()};
     $('#mName',sh).oninput=prev;
+    $('#mBank',sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;st.bank=st.bank===b.dataset.v?'':b.dataset.v;$$('#mBank button',sh).forEach(x=>x.classList.toggle('on',x.dataset.v===st.bank));$('#mAcct',sh).value=fmtAcct($('#mAcct',sh).value,st.bank)};
+    $('#mAcct',sh).onblur=e=>{e.target.value=fmtAcct(e.target.value,st.bank)};
     $('#mAv',sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;st.avatar=b.dataset.v;$$('#mAv button',sh).forEach(x=>x.classList.toggle('on',x===b));haptic(6);prev()};
     $('#mCol',sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;st.color=b.dataset.v;$$('#mCol button',sh).forEach(x=>x.classList.toggle('on',x===b));prev()};
     $('[data-save]',sh).onclick=()=>{const name=$('#mName',sh).value.trim();if(!name){$('#mErr',sh).textContent=t('mem.errName');return}
-      let m=ex;if(m)Object.assign(m,{name,color:st.color,avatar:st.avatar||''});else{m={id:uid('m'),name,color:st.color,avatar:st.avatar||''};db.members.push(m)}
+      const acct=digits($('#mAcct',sh).value);if(acct&&!st.bank){$('#mErr',sh).textContent=t('acct.errBank');return}
+      const bk={bank:acct?st.bank:'',acct,acctName:$('#mAcctName',sh).value.trim()};
+      let m=ex;if(m)Object.assign(m,{name,color:st.color,avatar:st.avatar||''},bk);else{m=Object.assign({id:uid('m'),name,color:st.color,avatar:st.avatar||''},bk);db.members.push(m)}
       api.close();commit();toast(t('toast.saved'));onDone&&onDone(m)};
     const del=$('[data-del]',sh);if(del)del.onclick=()=>{const r=memberRefs(ex.id);if(r.exp){$('#mErr',sh).textContent=t('mem.inUse',{n:ex.name});return}
       if(db.members.length<=1){$('#mErr',sh).textContent=t('mem.last');return}
@@ -2106,12 +2379,13 @@ function moveInd(){const a=$('#sideNav a.on'),ind=$('#sideInd');if(a&&ind){ind.s
   const b=$('#bottomNav a.on'),bi=$('#bbInd');if(b&&bi){bi.style.width=b.offsetWidth-8+'px';bi.style.transform=`translateX(${b.offsetLeft+4}px)`;bi.style.opacity=1}else if(bi)bi.style.opacity=0}
 addEventListener('resize',()=>requestAnimationFrame(moveInd));
 const VIEWS={home:renderHome,plan:renderPlan,money:renderMoney,receipt:renderReceipt,settings:renderSettings};
-function render(animate=false){const v=$('#view');v.classList.toggle('anim',animate&&!reduce);v.innerHTML=VIEWS[route]();if(!animate&&!ui.jDraw)$$('.journal.draw',v).forEach(j=>j.classList.remove('draw'));ui.jDraw=false;runCounts(v);renderNav();afterRender[route]&&afterRender[route](v,animate)}
+function render(animate=false){const v=$('#view');v.classList.toggle('anim',animate&&!reduce);let html;try{html=VIEWS[route]()}catch(err){console.error(err);html=`<div class="card"><div class="empty"><img src="${STK.cat}" alt="" style="width:70px"><p><b>${esc(t('err.view'))}</b><br><small class="muted">${esc(String(err&&err.message||err))}</small></p><button class="btn btn-primary btn-sm" data-act="fixView">${icon('i-undo','sm')}${esc(t('err.fix'))}</button></div></div>`}v.innerHTML=html;if(!animate&&!ui.jDraw)$$('.journal.draw',v).forEach(j=>j.classList.remove('draw'));ui.jDraw=false;runCounts(v);renderNav();afterRender[route]&&afterRender[route](v,animate)}
 function go(v,force){if(v===route&&!force){window.scrollTo({top:0,behavior:'smooth'});return}const view=$('#view');
   if(reduce){route=v;history.replaceState(null,'','#'+v);render(true);return}
   view.classList.add('leaving');setTimeout(()=>{view.classList.remove('leaving');route=v;try{history.replaceState(null,'','#'+v)}catch(e){}window.scrollTo({top:0});render(true)},150)}
 function commit(){persist();render(false)}
 const afterRender={};
+setTimeout(()=>PH.gc(),4000);
 
 /* =========================================================
    8. VIEW — HOME / DASHBOARD
@@ -2119,7 +2393,7 @@ const afterRender={};
 function demoStrip(){return db.demo?`<div class="demo rv" style="--i:0">${icon('i-heart','sm')}<span><b>${esc(t('demo.badge'))}</b> · ${esc(t('demo.text'))}</span><span class="spacer"></span><button class="btn btn-soft btn-sm" data-act="startFresh">${esc(t('demo.clear'))}</button></div>`:''}
 function renderHome(){
   const tid=resolveTrip('dashTrip');const me=memberById(settings.me);
-  let h=`${oweStrip()}<div class="hero-scene rv" style="--i:1">${cmHero()}<div class="in">
+  let h=`${oweStrip()}${depositNudge()}<div class="hero-scene rv" style="--i:1">${cmHero()}<div class="in">
     <div style="min-width:0"><div class="hs-hi">${esc(t('home.hi',{n:me.name}))} <span class="wave">${icon('i-heart','sm')}</span></div><h1>${L('home.hello')}</h1></div>${av(me,'lg')}</div></div>`;
   if(!db.trips.length){return h+`<div class="card rv" style="--i:2"><div class="empty"><img src="${STK.plane}" alt=""><p>${esc(t('plan.noTrips'))}</p><button class="btn btn-primary" data-act="newTrip">${icon('i-plus')}${esc(t('home.newTrip'))}</button><button class="btn btn-soft" data-act="importPrep">${icon('i-down','sm')}${esc(t('prep.short'))}</button></div></div>${installBanner()}`}
   const tr=tripById(tid),c=computeTrip(tid);
@@ -2245,15 +2519,20 @@ function expenseList(c){const tr=c.trip,f=ui.filters;const mem=c.memberIds.map(m
   if(!list.length)return h+`<div class="card"><div class="empty"><p>${esc(t('money.noMatch'))}</p><button class="btn btn-soft btn-sm" data-act="clearFilters">${esc(t('money.clearFilter'))}</button></div></div>`;
   h+=Object.keys(groups).map((d,gi)=>`<div class="day-group rv" style="--i:${gi+4}"><h4><span>${esc(fmtDate(d,'dow'))}</span><span class="num">${esc(t('money.dayTotal',{x:money(groups[d].reduce((s,e)=>s+e.amount,0),tr.currency)}))}</span></h4>
    ${groups[d].map(e=>{const p=db.places.find(x=>x.id===e.placeId);const payer=memberById(e.payerId);return `<button class="exp ${ui.flashId===e.id?'flash':''}" data-act="editExpense" data-id="${e.id}">${catIc(e.category)}
-     <div style="min-width:0"><div class="t">${esc(e.title)}</div><div class="m">${e.pre?`<span class="pre-tag">${icon(PRE_KINDS[e.preKind||'other'].ic,'sm')}${esc(t('pre.badge'))}</span>`:''}${av(payer,'sm')}<span>${esc(payer.name)}</span>${p?`<span class="sep">•</span><span>${icon('i-pin','sm')} ${esc(Nplain(p))}</span>`:''}<span class="sep">•</span><span>${esc(e.time||'')}</span></div></div>
+     <div style="min-width:0"><div class="t">${esc(e.title)}</div><div class="m">${(e.photos||[]).length?`<span class="ph-tag">${icon('i-image','sm')}${e.photos.length}</span>`:''}${e.pre?`<span class="pre-tag">${icon(PRE_KINDS[e.preKind||'other'].ic,'sm')}${esc(t('pre.badge'))}</span>`:''}${av(payer,'sm')}<span>${esc(payer.name)}</span>${p?`<span class="sep">•</span><span>${icon('i-pin','sm')} ${esc(Nplain(p))}</span>`:''}<span class="sep">•</span><span>${esc(e.time||'')}</span></div></div>
      <div class="a"><b class="num">${money(e.amount,tr.currency)}</b>${e.type==='personal'?`<span class="badge b-lav">${esc(t('money.self'))}</span>`:`<span class="badge b-info">${esc(t('money.splitN',{n:e.shares.length}))}</span>`}</div></button>`}).join('')}</div>`).join('');
   ui.flashId=null;return h}
 function settleView(c){const tr=c.trip;const ids=c.memberIds;
+  const dp=depPending(tr);
   let h=`<div class="card rv" style="--i:3"><div class="card-h"><div><div class="ttl">${L('settle.title')}</div><div class="muted tiny">${esc(t('settle.sub'))} · ${esc(t('settle.personalNote'))}</div></div></div>
+   <div class="line-cta"><button class="btn btn-primary btn-line" data-act="lineImg" data-trip="${tr.id}">${icon('i-image','sm')}${esc(t('line.make'))}</button><button class="btn btn-soft" data-act="copyLine" data-trip="${tr.id}">${icon('i-copy','sm')}${esc(t('line.copyTxt'))}</button></div>
    ${c.transfers.length?`<div class="xfers">${c.transfers.map((f,i)=>{const a=memberById(f.from),b=memberById(f.to);return `<div class="xf rv" style="--i:${i+4}">${av(a,'lg')}<span class="lane"></span>${av(b,'lg')}
-     <div class="txt"><span><b class="num">${money(f.amount,tr.currency)}</b>${esc(a.name)} → ${esc(b.name)}</span></div><button class="btn btn-primary btn-sm" data-act="markPaid" data-trip="${tr.id}" data-from="${f.from}" data-to="${f.to}" data-amt="${f.amount}">${icon('i-check','sm')}${esc(t('settle.markPaid'))}</button></div>`}).join('')}</div>`
-   :`<div class="alert ok" style="margin-top:0">${icon('i-heart','sm')}${esc(t('settle.allDone'))}</div>`}</div>`;
-  h+=`<div class="rv" style="--i:5"><div class="ttl" style="margin:4px 4px 12px">${L('settle.balances')}</div><div class="bal-grid">${ids.map(id=>{const m=memberById(id),p=c.per[id];const cls=p.net>0?'pos':p.net<0?'neg':'zero';
+     <div class="txt"><span><b class="num">${money(f.amount,tr.currency)}</b>${esc(a.name)} → ${esc(b.name)}</span></div><button class="btn btn-primary btn-sm" data-act="markPaid" data-trip="${tr.id}" data-from="${f.from}" data-to="${f.to}" data-amt="${f.amount}">${icon('i-check','sm')}${esc(t('settle.markPaid'))}</button>
+     <div class="xf-acct">${acctLine(b)}</div></div>`}).join('')}</div>`
+   :`<div class="alert ok" style="margin-top:0">${icon('i-heart','sm')}${esc(t('settle.allDone'))}</div>`}
+   ${dp.length?`<div class="alert info">${icon('i-undo','sm')}<span>${dp.map(d=>esc(t('dep.settleNote',{t:d.title,x:money(d.amount,tr.currency),n:memberById(d.payerId).name}))).join('<br>')}</span></div>`:''}</div>`;
+  h+=billBreakdown(c);
+  if(false)h+=`<div class="rv" style="--i:5"><div class="ttl" style="margin:4px 4px 12px">${L('settle.balances')}</div><div class="bal-grid">${ids.map(id=>{const m=memberById(id),p=c.per[id];const cls=p.net>0?'pos':p.net<0?'neg':'zero';
     return `<div class="bal"><div class="hd">${av(m)}<b>${esc(m.name)}</b></div><div class="rows"><div>${esc(t('settle.paidReal'))}<b class="num">${money(p.paidShared,tr.currency)}</b></div><div>${esc(t('settle.resp'))}<b class="num">${money(p.owed,tr.currency)}</b></div>
      ${p.personal?`<div>${esc(t('money.personal'))}<b class="num">${money(p.personal,tr.currency)}</b></div>`:''}${p.sent||p.recv?`<div>${esc(t('settle.settledIn'))}<b class="num">${money(p.sent?p.sent:-p.recv,tr.currency,{sign:true})}</b></div>`:''}</div>
      <div class="net ${cls}"><span>${esc(p.net>0?t('settle.get'):p.net<0?t('settle.owe'):t('settle.even'))}</span><b class="num">${money(Math.abs(p.net),tr.currency)}</b></div></div>`}).join('')}</div></div>`;
@@ -2286,6 +2565,7 @@ function expenseForm({tripId,placeId,id,preset}={}){
    <div class="field"><span class="flabel">${esc(t('form.payer'))}</span><div class="pick" id="xPayer">${mem.map(m=>`<button type="button" class="${st.payerId===m.id?'on':''}" data-v="${m.id}">${av(m,'sm')}${esc(m.name)}</button>`).join('')}</div></div>
    <div class="field"><span class="flabel">${esc(t('form.type'))}</span><div class="seg" id="xType"><button type="button" data-v="shared" class="${st.type==='shared'?'on':''}">${icon('i-users','sm')} ${esc(t('form.typeShared'))}</button><button type="button" data-v="personal" class="${st.type==='personal'?'on':''}">${esc(t('form.typePersonal'))}</button></div></div>
    <div id="xSplitWrap"></div>
+   <div class="field"><span class="flabel">${esc(t('photo.label'))}</span><div id="xPh"></div></div>
    <div class="field"><label for="xNote">${esc(t('form.note'))}</label><input class="inp" id="xNote" value="${esc(st.note||'')}"></div>
    <div class="err" id="xErr" role="alert"></div>`;
   const foot=`${existing?`<button class="btn btn-danger btn-icon" data-del aria-label="${esc(t('form.delete'))}" style="flex:none">${icon('i-trash')}</button>`:''}<button class="btn btn-soft" data-close>${esc(t('form.cancel'))}</button><button class="btn btn-primary" data-save>${esc(t('form.save'))}</button>`;
@@ -2293,6 +2573,7 @@ function expenseForm({tripId,placeId,id,preset}={}){
     const amt=()=>parseMoney($('#xAmt',sh).value,tr.currency);
     const pickOne=(id,key)=>$(id,sh).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;st[key]=b.dataset.v;$$(id+' button',sh).forEach(x=>x.classList.toggle('on',x===b));if(key==='type')drawSplit();validate()});
     pickOne('#xCat','category');pickOne('#xPayer','payerId');pickOne('#xType','type');
+    st.photos=Array.isArray(st.photos)?st.photos:[];photoField(sh,$('#xPh',sh),st.photos);
     const preBox=$('#xPreBox',sh);$('#xPre',sh).onclick=e=>{st.pre=!st.pre;e.currentTarget.setAttribute('aria-checked',st.pre);preBox.classList.toggle('on',st.pre)};
     $('#xPreKind',sh).onclick=e=>{const b=e.target.closest('button');if(!b)return;const old=st.preKind;st.preKind=b.dataset.v;$$('#xPreKind button',sh).forEach(x=>x.classList.toggle('on',x===b));
       st.category=PRE_KINDS[st.preKind].cat;$$('#xCat button',sh).forEach(x=>x.classList.toggle('on',x.dataset.v===st.category));
@@ -2328,7 +2609,7 @@ function expenseForm({tripId,placeId,id,preset}={}){
     let saving=false;
     $('[data-save]',sh).onclick=e=>{if(saving)return;const {err,s}=validate(true);if(err)return;saving=true;
       const rec={tripId,placeId:$('#xPlace',sh).value||null,title:$('#xTitle',sh).value.trim(),amount:amt(),category:st.category,payerId:st.payerId,type:st.type,split:st.type==='personal'?'equal':st.split,
-        shares:s.shares,date:$('#xDate',sh).value||todayStr(),time:$('#xTime',sh).value||'',note:$('#xNote',sh).value.trim(),pre:!!st.pre,preKind:st.pre?st.preKind:undefined,updatedAt:new Date().toISOString()};if(!rec.pre)delete rec.preKind;
+        shares:s.shares,date:$('#xDate',sh).value||todayStr(),time:$('#xTime',sh).value||'',note:$('#xNote',sh).value.trim(),pre:!!st.pre,preKind:st.pre?st.preKind:undefined,photos:st.photos,updatedAt:new Date().toISOString()};if(!rec.pre)delete rec.preKind;
       if(existing){const tgt=db.expenses.find(x=>x.id===existing.id);if(!rec.pre)delete tgt.preKind;Object.assign(tgt,rec);logAct({tripId,kind:'expense_edit',ref:existing.id,title:rec.title,amount:rec.amount});ui.flashId=existing.id}
       else{const ne=Object.assign({id:uid('e'),createdAt:new Date().toISOString()},rec);db.expenses.push(ne);logAct({tripId,kind:'expense_add',ref:ne.id,title:rec.title,amount:rec.amount});ui.flashId=ne.id}
       flyCoin(e.currentTarget);haptic(18);api.close();settings.moneyTrip=tripId;saveSettings();commit();toast(t('toast.saved'),'ok')};
@@ -2424,8 +2705,8 @@ function renderReceipt(){const tid=resolveTrip('rcTrip');const r=settings.rc;
    <div class="grp"><span class="flabel">${esc(t('rc.show'))}</span><div class="toggles">${[['cover','rc.showCover'],['stickers','rc.showStickers'],['footer','rc.showFooter'],['members','rc.showMembers']].map(([k,l])=>`<div class="tg"><span>${esc(t(l))}</span><button class="switch" role="switch" aria-checked="${!!r[k]}" data-act="rcToggle" data-k="${k}" aria-label="${esc(t(l))}"></button></div>`).join('')}</div></div>
    <div class="exports"><button class="btn btn-primary" data-act="exportPNG" ${c.ex.length?'':'disabled'}>${icon('i-down','sm')}${esc(t('rc.png'))}</button><button class="btn btn-soft" data-act="exportPDF" ${c.ex.length?'':'disabled'}>${icon('i-down','sm')}${esc(t('rc.pdf'))}</button>
     <button class="btn btn-soft" data-act="shareRc" ${c.ex.length?'':'disabled'}>${icon('i-share','sm')}${esc(t('rc.share'))}</button><button class="btn btn-soft" data-act="copySummary" ${c.ex.length?'':'disabled'}>${icon('i-copy','sm')}${esc(t('rc.copy'))}</button></div></div>
-   <div class="stage rv" style="--i:2"><div class="printer"><i></i></div><div class="feed printing" id="feed"><div id="receiptCapture">${c.ex.length?receiptMarkup(c):`<div class="rc rcA" style="padding:30px 22px"><div class="empty"><img src="${STK.cat}" alt="" style="width:70px"><p style="color:#8A8690">${esc(t('rc.empty'))}</p></div></div>`}</div></div>
-   <button class="btn btn-ghost btn-sm" data-act="reprint" style="margin-top:-8px">${icon('i-receipt','sm')}${esc(t('rc.reprint'))}</button></div></div>`;
+   <div class="stage rv" style="--i:2"><div class="printer"><i></i></div><div class="feed printing" id="feed"><div id="receiptCapture" ${c.ex.length?'data-act="viewRc" role="button" tabindex="0"':''}>${c.ex.length?receiptMarkup(c):`<div class="rc rcA" style="padding:30px 22px"><div class="empty"><img src="${STK.cat}" alt="" style="width:70px"><p style="color:#8A8690">${esc(t('rc.empty'))}</p></div></div>`}</div></div>
+   <div class="row" style="justify-content:center;margin-top:-8px;gap:6px">${c.ex.length?`<button class="btn btn-soft btn-sm" data-act="viewRc">${icon('i-image','sm')}${esc(t('rc.view'))}</button>`:''}<button class="btn btn-ghost btn-sm" data-act="reprint">${icon('i-receipt','sm')}${esc(t('rc.reprint'))}</button></div></div></div>`;
   return h}
 function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency,col=RC_COLORS[r.color]||RC_COLORS.coral;const {p:lp}=rcLangs();
   const mem=c.memberIds.map(memberById);const nMem=tr.memberIds.length;const person=r.person!=='all'&&c.per[r.person]?r.person:null;
@@ -2504,12 +2785,13 @@ async function offerFile(filename,data,previewURL,mime){const d=await getDownloa
     try{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=filename;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},2000);toast(t('rc.saved'));return true}catch(e){}}
   if(previewURL){openSheet({title:esc(t('rc.fallbackTitle')),body:`<p class="muted" style="margin:0">${esc(t('rc.fallback'))}</p><img src="${previewURL}" alt="receipt" style="width:100%;border-radius:16px;box-shadow:var(--shadow)">`})}return false}
 const fileBase=()=>{const tr=tripById(resolveTrip('rcTrip'));return 'triply-'+(tr?.name||'trip').replace(/[\\/:*?"<>|]+/g,'').replace(/\s+/g,'-').slice(0,40)}
-async function exportPNG(btn){busy(btn,true);try{const cv=await captureReceipt();const blob=await new Promise(r=>cv.toBlob(r,'image/png'));const url=cv.toDataURL('image/png');await offerFile(fileBase()+'.png',blob,url);burst(innerWidth/2,innerHeight/2,40)}
+async function viewRc(btn){if(viewRc.busy)return;viewRc.busy=true;try{const cv=await captureReceipt();imageSheet({canvas:cv,filename:fileBase()+'.png',text:summaryText(),title:t('rc.view')})}catch(e){console.error(e);toast(t('rc.exportFail'),'bad')}finally{viewRc.busy=false}}
+async function exportPNG(btn){busy(btn,true);try{const cv=await captureReceipt();if(!(await getDownloads())&&coarse){imageSheet({canvas:cv,filename:fileBase()+'.png',text:summaryText(),title:t('rc.png')});return}const blob=await new Promise(r=>cv.toBlob(r,'image/png'));const url=cv.toDataURL('image/png');await offerFile(fileBase()+'.png',blob,url);burst(innerWidth/2,innerHeight/2,40)}
   catch(e){console.error(e);toast(t('rc.exportFail'),'bad')}finally{busy(btn,false)}}
 async function exportPDF(btn){busy(btn,true);try{const cv=await captureReceipt();const J=window.jspdf?.jsPDF;if(!J)throw new Error('nopdf');
   const w=cv.width/2,h=cv.height/2;const pdf=new J({orientation:h>w?'portrait':'landscape',unit:'px',format:[w,h],hotfixes:['px_scaling']});pdf.addImage(cv.toDataURL('image/png'),'PNG',0,0,w,h);
   const blob=pdf.output('blob');await offerFile(fileBase()+'.pdf',blob,cv.toDataURL('image/png'))}catch(e){console.error(e);toast(t('rc.exportFail'),'bad')}finally{busy(btn,false)}}
-async function shareRc(btn){busy(btn,true);try{const cv=await captureReceipt();const blob=await new Promise(r=>cv.toBlob(r,'image/png'));const file=new File([blob],fileBase()+'.png',{type:'image/png'});
+async function shareRc(btn){busy(btn,true);try{const cv=await captureReceipt();imageSheet({canvas:cv,filename:fileBase()+'.png',text:summaryText(),title:t('rc.share')});return;const blob=await new Promise(r=>cv.toBlob(r,'image/png'));const file=new File([blob],fileBase()+'.png',{type:'image/png'});
   if(navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],text:summaryText()});return}catch(e){}}
   toast(t('rc.shareHint'),'info');await offerFile(fileBase()+'.png',blob,cv.toDataURL('image/png'))}catch(e){toast(t('rc.exportFail'),'bad')}finally{busy(btn,false)}}
 function busy(btn,on){if(!btn)return;btn.disabled=on;if(on){btn.dataset.lbl=btn.innerHTML;btn.innerHTML=`<span class="muted">${esc(t('rc.exporting'))}</span>`}else if(btn.dataset.lbl)btn.innerHTML=btn.dataset.lbl}
@@ -2551,6 +2833,11 @@ const A={
  installLater:()=>{store.set('triply.installDismissed','1');render(false)},
  addExpense:el=>expenseForm({tripId:el.dataset.trip||(route==='plan'?resolveTrip('planTrip'):route==='home'?resolveTrip('dashTrip'):resolveTrip('moneyTrip')),placeId:el.dataset.place}),
  editExpense:el=>expenseForm({id:el.dataset.id}),
+ copyAcct:el=>{const m=memberById(el.dataset.id);copyText(digits(m.acct),t('acct.copiedX',{n:m.name}))},
+ depNew:el=>depositForm(el.dataset.trip,null,el.dataset.v),depEdit:el=>depositForm(el.dataset.trip,el.dataset.id),depRefund:el=>refundSheet(el.dataset.trip,el.dataset.id),
+ lineImg:el=>makeLineImage(el.dataset.trip,el),copyLine:el=>copyText(lineSummaryText(computeTrip(el.dataset.trip)),t('rc.copied')),
+ viewRc:el=>viewRc(el),
+ fixView:()=>{try{settings.rc=Object.assign({style:'A',color:'lanna',content:'overview',person:'all',cover:true,stickers:true,footer:true,members:true},{lang:settings.lang});settings.rcTrip=null;saveSettings()}catch(e){}go('home',true)},
  preAdd:el=>expenseForm({tripId:el.dataset.trip,preset:{pre:true,preKind:el.dataset.v}}),
  preList:el=>preListSheet(el.dataset.trip,el.dataset.v),
  goPre:el=>{const id=el.dataset.id;ui.planDay[id]='pre';settings.planTrip=id;saveSettings();sheetStack.slice().forEach(s=>s.close());if(route!=='plan')go('plan');else render(true)},

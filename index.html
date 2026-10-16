@@ -1022,6 +1022,25 @@ h1,h2,h3,.ttl,.page-head h1,.hero-scene h1,.trip-hero h1,.pass-txt h2,.j-title,.
 .lc-it>div{display:flex;justify-content:space-between;gap:6px}.lc-it>div span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.lc-it .more{color:#B4A291}
 .lc-dep{margin:10px 16px 0;padding:8px 10px;border-radius:12px;border:1.5px dashed #D9C5A7;font-size:11.5px;color:#7D6A5C;line-height:1.5}
 .lc-ft{text-align:center;font-size:11px;color:#B4A291;margin-top:12px}
+
+/* receipt — Chiang Mai doodle paper + roomy totals */
+.rcA{background:var(--cm-tile) 0 0/230px auto repeat,var(--rc-paper)}
+.rcB{background:var(--cm-tile) 0 0/230px auto repeat,repeating-linear-gradient(180deg,transparent 0 27px,rgba(140,170,210,.22) 27px 28px),var(--rc-paper)}
+.rcC .inner{background:var(--cm-tile) 0 0/230px auto repeat,var(--rc-paper)}
+.rc .total{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;align-items:end;padding:12px 16px 14px}
+.rc .total>span{font-size:13px;line-height:1.35}
+.rc .total b{justify-self:end;font-size:clamp(24px,7.2vw,30px);line-height:1.15}
+.rc .mem .nums{white-space:normal;line-height:1.45}
+.rc .row2>span:first-child{min-width:0}
+.rc .foot{margin-top:6px}.rc .foot small{letter-spacing:.14em;font-family:var(--f-display);font-weight:700}
+.rc .stk{filter:drop-shadow(0 2px 0 rgba(255,253,248,.9))}
+
+.rcC .codes>div{min-width:0;flex:1}.rcC .codes>img{flex:none}.rcC .codes b{display:block;font-size:clamp(18px,5.6vw,24px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rcC .grid3 div{padding:9px 8px;font-size:10.5px;line-height:1.3;min-width:0}.rcC .grid3 b{font-size:14px;margin-top:2px}
+.rc .mem{grid-template-columns:auto minmax(0,1fr);row-gap:2px;align-items:start}.rc .mem .d{margin-top:1px}.rc .mem .nm{white-space:normal}
+.rc .mem .nums{grid-column:2;text-align:left;font-size:11.5px}
+
+.rcC .codes b.to{white-space:nowrap;font-size:18px;line-height:1.3;text-align:right;overflow:visible}
 </style>
 
 <div class="splash" id="splash" aria-hidden="true"><div class="sp"><img id="splashIcon" alt=""><b id="splashWord"></b><small id="splashTag"></small></div></div>
@@ -1134,8 +1153,8 @@ th:{
  'place.deleteQ':'ลบสถานที่ "{t}"?','place.deleteBody':'ค่าใช้จ่ายที่ผูกกับที่นี่จะยังอยู่ แต่จะกลายเป็นไม่ระบุสถานที่','place.errName':'ใส่ชื่อสถานที่ก่อนนะ',
  'expense.deleteQ':'ลบ "{t}"?','expense.deleteBody':'ยอดรวม ยอดของสถานที่ และยอดที่ต้องเคลียร์จะคำนวณใหม่ทันที',
  'member.title':'รายการที่ {n} จ่าย','member.none':'ยังไม่มีรายการที่ {n} จ่าย',
- 'rc.title':'สลิปทริป','rc.sub':'เลือกสไตล์ ปรับแต่ง แล้วเก็บไว้เป็นของที่ระลึก','rc.style':'สไตล์สลิป','rc.color':'สีธีม','rc.content':'เนื้อหา','rc.overview':'ภาพรวม','rc.detail':'รายละเอียด','rc.settlement':'ยอดเคลียร์',
- 'rc.lang':'ภาษาในสลิป','rc.langTh':'ไทย','rc.langJa':'日本語','rc.langBoth':'ไทย + 日本語','rc.show':'แสดงบนสลิป','rc.showCover':'ภาพปก','rc.showStickers':'สติกเกอร์ตกแต่ง','rc.showFooter':'ข้อความปิดท้าย','rc.showMembers':'ยอดของสมาชิก',
+ 'rc.title':'สลิปทริป','rc.sub':'เลือกสไตล์ แล้วบันทึกหรือส่งให้เพื่อน','rc.style':'สไตล์สลิป','rc.color':'สีธีม','rc.content':'เนื้อหา','rc.overview':'ภาพรวม','rc.detail':'รายละเอียด','rc.settlement':'ยอดเคลียร์',
+ 'rc.lang':'ภาษาในสลิป','rc.langTh':'ไทย','rc.langJa':'日本語','rc.langBoth':'ไทย + 日本語','rc.show':'แสดงบนสลิป','rc.showCover':'ภาพปก','rc.showStickers':'สติกเกอร์ตกแต่ง','rc.showFooter':'บรรทัดท้ายสลิป','rc.showMembers':'ยอดของสมาชิก',
  'rc.png':'บันทึก PNG','rc.pdf':'บันทึก PDF','rc.share':'แชร์','rc.copy':'คัดลอกสรุป','rc.empty':'ทริปนี้ยังไม่มีค่าใช้จ่ายจริง สลิปจะสร้างได้เมื่อมีรายการแรก','rc.exporting':'กำลังสร้างไฟล์…','rc.saved':'บันทึกไฟล์แล้ว','rc.declined':'ยกเลิกการบันทึก',
  'rc.fallbackTitle':'บันทึกรูปสลิป','rc.fallback':'กดค้างที่รูป (มือถือ) หรือคลิกขวา (คอม) แล้วเลือกบันทึกรูป','rc.copied':'คัดลอกสรุปแล้ว วางในแชทได้เลย','rc.copyFail':'คัดลอกอัตโนมัติไม่ได้ เลือกข้อความด้านล่างแล้วคัดลอกเอง',
  'rc.person':'สลิปของ','rc.group':'ทั้งกลุ่ม','rc.reprint':'พิมพ์ใหม่','rc.exportFail':'สร้างไฟล์ไม่สำเร็จ ลองอีกครั้งนะ','rc.shareHint':'บันทึกรูปแล้วส่งต่อใน LINE หรือ IG Stories ได้เลย',
@@ -1243,7 +1262,7 @@ ja:{
  'expense.deleteQ':'「{t}」を削除しますか？','expense.deleteBody':'合計・場所別・精算額はすぐに再計算されます',
  'member.title':'{n}が支払った明細','member.none':'{n}が支払った明細はまだありません',
  'rc.title':'旅のレシート','rc.sub':'スタイルを選んで、旅の思い出に残そう','rc.style':'スタイル','rc.color':'テーマカラー','rc.content':'内容','rc.overview':'概要','rc.detail':'詳細','rc.settlement':'精算',
- 'rc.lang':'レシートの言語','rc.langTh':'ไทย','rc.langJa':'日本語のみ','rc.langBoth':'ไทย＋日本語','rc.show':'表示する項目','rc.showCover':'カバー画像','rc.showStickers':'ステッカー','rc.showFooter':'締めのメッセージ','rc.showMembers':'メンバー別の金額',
+ 'rc.lang':'レシートの言語','rc.langTh':'ไทย','rc.langJa':'日本語のみ','rc.langBoth':'ไทย＋日本語','rc.show':'表示する項目','rc.showCover':'カバー画像','rc.showStickers':'ステッカー','rc.showFooter':'フッター','rc.showMembers':'メンバー別の金額',
  'rc.png':'PNGで保存','rc.pdf':'PDFで保存','rc.share':'シェア','rc.copy':'概要をコピー','rc.empty':'この旅にはまだ支出がありません。最初の明細を記録するとレシートが作れます','rc.exporting':'ファイルを作成中…','rc.saved':'保存しました','rc.declined':'保存をキャンセルしました',
  'rc.fallbackTitle':'レシート画像を保存','rc.fallback':'画像を長押し（PCは右クリック）して保存してください','rc.copied':'概要をコピーしました。チャットに貼り付けてね','rc.copyFail':'自動コピーできませんでした。下のテキストを選択してコピーしてください',
  'rc.person':'対象','rc.group':'グループ全体','rc.reprint':'もう一度印刷','rc.exportFail':'ファイルを作成できませんでした。もう一度お試しください','rc.shareHint':'画像を保存して、LINEやインスタのストーリーでシェアしよう',
@@ -2062,6 +2081,81 @@ const STICKERS={
  zig:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 12" preserveAspectRatio="none"><path d="M0 12 L0 6 L5 0 L10 6 L15 0 L20 6 L25 0 L30 6 L35 0 L40 6 L45 0 L50 6 L55 0 L60 6 L65 0 L70 6 L75 0 L80 6 L85 0 L90 6 L95 0 L100 6 L105 0 L110 6 L115 0 L120 6 L120 12Z" fill="#FFFDF8"/></svg>`
 };
 const STK={};Object.keys(STICKERS).forEach(k=>STK[k]=svgURL(STICKERS[k]));
+/* =========================================================
+   CHIANG MAI DOODLES — hand-drawn line art for receipts
+   (64×64 each; ink lines + soft wash; slightly wobbly via filter)
+   ========================================================= */
+const CMD_INK='#3A2A21';
+const CMD={
+ songthaew:`<g transform="translate(2 12)">
+   <path d="M6 30 L6 12 Q6 8 10 8 L40 8 L40 30 Z" fill="#C4553B"/>
+   <path d="M40 14 L50 14 Q54 14 56 19 L59 25 L59 30 L40 30 Z" fill="#D9694F"/>
+   <path d="M8 6 L40 6" fill="none"/><path d="M10 6 L10 3 M20 6 L20 3 M30 6 L30 3 M38 6 L38 3 M8 3 L40 3"/>
+   <path d="M6 30 L6 12 Q6 8 10 8 L40 8 L40 30 M40 14 L50 14 Q54 14 56 19 L59 25 L59 30 L3 30"/>
+   <path d="M11 12 L18 12 L18 19 L11 19 Z M22 12 L29 12 L29 19 L22 19 Z M32 12 L37 12 L37 19 L32 19 Z" fill="#F6E7CF"/>
+   <path d="M43 17 L50 17 Q52 17 53 19 L55 23 L43 23 Z" fill="#CFE3EE"/>
+   <path d="M6 23 L40 23"/>
+   <circle cx="15" cy="31" r="5" fill="#F6EEE1"/><circle cx="15" cy="31" r="1.6"/><circle cx="48" cy="31" r="5" fill="#F6EEE1"/><circle cx="48" cy="31" r="1.6"/></g>`,
+ khaosoi:`<g transform="translate(4 8)">
+   <path d="M4 26 Q28 22 52 26 Q50 44 28 46 Q6 44 4 26 Z" fill="#E7B04A"/>
+   <path d="M4 26 Q28 30 52 26" fill="none"/>
+   <path d="M10 26 q3 -5 6 0 q3 -5 6 0 q3 -5 6 0 q3 -5 6 0 q3 -5 6 0 q3 -5 6 0" fill="none" stroke="#9A5A1E"/>
+   <path d="M16 22 q4 -10 10 -6 q3 -6 9 -2 q6 -2 7 5" fill="#E9C27A"/>
+   <path d="M20 19 l3 -4 M27 17 l2 -5 M33 18 l4 -3"/>
+   <path d="M40 24 q6 -8 11 -2 Z" fill="#9BC57A"/>
+   <path d="M8 22 q2 -3 5 0" fill="none" stroke="#C4553B"/>
+   <path d="M18 46 Q28 50 38 46"/></g>`,
+ capmoo:`<g transform="translate(6 10)">
+   <path d="M4 26 q-2 -10 8 -12 q4 -8 12 -4 q8 -4 10 4 q8 2 6 12 q2 8 -8 10 q-6 6 -14 2 q-10 2 -12 -6 q-6 -2 -2 -6 Z" fill="#E9B872"/>
+   <path d="M30 16 q4 -10 14 -8 q10 0 10 10 q4 8 -4 12 q-4 6 -12 2" fill="#F0C88A"/>
+   <circle cx="14" cy="22" r="1.4"/><circle cx="20" cy="28" r="1.2"/><circle cx="26" cy="21" r="1.4"/><circle cx="12" cy="31" r="1"/><circle cx="24" cy="33" r="1.1"/>
+   <circle cx="40" cy="14" r="1.2"/><circle cx="46" cy="19" r="1.3"/><circle cx="42" cy="24" r="1"/>
+   <path d="M10 18 q3 -2 5 0 M30 30 q3 -2 5 0" fill="none" stroke="#B9813E"/></g>`,
+ doisuthep:`<g transform="translate(0 6)">
+   <path d="M2 50 Q20 22 32 18 Q46 22 62 50 Z" fill="#7FA36A"/>
+   <path d="M14 50 Q24 36 32 34 Q42 36 52 50" fill="none" stroke="#5E8550"/>
+   <path d="M32 18 q-1 8 2 14 q-2 6 0 12" fill="none" stroke-dasharray="2 3"/>
+   <path d="M28 18 L36 18 L35 14 Q32 11 29 14 Z" fill="#E3B23C"/><path d="M32 11 L32 5"/><circle cx="32" cy="5" r=".9"/>
+   <path d="M2 50 L62 50"/></g>`,
+ chedi:`<g transform="translate(14 2)">
+   <path d="M6 58 L30 58 L28 52 L8 52 Z" fill="#E8D5B0"/>
+   <path d="M10 52 L26 52 L24 46 L12 46 Z" fill="#E8D5B0"/>
+   <path d="M12 46 Q10 34 18 28 Q26 34 24 46 Z" fill="#E3B23C"/>
+   <path d="M15 28 L21 28 L20 24 L16 24 Z" fill="#E3B23C"/>
+   <path d="M18 24 L18 6"/><path d="M16 20 L20 20 M16.5 16 L19.5 16 M17 12 L19 12"/><circle cx="18" cy="5" r="1.2" fill="#E3B23C"/>
+   <path d="M14 38 Q18 36 22 38" fill="none" stroke="#B5862A"/></g>`,
+ lantern:`<g transform="translate(16 4)">
+   <path d="M4 8 Q16 2 28 8 L26 40 Q16 44 6 40 Z" fill="#F2C46B"/>
+   <path d="M11 6 L10 41 M21 6 L22 41" fill="none" stroke="#D49A3A"/>
+   <path d="M6 40 Q16 44 26 40 M9 46 L23 46"/><path d="M9 46 L6 40 M23 46 L26 40"/>
+   <path d="M16 50 q-3 3 0 6 q3 3 0 6" fill="none" stroke="#E07A3C"/></g>`,
+ umbrella:`<g transform="translate(4 4)">
+   <path d="M4 26 Q28 -2 52 26 Q46 22 40 26 Q34 22 28 26 Q22 22 16 26 Q10 22 4 26 Z" fill="#E28A6B"/>
+   <path d="M28 6 L16 26 M28 6 L40 26 M28 6 L28 26" fill="none" stroke="#B3593F"/>
+   <path d="M28 26 L28 52 q0 4 -4 4 q-3 0 -3 -3"/><circle cx="28" cy="5" r="1.4"/>
+   <path d="M18 14 q4 -3 8 0" fill="none" stroke="#F6E7CF"/></g>`,
+ saiua:`<g transform="translate(8 8)">
+   <path d="M24 24 m-18 0 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0" fill="none" stroke="#B5603A" stroke-width="6"/>
+   <path d="M24 24 m-9 0 a9 9 0 1 0 18 0 a9 9 0 1 0 -18 0" fill="none" stroke="#B5603A" stroke-width="6"/>
+   <path d="M24 24 m-18 0 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0 M24 24 m-9 0 a9 9 0 1 0 18 0 a9 9 0 1 0 -18 0" fill="none"/>
+   <path d="M10 14 l2 2 M36 10 l2 2 M40 30 l2 1 M28 42 l1 2" stroke="#C9874E"/>
+   <path d="M42 24 q6 -2 8 -8" fill="none" stroke="#7FA36A"/></g>`,
+ elephant:`<g transform="translate(4 10)">
+   <path d="M10 34 Q8 14 26 12 Q42 10 46 22 L50 32 Q52 40 48 44 L46 36 L44 44 L36 44 L36 36 L22 36 L22 44 L14 44 Z" fill="#B9B3AE"/>
+   <path d="M44 20 Q56 22 54 34 Q53 40 48 40" fill="none"/>
+   <path d="M30 14 Q24 18 26 28 Q32 30 36 24" fill="#CFCAC5"/>
+   <circle cx="42" cy="20" r="1.3"/><path d="M8 26 q-4 2 -3 6"/>
+   <path d="M20 12 Q26 6 32 10" fill="#C4553B"/></g>`
+};
+const CMD_KEYS=Object.keys(CMD);
+function cmdSVG(k,{op=1,rot=0,size=64}={}){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="${size}" height="${size}"><defs><filter id="w" filterUnits="userSpaceOnUse" x="-4" y="-4" width="72" height="72"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="1.6"/></filter></defs><g opacity="${op}" transform="rotate(${rot} 32 32)" filter="url(#w)" fill="none" stroke="${CMD_INK}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${CMD[k]}</g></svg>`}
+const CMD_URL={};CMD_KEYS.forEach(k=>CMD_URL[k]=svgURL(cmdSVG(k)));
+/* repeating background tile — faint, scattered, rotated */
+const CMD_TILE=(()=>{const W=260,H=300;const pos=[['songthaew',8,6,-8,60],['khaosoi',150,18,10,52],['doisuthep',92,92,0,58],['capmoo',196,118,-12,44],['chedi',14,140,6,54],['lantern',210,212,14,40],['saiua',104,210,-6,44],['umbrella',30,236,-14,46],['elephant',176,58,4,0]];
+  const g=pos.filter(p=>p[4]).map(([k,x,y,r,s])=>`<g transform="translate(${x} ${y}) rotate(${r} ${s/2} ${s/2}) scale(${s/64})" fill="none" stroke="${CMD_INK}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${CMD[k]}</g>`).join('');
+  return svgURL(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><defs><filter id="w" filterUnits="userSpaceOnUse" x="0" y="0" width="${W}" height="${H}"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="1.8"/></filter></defs><g opacity=".17" filter="url(#w)">${g}</g></svg>`)})();
+
+document.documentElement.style.setProperty('--cm-tile',`url("${CMD_TILE}")`);
 const RC_COLORS={lanna:{a:'#C4553B',a2:'#F7E2CC',band:'linear-gradient(135deg,#F3D0B2,#FBEBDA)'},forest:{a:'#7FA889',a2:'#E2ECDD',band:'linear-gradient(135deg,#D4E4D0,#EDF3E8)'},sun:{a:'#E3B95A',a2:'#FAEDCB',band:'linear-gradient(135deg,#F7E3B0,#FCF2DA)'},
   blue:{a:'#8DB6E6',a2:'#DCEBFA',band:'linear-gradient(135deg,#CBE0F8,#E5F0FC)'},lav:{a:'#B8A2E3',a2:'#EAE1FA',band:'linear-gradient(135deg,#DCCFF6,#EEE8FB)'}};
 
@@ -2714,7 +2808,7 @@ function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency,col=RC_C
   const vars=`--rc-a:${col.a};--rc-a2:${col.a2};`;
   const settledAll=!c.transfers.length;
   const stampEl=r.stickers?`<div style="text-align:right;margin:8px 6px 0"><div class="stamp stamp-anim" style="color:${settledAll?'#2C8455':'#C2493D'}">${settledAll?'SETTLED ✓':'PENDING'}<br><span style="font-size:10px">${esc(fmtDate(tr.end,'short',lp))}</span></div></div>`:'';const stamp='';
-  const stk=(k,css,w=40)=>r.stickers?`<img class="stk" src="${STK[k]}" alt="" style="width:${w}px;${css}">`:'';
+  const stk=(k,css,w=40)=>r.stickers?`<img class="stk" src="${CMD_URL[k]||STK[k]}" alt="" style="width:${w}px;${css}">`:'';
   // blocks
   const finance=`<div class="row2"><span>${RL('r.budget')}</span><span class="v">${M(tr.budget)}</span></div>
     <div class="row2"><span>${RL('r.spent')}</span><span class="v">${M(c.total)}</span></div>
@@ -2723,7 +2817,7 @@ function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency,col=RC_C
     <div class="row2"><span>${RL('r.items')}</span><span class="v">${esc(t('r.itemsN',{n:c.ex.length},lp))}</span></div>`;
   const catBlock=`<div class="sec">${RL('r.byCat')}</div>${cats.map(k=>`<div class="row2"><span>${RL('cat.'+k)}</span><span class="v">${M(c.byCat[k])}</span></div>`).join('')}`;
   const top=[...c.ex].sort((a,b)=>b.amount-a.amount).slice(0,r.content==='detail'?8:4);
-  const highlights=`<div class="sec">${RL('r.highlights')}</div>${top.map(e=>`<div class="row2"><span style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(e.title)}</span><span class="v">${M(e.amount)}</span></div>`).join('')}`;
+  const highlights=`<div class="sec">${RL('r.highlights')}</div>${top.map(e=>`<div class="row2"><span style="min-width:0">${esc([...e.title].length>26?[...e.title].slice(0,25).join('').trim()+'…':e.title)}</span><span class="v">${M(e.amount)}</span></div>`).join('')}`;
   const memBlock=r.members?`<div class="sec">${RL('r.whoPaid')}</div>${mem.map(m=>{const p=c.per[m.id];const net=p.net;
     return `<div class="mem"><span class="d" style="background:${m.color}">${m.avatar&&AV_ART[m.avatar]?avatarSVG(m.avatar):esc(m.name.slice(0,1).toUpperCase())}</span><span class="nm">${esc(m.name)}</span><span class="nums">${esc(t('r.paid',null,lp))} <b>${M(p.paid)}</b>${r.content!=='overview'?` · ${esc(t('r.resp',null,lp))} <b>${M(p.resp)}</b><br><span class="${net>0?'pos':net<0?'neg':''}">${esc(net>0?t('r.get',null,lp):net<0?t('r.give',null,lp):t('r.even',null,lp))} ${net?M(Math.abs(net)):''}</span>`:''}</span></div>`}).join('')}`:'';
   const xfer=`<div class="sec">${RL('r.transfers')}</div>${c.transfers.length?c.transfers.map(f=>{const a=memberById(f.from),b=memberById(f.to);return `<div class="xrow"><b>${esc(a.name)}</b><span class="arr">→</span><b>${esc(b.name)}</b><span class="v">${M(f.amount)}</span></div>`}).join(''):`<div class="row2"><span>${RL('r.noTransfers')}</span><span class="v pos">✓</span></div>`}
@@ -2737,7 +2831,7 @@ function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency,col=RC_C
   else if(r.content==='settlement')content=`<div class="total"><span>${RL('r.spent')}</span><b>${M(c.total)}</b></div>`+xfer+(r.members?`<div class="dash"></div>`+memBlock:'');
   else if(r.content==='detail')content=`<div class="total"><span>${RL('r.spent')}</span><b>${M(c.total)}</b></div>`+finance+`<div class="dash"></div>`+catBlock+`<div class="dash"></div>`+highlights+(r.members?`<div class="dash"></div>`+memBlock:'')+`<div class="dash"></div>`+xfer;
   else content=`<div class="total"><span>${RL('r.spent')}</span><b>${M(c.total)}</b></div>`+finance+`<div class="dash"></div>`+catBlock+(r.members?`<div class="dash"></div>`+memBlock:'');
-  const footer=stampEl+(r.footer?`<div class="foot">${esc(t('r.footer',null,lp))}${rcLangs().s?`<small>${esc(t('r.footer',null,rcLangs().s))}</small>`:''}<small>Thanks for the memories ♡ · TRIPLY</small></div>`:'');
+  const footer=stampEl+(r.footer?`<div class="foot"><small>TRIPLY · ${esc(fmtDate(todayStr(),'short',lp))}</small></div>`:'');
   const dates=esc(fmtRange(tr.start,tr.end,lp));
   if(r.style==='B'){
     return `<div class="rc rcB" style="${vars}">
@@ -2746,22 +2840,22 @@ function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency,col=RC_C
      <h2>${RN(tr)}</h2><div class="h2s">TRIPLY · TRAVEL JOURNAL</div>
      <div class="fields"><div>${RL('r.dates')}<b>${dates}</b></div><div>${RL('r.dest')}<b>${RN(tr,'destination','destAlt')}</b></div><div>${RL('r.members')}<b>${esc(t('r.people',{n:nMem},lp))}</b></div><div>${RL('r.used')}<b>${tr.budget?Math.round(c.pct)+'%':'—'}</b></div></div>
      <div class="body">${content}${footer}</div>
-     ${stk('flower','right:-10px;bottom:70px;transform:rotate(12deg)',44)}${stk('heart','left:-6px;bottom:20px;transform:rotate(-14deg)',30)}${stk('bear','right:16px;bottom:-14px',46)}</div>`}
+     ${stk('khaosoi','right:-14px;bottom:80px;transform:rotate(10deg)',58)}${stk('lantern','left:-12px;bottom:30px;transform:rotate(-12deg)',44)}${stk('songthaew','right:10px;bottom:-18px;transform:rotate(-4deg)',66)}</div>`}
   if(r.style==='C'){
     return `<div class="rc rcC" style="${vars}"><div class="band" style="background:${col.band}"><div class="brandline">TRIPLY · TRAVEL PASS</div><h2>${RN(tr)}</h2><div class="h2s">${dates}</div>
-      <div class="codes"><div><small>FROM</small><b>HOME</b></div><img src="${STK.plane}" alt="" style="width:40px"><div style="text-align:right"><small>TO</small><b>${esc((Nplain(tr,'destination','destAlt')||'').slice(0,10))}</b></div></div></div>
+      <div class="codes"><div><small>FROM</small><b>HOME</b></div><img src="${CMD_URL.songthaew}" alt="" style="width:50px;flex:none"><div style="text-align:right"><small>TO</small><b class="to">${esc((Nplain(tr,'destination','destAlt')||'').slice(0,14))}</b></div></div></div>
      <div class="perf"><i class="l"></i><i class="r"></i></div>
      <div class="inner">${r.cover?`<img class="cover" src="${coverSrc(tr)}" alt="" style="border-radius:14px;margin-bottom:8px">`:''}
       <div class="grid3"><div>${RL('r.members')}<b>${esc(t('r.people',{n:nMem},lp))}</b></div><div>${RL('r.items')}<b>${c.ex.length}</b></div><div>${RL('r.used')}<b>${tr.budget?Math.round(c.pct)+'%':'—'}</b></div></div>
       ${content}${footer}<div class="barcode"></div><div style="text-align:center;font-size:10px;color:#8A8690;margin-top:4px;letter-spacing:.3em">${tr.id.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,12)}</div></div>
-     ${stamp}${stk('star','left:14px;top:12px',26)}${stk('cat','right:-8px;bottom:120px;transform:rotate(10deg)',44)}</div>`}
+     ${stamp}${stk('chedi','right:16px;top:14px;transform:rotate(6deg)',40)}${stk('capmoo','right:-10px;bottom:120px;transform:rotate(12deg)',52)}${stk('songthaew','left:-10px;bottom:-14px;transform:rotate(-6deg)',62)}</div>`}
   return `<div class="rc rcA" style="${vars}"><img class="zig t" src="${STK.zig}" alt=""><img class="zig b" src="${STK.zig}" alt="">${stamp}
    <div class="brandline">TRIPLY · TRAVEL RECEIPT</div><h2>${RN(tr)}</h2><div class="h2s">${RN(tr,'destination','destAlt')}</div>
    <div class="meta"><span>${dates}</span><span>${esc(t('r.people',{n:nMem},lp))}</span></div>
    ${r.cover?`<img class="cover" src="${coverSrc(tr)}" alt="">`:''}<div class="dash"></div>
    <div class="pill-h" style="margin-bottom:4px">${esc(t(person?'r.myShare':r.content==='settlement'?'r.transfers':'r.summary',null,rcLangs().p))}${rcLangs().s?` · ${esc(t(person?'r.myShare':r.content==='settlement'?'r.transfers':'r.summary',null,rcLangs().s))}`:''}</div>
    ${content}<div class="dash"></div>${footer}
-   ${stk('cat','left:-14px;top:70px;transform:rotate(-12deg)',46)}${stk('star','right:22px;top:92px',22)}${stk('plane','right:-12px;bottom:90px;transform:rotate(-10deg)',44)}${stk('heart','left:20px;bottom:18px',20)}</div>`}
+   ${stk('doisuthep','left:-20px;top:236px;transform:rotate(-10deg)',56)}${stk('lantern','right:18px;top:84px;transform:rotate(12deg)',30)}${stk('khaosoi','right:-16px;bottom:96px;transform:rotate(-8deg)',58)}${stk('songthaew','left:-8px;bottom:-16px;transform:rotate(-4deg)',64)}${stk('capmoo','right:22px;bottom:-12px;transform:rotate(10deg)',40)}</div>`}
 afterRender.receipt=(v,anim)=>{const f=$('#feed',v);if(f&&!anim)f.classList.remove('printing')};
 function updateReceipt(reprint){const cap=$('#receiptCapture');if(!cap)return;const c=computeTrip(resolveTrip('rcTrip'));if(c.ex.length)cap.innerHTML=receiptMarkup(c);
   const f=$('#feed');if(reprint&&f){f.classList.remove('printing');void f.offsetWidth;f.classList.add('printing')}else if(f)f.classList.remove('printing');

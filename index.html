@@ -1041,6 +1041,80 @@ h1,h2,h3,.ttl,.page-head h1,.hero-scene h1,.trip-hero h1,.pass-txt h2,.j-title,.
 .rc .mem .nums{grid-column:2;text-align:left;font-size:11.5px}
 
 .rcC .codes b.to{white-space:nowrap;font-size:18px;line-height:1.3;text-align:right;overflow:visible}
+
+/* ===== receipt v2 ===== */
+.feed{width:min(468px,calc(100% - 4px));padding:0 2px 24px}
+#receiptCapture{padding:24px 14px 30px}
+.rx-pick{display:grid;grid-auto-flow:column;grid-template-rows:repeat(2,auto);grid-auto-columns:86px;gap:8px;overflow-x:auto;padding:3px 2px 8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}.rx-pick button{scroll-snap-align:start}
+.rx-pick button{display:flex;flex-direction:column;align-items:center;gap:5px;padding:6px 4px 8px;border-radius:14px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
+.rx-pick button.on{border-color:var(--brand);box-shadow:0 0 0 3px var(--coral-soft)}
+.rx-pick .nm{font-size:11px;line-height:1.3;font-weight:600;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.rx-th{position:relative;width:100%;aspect-ratio:4/5;border-radius:8px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);display:block}
+.rx-th i{position:absolute;left:0;right:0;top:0;height:30%}.rx-th img{position:absolute;left:50%;top:8%;width:34%;margin-left:-17%}
+.rx-th b{position:absolute;left:14%;width:72%;height:4px;border-radius:2px;opacity:.55;top:46%}.rx-th b+b{top:58%}
+.rx-th em{position:absolute;left:14%;right:14%;bottom:12%;height:14%;border-radius:4px;opacity:.85}
+.rx{position:relative;color:var(--i);font-family:var(--f-body);box-shadow:0 18px 40px -18px rgba(80,50,30,.4),0 2px 4px rgba(80,50,30,.08);line-height:1.4}
+.rx .ft{display:block;white-space:nowrap;overflow:hidden;min-width:0}
+.rx .rl{display:inline}.rx .rl .s{margin-left:6px;font-size:.86em;opacity:.7}
+.e-zig,.e-scallop{border-radius:2px}
+.e-round{border-radius:24px;overflow:hidden}.e-ticket{border-radius:18px;overflow:hidden}.e-square{border-radius:4px;overflow:hidden;box-shadow:0 0 0 1px var(--l),0 18px 40px -18px rgba(0,0,0,.3)}
+.e-stitch{border-radius:18px;overflow:hidden}.e-stitch::after{content:"";position:absolute;inset:7px;border:1.8px dashed var(--l);border-radius:13px;pointer-events:none}
+.e-note{border-radius:4px}
+.rx-tape{position:absolute;z-index:3;top:-12px;left:50%;width:110px;height:26px;margin-left:-55px;background:rgba(217,88,74,.32);transform:rotate(-3deg)}
+.rx-zig{position:absolute;left:0;right:0;height:10px;background-repeat:repeat-x;background-size:16px 10px;display:block}
+.rx-zig.t{top:-9px}.rx-zig.b{bottom:-9px;transform:scaleY(-1)}
+.e-scallop .rx-zig{height:12px;background-size:24px 12px}.e-scallop .rx-zig.t{top:-11px;transform:scaleY(-1)}.e-scallop .rx-zig.b{bottom:-11px;transform:none}
+.rx-head{position:relative;padding:22px 22px 16px;text-align:center;background:var(--hb);color:var(--hi)}
+.has-band .rx-head{padding:18px 20px 18px}
+.rx-brand{font:700 10.5px/1.4 var(--f-display);letter-spacing:.2em;opacity:.72}
+.rx-deco{display:flex;justify-content:center;align-items:flex-end;gap:4px;margin:10px 0 2px;height:42px}
+.rx-name{font-family:var(--f-display);font-size:27px;line-height:1.3;font-weight:700;margin:4px 0 0;color:inherit}
+.f-hand .rx-name{font-weight:600;letter-spacing:.01em}
+.rx-alt{font-size:13px;opacity:.75}
+.rx-date{font-size:14.5px;font-weight:600;margin-top:2px;opacity:.9}
+.rx-meta{display:flex;justify-content:center;gap:6px;margin-top:10px;flex-wrap:nowrap}
+.rx-meta span{display:inline-block;padding:2px 10px;border-radius:99px;font-size:11.5px;font-weight:600;background:var(--a2);color:var(--i);max-width:34%}
+.has-band .rx-meta span{background:rgba(255,255,255,.24);color:inherit}
+.rx-body{position:relative;padding:4px 20px 6px}
+.has-band .rx-body{padding-top:10px}
+.rx-total{margin:12px 0 10px;padding:12px 16px 14px;border-radius:16px;background:var(--a2)}
+.rx-total .lbl{font-size:12.5px;color:var(--m);font-weight:600}
+.rx-total .amt{font:700 36px/1.2 var(--f-display);text-align:right;letter-spacing:-.01em;color:var(--i)}
+.rx-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.rx-kpis>div{padding:7px 9px;border-radius:12px;border:1.5px dashed var(--l);background:var(--p);min-width:0}
+.rx-kpis small{font-size:10.5px;color:var(--m)}.rx-kpis b{font-size:14.5px;font-variant-numeric:tabular-nums}
+.rx-sec{margin-top:16px;padding-top:12px;border-top:2px dashed var(--l)}
+.rx-st{font:700 12.5px/1.4 var(--f-display);letter-spacing:.04em;color:var(--a);margin-bottom:4px}
+.rx-row{display:flex;gap:12px;align-items:baseline;padding:4px 0;font-size:13.5px}
+.rx-row .k{flex:1}.rx-row .v{flex:none;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.rx-mh,.rx-m{display:grid;grid-template-columns:minmax(0,1.25fr) repeat(3,minmax(0,1fr));gap:6px;align-items:center}
+.rx-mh{font-size:10.5px;color:var(--m);text-align:right;padding-bottom:2px}
+.rx-m{padding:5px 0;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;border-top:1px dotted var(--l)}
+.rx-m .nm{display:flex;align-items:center;gap:6px;text-align:left;min-width:0}.rx-m .nm b{font-size:13.5px}
+.rx-m .d{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:700;overflow:hidden}.rx-m .d svg{width:100%;height:100%}
+.rx-xsec .rx-st{font-size:13.5px}
+.rx-x{margin-top:8px;padding:10px 12px 12px;border-radius:16px;border:2px solid var(--a);background:var(--p)}
+.rx-xl{display:flex;align-items:baseline;gap:10px}.rx-xl .who{flex:1;font-size:14px}.rx-xl .amt{flex:none;font:700 22px/1.2 var(--f-display);color:var(--a);white-space:nowrap}
+.rx-bank{display:flex;align-items:center;gap:10px;margin-top:8px;padding:10px 12px;border-radius:12px;background:var(--a2)}
+.rx-bank .acc{flex:1;min-width:0}.rx-bank .no{font:700 21px/1.25 var(--f-display);letter-spacing:.06em;font-variant-numeric:tabular-nums}.rx-bank .bn{font-size:11.5px;color:var(--m)}
+.rx-bank.none{display:block;text-align:center;font-size:12px;color:var(--m)}
+.bank-chip.lg{min-width:58px;height:28px;font-size:12px;border-radius:8px}
+.rx-ok{padding:10px;border-radius:12px;background:var(--a2);text-align:center;font-weight:700;color:#2C8455}
+.rx-note{font-size:11px;color:var(--m);margin-top:2px}
+.rx .pos{color:#2C8455}.rx .neg{color:#C2493D}.rx.dark .pos{color:#8FD6A4}.rx.dark .neg{color:#FF9C8C}.rx.dark .rx-ok{color:#8FD6A4}
+.rx.dark{box-shadow:0 18px 40px -16px rgba(0,0,0,.6)}
+.rx-foot{position:relative;padding:12px 20px 20px;text-align:center}
+.rx-stamp{display:inline-block;border:2.5px solid #C2493D;color:#C2493D;border-radius:12px;padding:4px 12px;font:700 13px/1.2 var(--f-display);transform:rotate(-8deg);opacity:.9}
+.rx-stamp.ok{border-color:#2C8455;color:#2C8455}.rx.dark .rx-stamp{border-color:#FF9C8C;color:#FF9C8C}.rx.dark .rx-stamp.ok{border-color:#8FD6A4;color:#8FD6A4}
+.rx-stamp small{display:block;font-size:10px;font-weight:600}
+.rx-code{font:700 10.5px/1.4 var(--f-display);letter-spacing:.16em;color:var(--m);margin-top:10px}
+.rx-bar{display:block;width:calc(100% - 8px);height:46px;margin:12px 4px 0}
+.rx-perf{position:relative;height:0;border-top:2px dashed var(--l);margin:0 18px}
+.rx-perf i{position:absolute;top:-12px;width:22px;height:22px;border-radius:50%;background:#EFEBDF}.rx-perf i:first-child{left:-30px}.rx-perf i:last-child{right:-30px}
+.rx-stk{position:absolute;pointer-events:none;z-index:2}
+.f-mono .rx-body,.f-mono .rx-date,.f-mono .rx-meta{font-family:'Courier New',ui-monospace,var(--f-body)}
+.f-mono .rx-total .amt,.f-mono .rx-bank .no,.f-mono .rx-xl .amt{font-family:'Courier New',ui-monospace,var(--f-display)}
+@media (max-width:420px){#receiptCapture{padding:20px 8px 26px}.rx-body{padding:4px 14px 6px}.rx-head{padding-left:16px;padding-right:16px}.rx-total .amt{font-size:32px}}
 </style>
 
 <div class="splash" id="splash" aria-hidden="true"><div class="sp"><img id="splashIcon" alt=""><b id="splashWord"></b><small id="splashTag"></small></div></div>
@@ -1154,7 +1228,7 @@ th:{
  'expense.deleteQ':'ลบ "{t}"?','expense.deleteBody':'ยอดรวม ยอดของสถานที่ และยอดที่ต้องเคลียร์จะคำนวณใหม่ทันที',
  'member.title':'รายการที่ {n} จ่าย','member.none':'ยังไม่มีรายการที่ {n} จ่าย',
  'rc.title':'สลิปทริป','rc.sub':'เลือกสไตล์ แล้วบันทึกหรือส่งให้เพื่อน','rc.style':'สไตล์สลิป','rc.color':'สีธีม','rc.content':'เนื้อหา','rc.overview':'ภาพรวม','rc.detail':'รายละเอียด','rc.settlement':'ยอดเคลียร์',
- 'rc.lang':'ภาษาในสลิป','rc.langTh':'ไทย','rc.langJa':'日本語','rc.langBoth':'ไทย + 日本語','rc.show':'แสดงบนสลิป','rc.showCover':'ภาพปก','rc.showStickers':'สติกเกอร์ตกแต่ง','rc.showFooter':'บรรทัดท้ายสลิป','rc.showMembers':'ยอดของสมาชิก',
+ 'rc.lang':'ภาษาในสลิป','rc.langTh':'ไทย','rc.langJa':'日本語','rc.langBoth':'ไทย + 日本語','rc.show':'แสดงบนสลิป','rc.showCover':'ภาพปก','rc.showStickers':'สติกเกอร์ตกแต่ง','rc.showFooter':'บรรทัดท้ายสลิป','rc.showBank':'เลขบัญชีคนรับเงิน','rx.days':'{n} วัน','rx.budget':'งบทั้งหมด','rx.left':'คงเหลือ','rx.pp':'เฉลี่ยต่อคน','rx.paid':'จ่ายไป','rx.share':'ต้องออก','rc.showMembers':'ยอดของสมาชิก',
  'rc.png':'บันทึก PNG','rc.pdf':'บันทึก PDF','rc.share':'แชร์','rc.copy':'คัดลอกสรุป','rc.empty':'ทริปนี้ยังไม่มีค่าใช้จ่ายจริง สลิปจะสร้างได้เมื่อมีรายการแรก','rc.exporting':'กำลังสร้างไฟล์…','rc.saved':'บันทึกไฟล์แล้ว','rc.declined':'ยกเลิกการบันทึก',
  'rc.fallbackTitle':'บันทึกรูปสลิป','rc.fallback':'กดค้างที่รูป (มือถือ) หรือคลิกขวา (คอม) แล้วเลือกบันทึกรูป','rc.copied':'คัดลอกสรุปแล้ว วางในแชทได้เลย','rc.copyFail':'คัดลอกอัตโนมัติไม่ได้ เลือกข้อความด้านล่างแล้วคัดลอกเอง',
  'rc.person':'สลิปของ','rc.group':'ทั้งกลุ่ม','rc.reprint':'พิมพ์ใหม่','rc.exportFail':'สร้างไฟล์ไม่สำเร็จ ลองอีกครั้งนะ','rc.shareHint':'บันทึกรูปแล้วส่งต่อใน LINE หรือ IG Stories ได้เลย',
@@ -1262,7 +1336,7 @@ ja:{
  'expense.deleteQ':'「{t}」を削除しますか？','expense.deleteBody':'合計・場所別・精算額はすぐに再計算されます',
  'member.title':'{n}が支払った明細','member.none':'{n}が支払った明細はまだありません',
  'rc.title':'旅のレシート','rc.sub':'スタイルを選んで、旅の思い出に残そう','rc.style':'スタイル','rc.color':'テーマカラー','rc.content':'内容','rc.overview':'概要','rc.detail':'詳細','rc.settlement':'精算',
- 'rc.lang':'レシートの言語','rc.langTh':'ไทย','rc.langJa':'日本語のみ','rc.langBoth':'ไทย＋日本語','rc.show':'表示する項目','rc.showCover':'カバー画像','rc.showStickers':'ステッカー','rc.showFooter':'フッター','rc.showMembers':'メンバー別の金額',
+ 'rc.lang':'レシートの言語','rc.langTh':'ไทย','rc.langJa':'日本語のみ','rc.langBoth':'ไทย＋日本語','rc.show':'表示する項目','rc.showCover':'カバー画像','rc.showStickers':'ステッカー','rc.showFooter':'フッター','rc.showBank':'受取口座','rx.days':'{n}日間','rx.budget':'予算','rx.left':'残り','rx.pp':'1人あたり','rx.paid':'支払','rx.share':'負担','rc.showMembers':'メンバー別の金額',
  'rc.png':'PNGで保存','rc.pdf':'PDFで保存','rc.share':'シェア','rc.copy':'概要をコピー','rc.empty':'この旅にはまだ支出がありません。最初の明細を記録するとレシートが作れます','rc.exporting':'ファイルを作成中…','rc.saved':'保存しました','rc.declined':'保存をキャンセルしました',
  'rc.fallbackTitle':'レシート画像を保存','rc.fallback':'画像を長押し（PCは右クリック）して保存してください','rc.copied':'概要をコピーしました。チャットに貼り付けてね','rc.copyFail':'自動コピーできませんでした。下のテキストを選択してコピーしてください',
  'rc.person':'対象','rc.group':'グループ全体','rc.reprint':'もう一度印刷','rc.exportFail':'ファイルを作成できませんでした。もう一度お試しください','rc.shareHint':'画像を保存して、LINEやインスタのストーリーでシェアしよう',
@@ -2791,18 +2865,18 @@ function renderReceipt(){const tid=resolveTrip('rcTrip');const r=settings.rc;
    C:`<div class="thumb" style="background:#FFFDF8;border-radius:10px"><div style="height:40%;background:linear-gradient(135deg,#CDEBD8,#DCEBFA)"></div><div style="margin:6px 8px;border-top:2px dashed #E9DFD2"></div><div style="margin:6px 8px;height:10px;background:repeating-linear-gradient(90deg,#383B42 0 2px,transparent 2px 4px)"></div></div>`};
   const mem=c.memberIds.map(memberById);
   h+=`<div class="studio"><div class="controls rv" style="--i:1">
-   <div class="grp"><span class="flabel">${esc(t('rc.style'))}</span><div class="style-pick">${['A','B','C'].map(k=>`<button data-act="rcSet" data-k="style" data-v="${k}" class="${r.style===k?'on':''}">${thumbs[k]}${['Kawaii Café','Travel Journal','Pastel Ticket'][k.charCodeAt(0)-65]}</button>`).join('')}</div></div>
-   <div class="grp"><span class="flabel">${esc(t('rc.color'))}</span><div class="swatches">${Object.entries(RC_COLORS).map(([k,v])=>`<button data-act="rcSet" data-k="color" data-v="${k}" class="${r.color===k?'on':''}" style="background:${v.a}" aria-label="${k}"></button>`).join('')}</div></div>
+   <div class="grp"><span class="flabel">${esc(t('rc.style'))} <small class="muted tiny">· ${RX.length}</small></span><div class="rx-pick">${RX.map(st=>`<button data-act="rcSet" data-k="style" data-v="${st.id}" class="${rxOf(r.style).id===st.id?'on':''}"><span class="rx-th" style="background:${st.p}"><i style="background:${st.hb||st.a2}"></i><img src="${CMD_URL[st.deco[0]]}" alt=""><b style="background:${st.i}"></b><b style="background:${st.i};width:46%"></b><em style="background:${st.a}"></em></span><span class="nm">${esc(rxName(st))}</span></button>`).join('')}</div></div>
+
    <div class="grp"><span class="flabel">${esc(t('rc.content'))}</span><div class="seg">${['overview','detail','settlement'].map(k=>`<button data-act="rcSet" data-k="content" data-v="${k}" class="${r.content===k?'on':''}">${esc(t('rc.'+k))}</button>`).join('')}</div></div>
    <div class="grp"><span class="flabel">${esc(t('rc.person'))}</span><div class="pick"><button class="noav ${r.person==='all'?'on':''}" data-act="rcSet" data-k="person" data-v="all">${icon('i-users','sm')} ${esc(t('rc.group'))}</button>${mem.map(m=>`<button class="${r.person===m.id?'on':''}" data-act="rcSet" data-k="person" data-v="${m.id}">${av(m,'sm')}${esc(m.name)}</button>`).join('')}</div></div>
    <div class="grp"><span class="flabel">${esc(t('rc.lang'))}</span><div class="seg">${[['th','rc.langTh'],['ja','rc.langJa'],['both','rc.langBoth']].map(([k,l])=>`<button data-act="rcSet" data-k="lang" data-v="${k}" class="${(r.lang||settings.lang)===k?'on':''}">${esc(t(l))}</button>`).join('')}</div></div>
-   <div class="grp"><span class="flabel">${esc(t('rc.show'))}</span><div class="toggles">${[['cover','rc.showCover'],['stickers','rc.showStickers'],['footer','rc.showFooter'],['members','rc.showMembers']].map(([k,l])=>`<div class="tg"><span>${esc(t(l))}</span><button class="switch" role="switch" aria-checked="${!!r[k]}" data-act="rcToggle" data-k="${k}" aria-label="${esc(t(l))}"></button></div>`).join('')}</div></div>
+   <div class="grp"><span class="flabel">${esc(t('rc.show'))}</span><div class="toggles">${[['bank','rc.showBank'],['stickers','rc.showStickers'],['members','rc.showMembers'],['footer','rc.showFooter']].map(([k,l])=>`<div class="tg"><span>${esc(t(l))}</span><button class="switch" role="switch" aria-checked="${r[k]!==false}" data-act="rcToggle" data-k="${k}" aria-label="${esc(t(l))}"></button></div>`).join('')}</div></div>
    <div class="exports"><button class="btn btn-primary" data-act="exportPNG" ${c.ex.length?'':'disabled'}>${icon('i-down','sm')}${esc(t('rc.png'))}</button><button class="btn btn-soft" data-act="exportPDF" ${c.ex.length?'':'disabled'}>${icon('i-down','sm')}${esc(t('rc.pdf'))}</button>
     <button class="btn btn-soft" data-act="shareRc" ${c.ex.length?'':'disabled'}>${icon('i-share','sm')}${esc(t('rc.share'))}</button><button class="btn btn-soft" data-act="copySummary" ${c.ex.length?'':'disabled'}>${icon('i-copy','sm')}${esc(t('rc.copy'))}</button></div></div>
    <div class="stage rv" style="--i:2"><div class="printer"><i></i></div><div class="feed printing" id="feed"><div id="receiptCapture" ${c.ex.length?'data-act="viewRc" role="button" tabindex="0"':''}>${c.ex.length?receiptMarkup(c):`<div class="rc rcA" style="padding:30px 22px"><div class="empty"><img src="${STK.cat}" alt="" style="width:70px"><p style="color:#8A8690">${esc(t('rc.empty'))}</p></div></div>`}</div></div>
    <div class="row" style="justify-content:center;margin-top:-8px;gap:6px">${c.ex.length?`<button class="btn btn-soft btn-sm" data-act="viewRc">${icon('i-image','sm')}${esc(t('rc.view'))}</button>`:''}<button class="btn btn-ghost btn-sm" data-act="reprint">${icon('i-receipt','sm')}${esc(t('rc.reprint'))}</button></div></div></div>`;
   return h}
-function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency,col=RC_COLORS[r.color]||RC_COLORS.coral;const {p:lp}=rcLangs();
+function receiptMarkupOld(c){const r=settings.rc,tr=c.trip,cur=tr.currency,col=RC_COLORS[r.color]||RC_COLORS.coral;const {p:lp}=rcLangs();
   const mem=c.memberIds.map(memberById);const nMem=tr.memberIds.length;const person=r.person!=='all'&&c.per[r.person]?r.person:null;
   const M=v=>money(v,cur);const cats=CATS.filter(k=>c.byCat[k]).sort((a,b)=>c.byCat[b]-c.byCat[a]);
   const vars=`--rc-a:${col.a};--rc-a2:${col.a2};`;
@@ -2856,12 +2930,88 @@ function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency,col=RC_C
    <div class="pill-h" style="margin-bottom:4px">${esc(t(person?'r.myShare':r.content==='settlement'?'r.transfers':'r.summary',null,rcLangs().p))}${rcLangs().s?` · ${esc(t(person?'r.myShare':r.content==='settlement'?'r.transfers':'r.summary',null,rcLangs().s))}`:''}</div>
    ${content}<div class="dash"></div>${footer}
    ${stk('doisuthep','left:-20px;top:236px;transform:rotate(-10deg)',56)}${stk('lantern','right:18px;top:84px;transform:rotate(12deg)',30)}${stk('khaosoi','right:-16px;bottom:96px;transform:rotate(-8deg)',58)}${stk('songthaew','left:-8px;bottom:-16px;transform:rotate(-4deg)',64)}${stk('capmoo','right:22px;bottom:-12px;transform:rotate(10deg)',40)}</div>`}
-afterRender.receipt=(v,anim)=>{const f=$('#feed',v);if(f&&!anim)f.classList.remove('printing')};
-function updateReceipt(reprint){const cap=$('#receiptCapture');if(!cap)return;const c=computeTrip(resolveTrip('rcTrip'));if(c.ex.length)cap.innerHTML=receiptMarkup(c);
+/* =========================================================
+   RECEIPT v2 — 15 styles, one clear structure
+   head (name + doodles, date) → total → categories → members → transfers + bank → footer
+   every line is single-line; fitText() shrinks text instead of wrapping
+   ========================================================= */
+const RX=[
+ {id:'lanna',  th:'ล้านนาคลาสสิก',en:'Lanna Classic', p:'#FFFBF3',i:'#3A2A21',m:'#8C7767',a:'#B5452F',a2:'#F6E0CB',l:'#E8D8C2',edge:'zig',   font:'display',deco:['songthaew','doisuthep','khaosoi','lantern','chedi'],to:.13},
+ {id:'khaosoi',th:'ข้าวซอย',     en:'Khao Soi',      p:'#FFF6DF',i:'#4A3215',m:'#9A7A4E',a:'#C9781A',a2:'#F9E2AE',l:'#EED9AC',edge:'round', font:'display',hb:'#F4C35A',hi:'#4A3215',deco:['khaosoi','capmoo','saiua','khaosoi','capmoo'],to:.14},
+ {id:'songthaew',th:'รถแดง',     en:'Songthaew',     p:'#FFF8F4',i:'#3B2320',m:'#957370',a:'#C8372D',a2:'#F9D9D3',l:'#EFD6CF',edge:'ticket',font:'display',hb:'#C8372D',hi:'#FFF6EE',deco:['songthaew','songthaew','songthaew'],to:.12},
+ {id:'doi',    th:'ดอยสุเทพ',    en:'Doi Suthep',    p:'#F6F8F0',i:'#2D3B2A',m:'#7A8A72',a:'#4F7B43',a2:'#DCE8D2',l:'#D8E2CD',edge:'round', font:'display',hb:'#7FA36A',hi:'#FFFFFF',deco:['doisuthep','chedi','umbrella','elephant','doisuthep'],to:.13},
+ {id:'khomloi',th:'คืนโคมลอย',   en:'Lantern Night', p:'#1E2340',i:'#F6EBD3',m:'#A9A6BF',a:'#F2C46B',a2:'#2C3258',l:'#3A4068',edge:'round', font:'display',deco:['lantern','lantern','chedi','lantern','lantern'],to:.2,ti:'#F2C46B',dark:1},
+ {id:'nimman', th:'นิมมานมินิมอล',en:'Nimman Minimal',p:'#FFFFFF',i:'#1F1F1F',m:'#8A8A8A',a:'#1F1F1F',a2:'#F2F2EF',l:'#E4E4E0',edge:'square',font:'display',deco:['songthaew','khaosoi','doisuthep'],to:.07},
+ {id:'kraft',  th:'กระดาษคราฟต์',en:'Kraft Paper',   p:'#E9D3B0',i:'#3B2A1A',m:'#7E6446',a:'#8C3B22',a2:'#F3E4CB',l:'#CDB38C',edge:'zig',   font:'hand',   deco:['saiua','capmoo','khaosoi','umbrella','songthaew'],to:.15},
+ {id:'bosang', th:'ร่มบ่อสร้าง', en:'Bo Sang',       p:'#FFF5F0',i:'#4A2A26',m:'#9B7570',a:'#D9603F',a2:'#FBDCD2',l:'#F2D3C8',edge:'scallop',font:'display',hb:'#F3B6A1',hi:'#4A2A26',deco:['umbrella','umbrella','lantern','umbrella','umbrella'],to:.13},
+ {id:'note',   th:'สมุดจด',      en:'Notebook',      p:'#FFFDF7',i:'#2F3A4A',m:'#7E8796',a:'#D9584A',a2:'#FCE3DE',l:'#DCE3EE',edge:'note',  font:'hand',   deco:['khaosoi','songthaew','lantern','doisuthep','capmoo'],to:.1},
+ {id:'pass',   th:'บอร์ดดิ้งพาส',en:'Boarding Pass', p:'#FFFFFF',i:'#23324A',m:'#7D8899',a:'#2E5E9E',a2:'#DCE8F6',l:'#DCE3EE',edge:'ticket',font:'display',hb:'#2E5E9E',hi:'#FFFFFF',deco:['songthaew','doisuthep','chedi'],to:.08,bar:1},
+ {id:'thermal',th:'ใบเสร็จร้านค้า',en:'Thermal',     p:'#FAFAF7',i:'#2B2B2B',m:'#777772',a:'#2B2B2B',a2:'#EEEEE8',l:'#DADAD3',edge:'zig',   font:'mono',   deco:['capmoo','khaosoi','saiua'],to:.06,bar:1},
+ {id:'matcha', th:'มัทฉะ',       en:'Matcha',        p:'#F4F7EC',i:'#2F3A26',m:'#7C8870',a:'#5E7E2E',a2:'#E0EACB',l:'#D6E0C2',edge:'round', font:'hand',   hb:'#C9DBA6',hi:'#2F3A26',deco:['doisuthep','umbrella','elephant','chedi','doisuthep'],to:.12},
+ {id:'indigo', th:'ผ้าคราม',     en:'Indigo Cloth',  p:'#F3F5FB',i:'#1F2A4D',m:'#74809F',a:'#2B3F87',a2:'#DDE3F5',l:'#D3DAEE',edge:'stitch',font:'display',hb:'#2B3F87',hi:'#FFFFFF',deco:['elephant','chedi','umbrella','lantern','elephant'],to:.1},
+ {id:'ping',   th:'ตะวันริมปิง', en:'Ping Sunset',   p:'#FFF7EE',i:'#3D2A2A',m:'#9A7F78',a:'#D85F3E',a2:'#FCE0D0',l:'#F3DCCB',edge:'round', font:'display',hb:'linear-gradient(135deg,#F7B98B,#EE8A8A)',hi:'#FFFFFF',deco:['lantern','doisuthep','songthaew','umbrella','lantern'],to:.12},
+ {id:'bazaar', th:'ไนท์บาซาร์',  en:'Night Bazaar',  p:'#2A1F2D',i:'#FBEAD7',m:'#BBA6B3',a:'#FF9F5A',a2:'#3D2E42',l:'#4A3A50',edge:'ticket',font:'display',deco:['saiua','capmoo','lantern','khaosoi','umbrella'],to:.2,ti:'#FFB37A',dark:1}];
+const RX_OLD={A:'lanna',B:'note',C:'pass'};
+const rxOf=id=>RX.find(s=>s.id===(RX_OLD[id]||id))||RX[0];
+const rxName=s=>settings.lang==='th'?s.th:s.en;
+/* per-style doodle wallpaper + edge art, built once */
+function cmTileURL(ink,op){const W=260,H=300;const pos=[['songthaew',8,6,-8,60],['khaosoi',150,18,10,52],['doisuthep',92,92,0,58],['capmoo',196,118,-12,44],['chedi',14,140,6,54],['lantern',210,212,14,40],['saiua',104,210,-6,44],['umbrella',30,236,-14,46]];
+  const g=pos.map(([k,x,y,r,s])=>`<g transform="translate(${x} ${y}) rotate(${r} ${s/2} ${s/2}) scale(${s/64})" fill="none" stroke="${ink}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${CMD[k]}</g>`).join('');
+  return svgURL(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><g opacity="${op}">${g}</g></svg>`)}
+const edgeURL=(kind,col)=>svgURL(kind==='scallop'?`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="12" viewBox="0 0 24 12"><path d="M0 0 H24 V0 A12 12 0 0 1 0 0 Z" fill="${col}"/></svg>`
+  :`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><path d="M0 10 L8 0 L16 10 Z" fill="${col}"/></svg>`);
+(()=>{const css=RX.map(s=>`.rx-${s.id}{--p:${s.p};--i:${s.i};--m:${s.m};--a:${s.a};--a2:${s.a2};--l:${s.l};--hb:${s.hb||'transparent'};--hi:${s.hi||s.i};background-color:${s.p};background-image:url("${cmTileURL(s.ti||s.i,s.to)}")${s.edge==='note'?`,url("${svgURL(`<svg xmlns='http://www.w3.org/2000/svg' width='8' height='28'><rect y='27' width='8' height='1.2' fill='${s.l}'/></svg>`)}")`:''};background-size:250px auto${s.edge==='note'?',8px 28px':''}}
+ .rx-${s.id} .rx-zig{background-image:url("${edgeURL(s.edge==='scallop'?'scallop':'zig',s.p)}")}`).join('\n');
+  const st=document.createElement('style');st.textContent=css;document.head.appendChild(st)})();
+/* shrink single-line text until it fits */
+function rxBarcode(seed){let h=0;for(const ch of String(seed))h=(h*31+ch.charCodeAt(0))>>>0;let x=0,out='';while(x<296){h=(h*1103515245+12345)>>>0;const w=1+(h>>>29)%3,g=1+(h>>>26)%2;out+=`<rect x="${x}" y="0" width="${w}" height="44"/>`;x+=w+g}return svgURL(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 44" preserveAspectRatio="none"><g fill="#23324A">${out}</g></svg>`)}
+function fitText(root){$$('.ft',root).forEach(el=>{el.style.fontSize='';let fs=parseFloat(getComputedStyle(el).fontSize)||14;const min=Math.max(8,fs*.55);let g=0;
+  while(el.scrollWidth>el.clientWidth+.5&&fs>min&&g++<40){fs-=.5;el.style.fontSize=fs+'px'}})}
+function rxDeco(s,size){return s.deco.map((k,i)=>`<img src="${CMD_URL[k]}" alt="" style="width:${size}px;transform:rotate(${[-8,6,-3,9,-6][i%5]}deg) translateY(${[2,-2,1,-1,2][i%5]}px)">`).join('')}
+function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency;const s=rxOf(r.style);const {p:lp,s:ls}=rcLangs();
+  const M=v=>money(v,cur);const T=(k,p)=>t(k,p,lp);const n=Math.max(1,tr.memberIds.length);
+  const person=r.person!=='all'&&c.per[r.person]?r.person:null;const settledAll=!c.transfers.length;
+  const cats=CATS.filter(k=>c.byCat[k]).sort((a,b)=>c.byCat[b]-c.byCat[a]);
+  const row=(k,v,cls='')=>`<div class="rx-row ${cls}"><span class="k ft">${k}</span><span class="v">${v}</span></div>`;
+  const sec=(title,body,cls='')=>`<section class="rx-sec ${cls}"><div class="rx-st ft">${title}</div>${body}</section>`;
+  const days=tripDays(tr).length;
+  const head=`<header class="rx-head"><div class="rx-brand ft">TRIPLY · ${s.bar?'TRAVEL PASS':'TRAVEL RECEIPT'}</div>
+    ${r.stickers!==false?`<div class="rx-deco">${rxDeco(s,s.deco.length>3?34:40)}</div>`:''}
+    <h2 class="rx-name ft">${esc(Nplain(tr))}</h2>${ls&&tr.nameAlt?`<div class="rx-alt ft">${esc(lp==='ja'?tr.name:tr.nameAlt)}</div>`:''}
+    <div class="rx-date ft">${esc(fmtRange(tr.start,tr.end,lp))}</div>
+    <div class="rx-meta"><span class="ft">${esc(t('r.people',{n},lp))}</span><span class="ft">${esc(T('rx.days',{n:days}))}</span><span class="ft">${esc(t('r.itemsN',{n:c.ex.length},lp))}</span></div></header>`;
+  const total=person?(()=>{const p=c.per[person],m=memberById(person);return `<div class="rx-total"><div class="lbl ft">${RL('r.myShare')} · ${esc(m.name)}</div><div class="amt ft">${M(p.resp)}</div></div>`})()
+    :`<div class="rx-total"><div class="lbl ft">${RL('r.spent')}</div><div class="amt ft">${M(c.total)}</div></div>`;
+  const kpis=person?(()=>{const p=c.per[person];return `<div class="rx-kpis"><div><small class="ft">${esc(T('r.paid'))}</small><b class="ft">${M(p.paid)}</b></div><div><small class="ft">${esc(T('r.personal'))}</small><b class="ft">${M(p.personal)}</b></div><div><small class="ft">${esc(T(p.net>=0?'r.get':'r.give'))}</small><b class="ft ${p.net>0?'pos':p.net<0?'neg':''}">${M(Math.abs(p.net))}</b></div></div>`})()
+    :`<div class="rx-kpis"><div><small class="ft">${esc(T('rx.budget'))}</small><b class="ft">${tr.budget?M(tr.budget):'—'}</b></div><div><small class="ft">${esc(T(c.remaining<0?'r.over':'rx.left'))}</small><b class="ft ${c.remaining<0?'neg':'pos'}">${tr.budget?M(Math.abs(c.remaining)):'—'}</b></div><div><small class="ft">${esc(T('rx.pp'))}</small><b class="ft">${M(Math.round(c.shared/n))}</b></div></div>`;
+  const catSec=sec(RL('r.byCat'),cats.map(k=>row(RL('cat.'+k),M(c.byCat[k]))).join(''));
+  const pre=c.ex.filter(e=>e.pre);const preSec=pre.length?sec(RL('pre.tab'),pre.map(e=>row(esc(e.title),M(e.amount))).join('')):'';
+  const top=[...c.ex].sort((a,b)=>b.amount-a.amount).slice(0,6);const hiSec=sec(RL('r.highlights'),top.map(e=>row(esc(e.title),M(e.amount))).join(''));
+  const memSec=r.members!==false?sec(RL('r.whoPaid'),`<div class="rx-mh"><span></span><span class="ft">${esc(T('rx.paid'))}</span><span class="ft">${esc(T('rx.share'))}</span><span class="ft">${esc(T('line.net'))}</span></div>`+
+    c.memberIds.map(id=>{const m=memberById(id),p=c.per[id];return `<div class="rx-m"><span class="nm"><span class="d" style="background:${m.color}">${m.avatar&&AV_ART[m.avatar]?avatarSVG(m.avatar):esc((m.name||'?').slice(0,1))}</span><b class="ft">${esc(m.name)}</b></span><span class="ft">${M(p.paidShared)}</span><span class="ft">${M(p.owed)}</span><span class="ft ${p.net>0?'pos':p.net<0?'neg':''}">${p.net>0?'+':p.net<0?'−':''}${M(Math.abs(p.net))}</span></div>`}).join('')):'';
+  const xs=person?c.transfers.filter(f=>f.from===person||f.to===person):c.transfers;
+  const xSec=sec(RL('r.transfers'),xs.length?xs.map(f=>{const a=memberById(f.from),b=memberById(f.to);
+    return `<div class="rx-x"><div class="rx-xl"><span class="who ft"><b>${esc(a.name)}</b> → <b>${esc(b.name)}</b></span><span class="amt">${M(f.amount)}</span></div>
+     ${r.bank!==false?(hasAcct(b)?`<div class="rx-bank">${bankChip(b.bank,'lg')}<div class="acc"><div class="no ft">${esc(fmtAcct(b.acct,b.bank).replace(/-/g,' '))}</div><div class="bn ft">${esc(bankName(b.bank))}${b.acctName?' · '+esc(b.acctName):''}</div></div></div>`:`<div class="rx-bank none ft">${esc(t('line.noAcct',{n:b.name},lp))}</div>`):''}</div>`}).join('')
+    :`<div class="rx-ok ft">✓ ${esc(T('r.settled'))}</div>`,'rx-xsec');
+  const dp=depPending(tr);const depSec=dp.length&&!person?sec(RL('dep.sec'),dp.map(d=>row(esc(d.title),M(d.amount))).join('')+`<div class="rx-note ft">${esc(T('dep.secSub'))}</div>`):'';
+  let body;
+  if(r.content==='settlement')body=xSec+memSec+depSec;
+  else if(r.content==='detail')body=catSec+preSec+hiSec+memSec+xSec+depSec;
+  else body=catSec+memSec+xSec;
+  const stamp=r.stickers!==false?`<div class="rx-stamp ${settledAll?'ok':''} stamp-anim">${settledAll?'SETTLED ✓':'PENDING'}<small>${esc(fmtDate(tr.end,'short',lp))}</small></div>`:'';
+  const foot=`<footer class="rx-foot">${stamp}${s.bar?`<img class="rx-bar" src="${rxBarcode(tr.id)}" alt=""><div class="rx-code">${esc(tr.id.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,10))} · ${esc(fmtDate(todayStr(),'short',lp))}</div>`:r.footer!==false?`<div class="rx-code">TRIPLY · ${esc(fmtDate(todayStr(),'short',lp))}</div>`:''}</footer>`;
+  const edges=['zig','scallop'].includes(s.edge)?`<i class="rx-zig t"></i><i class="rx-zig b"></i>`:'';
+  const corner=r.stickers!==false?`<img class="rx-stk" src="${CMD_URL[s.deco[0]]}" alt="" style="right:12px;bottom:12px;width:56px;transform:rotate(-6deg)">`:'';
+  return `<div class="rx rx-${s.id} e-${s.edge} f-${s.font} ${s.dark?'dark':''} ${s.hb?'has-band':''}">${edges}${s.edge==='note'?'<i class="rx-tape"></i>':''}${head}
+   ${s.edge==='ticket'?'<div class="rx-perf"><i></i><i></i></div>':''}<div class="rx-body">${total}${kpis}${body}</div>${foot}${corner}</div>`}
+
+afterRender.receipt=(v,anim)=>{const f=$('#feed',v);if(f&&!anim)f.classList.remove('printing');fitText(v);document.fonts&&document.fonts.ready.then(()=>fitText($('#receiptCapture')))};
+function updateReceipt(reprint){const cap=$('#receiptCapture');if(!cap)return;const c=computeTrip(resolveTrip('rcTrip'));if(c.ex.length){cap.innerHTML=receiptMarkup(c);fitText(cap)}
   const f=$('#feed');if(reprint&&f){f.classList.remove('printing');void f.offsetWidth;f.classList.add('printing')}else if(f)f.classList.remove('printing');
   if(!reprint)$$('.stamp-anim',cap).forEach(s=>s.classList.remove('stamp-anim'))}
 async function captureReceipt(){const el=$('#receiptCapture');if(!el||typeof html2canvas!=='function')throw new Error('nolib');
-  const feed=$('#feed');feed.classList.remove('printing');el.classList.add('capturing');
+  const feed=$('#feed');feed.classList.remove('printing');el.classList.add('capturing');fitText(el);
   const swaps=[];
   try{await document.fonts.ready;await Promise.all($$('img',el).map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r})));
    for(const img of $$('img.cover',el)){const w=img.clientWidth,h=img.clientHeight;if(!w||!h)continue;const k=3;const cv=document.createElement('canvas');cv.width=w*k;cv.height=h*k;
@@ -2986,7 +3136,7 @@ const A={
  undoSettle:el=>{const s=db.settlements.find(x=>x.id===el.dataset.id);if(!s||s.status!=='paid')return;s.status='void';logAct({tripId:s.tripId,kind:'settle_undo',ref:s.id,from:s.from,to:s.to});commit();toast(t('toast.undone'))},
  rcSet:el=>{const k=el.dataset.k;settings.rc[k]=el.dataset.v;saveSettings();
    $$(`[data-act="rcSet"][data-k="${k}"]`).forEach(b=>b.classList.toggle('on',b===el));updateReceipt(k==='style')},
- rcToggle:el=>{const k=el.dataset.k;settings.rc[k]=!settings.rc[k];el.setAttribute('aria-checked',settings.rc[k]);saveSettings();updateReceipt(false)},
+ rcToggle:el=>{const k=el.dataset.k;settings.rc[k]=settings.rc[k]===false;el.setAttribute('aria-checked',settings.rc[k]);saveSettings();updateReceipt(false)},
  reprint:()=>updateReceipt(true),
  exportPNG:el=>exportPNG(el), exportPDF:el=>exportPDF(el), shareRc:el=>shareRc(el), copySummary:()=>copySummary(),
  setLang:el=>{settings.lang=el.dataset.v;settings.rc.lang=null;saveSettings();applyTheme();render(false)},

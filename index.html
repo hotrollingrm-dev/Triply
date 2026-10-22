@@ -1151,6 +1151,14 @@ h1,h2,h3,.ttl,.page-head h1,.hero-scene h1,.trip-hero h1,.pass-txt h2,.j-title,.
 .pc-empty{margin-top:14px;padding:14px;border-radius:16px;border:2px dashed var(--a2);text-align:center;font-size:13px;color:var(--m)}
 .pc-foot{text-align:center;font:700 10.5px/1.4 var(--f-display);letter-spacing:.18em;color:var(--m);margin-top:14px}
 @media (max-width:420px){.pc{padding:30px 14px 22px}.pc-card{padding:20px 14px 14px}.pc-qrbox img{width:180px;height:180px}}
+
+.rx-cnt{display:inline-block;margin-left:6px;padding:0 7px;border-radius:99px;background:var(--a2);color:var(--i);font-size:11px;letter-spacing:0}
+.rx-day{margin-top:8px}
+.rx-dh{display:flex;align-items:baseline;gap:10px;padding:5px 10px;border-radius:10px;background:var(--a2);font-size:12.5px;font-weight:700}
+.rx-dh .ft{flex:1}.rx-dh .v{flex:none;white-space:nowrap;font-variant-numeric:tabular-nums}
+.rx-it{padding:6px 2px 6px 10px;border-bottom:1px dotted var(--l)}.rx-it:last-child{border-bottom:0}
+.rx-it .l1{display:flex;align-items:baseline;gap:10px;font-size:13.5px;font-weight:600}.rx-it .l1 .ft{flex:1}.rx-it .l1 .v{flex:none;white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums}
+.rx-it .l2{font-size:11px;color:var(--m);margin-top:1px}.rx-it .l2.pl{color:var(--i);opacity:.8;font-size:11.5px}
 </style>
 
 <div class="splash" id="splash" aria-hidden="true"><div class="sp"><img id="splashIcon" alt=""><b id="splashWord"></b><small id="splashTag"></small></div></div>
@@ -3555,7 +3563,7 @@ th:{
  'expense.deleteQ':'ลบ "{t}"?','expense.deleteBody':'ยอดรวม ยอดของสถานที่ และยอดที่ต้องเคลียร์จะคำนวณใหม่ทันที',
  'member.title':'รายการที่ {n} จ่าย','member.none':'ยังไม่มีรายการที่ {n} จ่าย',
  'rc.title':'สลิปทริป','rc.sub':'เลือกสไตล์ แล้วบันทึกหรือส่งให้เพื่อน','rc.style':'สไตล์สลิป','rc.color':'สีธีม','rc.content':'เนื้อหา','rc.overview':'ภาพรวม','rc.detail':'รายละเอียด','rc.settlement':'ยอดเคลียร์',
- 'rc.lang':'ภาษาในสลิป','rc.langTh':'ไทย','rc.langJa':'日本語','rc.langBoth':'ไทย + 日本語','rc.show':'แสดงบนสลิป','rc.showCover':'ภาพปก','rc.showStickers':'สติกเกอร์ตกแต่ง','rc.showFooter':'บรรทัดท้ายสลิป','rc.showBank':'เลขบัญชีคนรับเงิน','rx.days':'{n} วัน','rx.budget':'งบทั้งหมด','rx.left':'คงเหลือ','rx.pp':'เฉลี่ยต่อคน','rx.paid':'จ่ายไป','rx.share':'ต้องออก','rc.showMembers':'ยอดของสมาชิก',
+ 'rc.lang':'ภาษาในสลิป','rc.langTh':'ไทย','rc.langJa':'日本語','rc.langBoth':'ไทย + 日本語','rc.show':'แสดงบนสลิป','rc.showCover':'ภาพปก','rc.showStickers':'สติกเกอร์ตกแต่ง','rc.showFooter':'บรรทัดท้ายสลิป','rc.showBank':'เลขบัญชีคนรับเงิน','rx.days':'{n} วัน','rx.items':'รายละเอียดค่าใช้จ่าย','rx.by':'{n} จ่าย','rx.of':'จากยอด {x}','rx.budget':'งบทั้งหมด','rx.left':'คงเหลือ','rx.pp':'เฉลี่ยต่อคน','rx.paid':'จ่ายไป','rx.share':'ต้องออก','rc.showMembers':'ยอดของสมาชิก',
  'rc.png':'บันทึก PNG','rc.pdf':'บันทึก PDF','rc.share':'แชร์','rc.copy':'คัดลอกสรุป','rc.empty':'ทริปนี้ยังไม่มีค่าใช้จ่ายจริง สลิปจะสร้างได้เมื่อมีรายการแรก','rc.exporting':'กำลังสร้างไฟล์…','rc.saved':'บันทึกไฟล์แล้ว','rc.declined':'ยกเลิกการบันทึก',
  'rc.fallbackTitle':'บันทึกรูปสลิป','rc.fallback':'กดค้างที่รูป (มือถือ) หรือคลิกขวา (คอม) แล้วเลือกบันทึกรูป','rc.copied':'คัดลอกสรุปแล้ว วางในแชทได้เลย','rc.copyFail':'คัดลอกอัตโนมัติไม่ได้ เลือกข้อความด้านล่างแล้วคัดลอกเอง',
  'rc.person':'สลิปของ','rc.group':'ทั้งกลุ่ม','rc.reprint':'พิมพ์ใหม่','rc.exportFail':'สร้างไฟล์ไม่สำเร็จ ลองอีกครั้งนะ','rc.shareHint':'บันทึกรูปแล้วส่งต่อใน LINE หรือ IG Stories ได้เลย',
@@ -3667,7 +3675,7 @@ ja:{
  'expense.deleteQ':'「{t}」を削除しますか？','expense.deleteBody':'合計・場所別・精算額はすぐに再計算されます',
  'member.title':'{n}が支払った明細','member.none':'{n}が支払った明細はまだありません',
  'rc.title':'旅のレシート','rc.sub':'スタイルを選んで、旅の思い出に残そう','rc.style':'スタイル','rc.color':'テーマカラー','rc.content':'内容','rc.overview':'概要','rc.detail':'詳細','rc.settlement':'精算',
- 'rc.lang':'レシートの言語','rc.langTh':'ไทย','rc.langJa':'日本語のみ','rc.langBoth':'ไทย＋日本語','rc.show':'表示する項目','rc.showCover':'カバー画像','rc.showStickers':'ステッカー','rc.showFooter':'フッター','rc.showBank':'受取口座','rx.days':'{n}日間','rx.budget':'予算','rx.left':'残り','rx.pp':'1人あたり','rx.paid':'支払','rx.share':'負担','rc.showMembers':'メンバー別の金額',
+ 'rc.lang':'レシートの言語','rc.langTh':'ไทย','rc.langJa':'日本語のみ','rc.langBoth':'ไทย＋日本語','rc.show':'表示する項目','rc.showCover':'カバー画像','rc.showStickers':'ステッカー','rc.showFooter':'フッター','rc.showBank':'受取口座','rx.days':'{n}日間','rx.items':'支出の明細','rx.by':'{n}が支払','rx.of':'合計 {x} のうち','rx.budget':'予算','rx.left':'残り','rx.pp':'1人あたり','rx.paid':'支払','rx.share':'負担','rc.showMembers':'メンバー別の金額',
  'rc.png':'PNGで保存','rc.pdf':'PDFで保存','rc.share':'シェア','rc.copy':'概要をコピー','rc.empty':'この旅にはまだ支出がありません。最初の明細を記録するとレシートが作れます','rc.exporting':'ファイルを作成中…','rc.saved':'保存しました','rc.declined':'保存をキャンセルしました',
  'rc.fallbackTitle':'レシート画像を保存','rc.fallback':'画像を長押し（PCは右クリック）して保存してください','rc.copied':'概要をコピーしました。チャットに貼り付けてね','rc.copyFail':'自動コピーできませんでした。下のテキストを選択してコピーしてください',
  'rc.person':'対象','rc.group':'グループ全体','rc.reprint':'もう一度印刷','rc.exportFail':'ファイルを作成できませんでした。もう一度お試しください','rc.shareHint':'画像を保存して、LINEやインスタのストーリーでシェアしよう',
@@ -5334,10 +5342,21 @@ function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency;const s=
      ${r.bank!==false?(hasAcct(b)?`<div class="rx-bank">${bankChip(b.bank,'lg')}<div class="acc"><div class="no ft">${esc(fmtAcct(b.acct,b.bank).replace(/-/g,' '))}</div><div class="bn ft">${esc(bankName(b.bank))}${b.acctName?' · '+esc(b.acctName):''}</div></div></div>`:`<div class="rx-bank none ft">${esc(t('line.noAcct',{n:b.name},lp))}</div>`):''}</div>`}).join('')
     :`<div class="rx-ok ft">✓ ${esc(T('r.settled'))}</div>`,'rx-xsec');
   const dp=depPending(tr);const depSec=dp.length&&!person?sec(RL('dep.sec'),dp.map(d=>row(esc(d.title),M(d.amount))).join('')+`<div class="rx-note ft">${esc(T('dep.secSub'))}</div>`):'';
+  const itemList=(()=>{let ex=[...c.ex];if(person)ex=ex.filter(e=>e.payerId===person||e.shares.some(x=>x.memberId===person));
+    ex.sort((a,b)=>(a.date+(a.time||'')).localeCompare(b.date+(b.time||'')));if(!ex.length)return '';
+    const g={};ex.forEach(e=>{const k=e.pre&&e.date<tr.start?'pre':e.date;(g[k]=g[k]||[]).push(e)});
+    const keys=Object.keys(g).sort((a,b)=>a==='pre'?-1:b==='pre'?1:a.localeCompare(b));
+    return sec(`${RL('rx.items')}<span class="rx-cnt">${ex.length}</span>`,keys.map(k=>{const list=g[k];const di=tripDays(tr).indexOf(k);
+      const lbl=k==='pre'?t('pre.tab',null,lp):`${fmtDate(k,'dow',lp)}${di>=0?' · '+t('plan.day',{n:dayNum(tr,di)},lp):''}`;
+      const sum=list.reduce((s2,e)=>s2+(person?(e.shares.find(x=>x.memberId===person)?.amount||0):e.amount),0);
+      return `<div class="rx-day"><div class="rx-dh"><span class="ft">${esc(lbl)}</span><span class="v">${M(sum)}</span></div>${list.map(e=>{const pl=db.places.find(x=>x.id===e.placeId);const py=memberById(e.payerId);
+        const mine=person?(e.shares.find(x=>x.memberId===person)?.amount||0):0;
+        const sub=[t('rx.by',{n:py.name},lp),e.type==='personal'?t('money.self',null,lp):t('money.splitN',{n:e.shares.length},lp),person&&mine!==e.amount?t('rx.of',{x:M(e.amount)},lp):''].filter(Boolean).join(' · ');
+        return `<div class="rx-it"><div class="l1"><span class="ft">${esc(e.title)}</span><span class="v">${M(person?mine:e.amount)}</span></div>${pl?`<div class="l2 pl"><span class="ft">📍 ${esc(Nplain(pl))}</span></div>`:''}<div class="l2"><span class="ft">${esc(sub)}</span></div></div>`}).join('')}</div>`}).join(''),'rx-items')})();
   let body;
   if(r.content==='settlement')body=xSec+memSec+depSec;
-  else if(r.content==='detail')body=catSec+preSec+hiSec+memSec+xSec+depSec;
-  else body=catSec+memSec+xSec;
+  else if(r.content==='detail')body=itemList+catSec+memSec+xSec+depSec;
+  else body=itemList+memSec+xSec;
   const stamp=r.stickers!==false?`<div class="rx-stamp ${settledAll?'ok':''} stamp-anim">${settledAll?'SETTLED ✓':'PENDING'}<small>${esc(fmtDate(tr.end,'short',lp))}</small></div>`:'';
   const foot=`<footer class="rx-foot">${stamp}${s.bar?`<img class="rx-bar" src="${rxBarcode(tr.id)}" alt=""><div class="rx-code">${esc(tr.id.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,10))} · ${esc(fmtDate(todayStr(),'short',lp))}</div>`:r.footer!==false?`<div class="rx-code">TRIPLY · ${esc(fmtDate(todayStr(),'short',lp))}</div>`:''}</footer>`;
   const edges=['zig','scallop'].includes(s.edge)?`<i class="rx-zig t"></i><i class="rx-zig b"></i>`:'';

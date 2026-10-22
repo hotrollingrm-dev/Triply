@@ -5546,19 +5546,28 @@ async function rxPages(){const tid=resolveTrip('rcTrip');const c=computeTrip(tid
   const headH=measure(P.head+`<div class="rxp-sum">${P.summary}</div>`);
   const blocks=P.blocks.map(b=>({...b,h:measure(b.html)}));const contH={};
   const H1=RXP.H-RXP.pad-RXP.foot,H2=H1-RXP.strip;
-  const pages=[];let page=null,col=null,used=0,cap=0;
-  const newCol=()=>{if(!page||page.cols.length===2){page={cols:[]};pages.push(page)}col=[];page.cols.push(col);cap=pages.length===1?H1:H2;used=0};
-  newCol();col.push(P.head+`<div class="rxp-sum">${P.summary}</div>`);used=headH;
-  let curDay=-1;
-  for(const b of blocks){const isItem=typeof b.kind==='object';let need=b.h;let pre='';
-    if(isItem&&!b.kind.first&&curDay!==b.kind.day){pre=`<section class="rx-sec rx-items cont">${b.kind.dh}</section>`;need+=contH[b.kind.day]??(contH[b.kind.day]=measure(pre))}
-    if(used+need>cap&&used>0){newCol();if(isItem&&!b.kind.first){pre=`<section class="rx-sec rx-items cont">${b.kind.dh}</section>`;need=b.h+(contH[b.kind.day]??(contH[b.kind.day]=measure(pre)))}}
-    col.push(pre+b.html);used+=need;if(isItem)curDay=b.kind.day;
-    if(isItem&&b.kind.first)curDay=b.kind.day}
+  /* entries: {html,h,item:{day,first,dh}|null}; a column re-shows the day header when a day continues into it */
+  const headE={html:P.head+`<div class="rxp-sum">${P.summary}</div>`,h:headH,item:null};
+  const ents=blocks.map(b=>({html:b.html,h:b.h,item:typeof b.kind==='object'?b.kind:null}));
+  const cH=day=>contH[day]??(contH[day]=measure(`<section class="rx-sec rx-items cont">${ents.find(e=>e.item&&e.item.day===day).item.dh}</section>`));
+  const colH=list=>list.reduce((t2,e,k)=>t2+e.h+(e.item&&!e.item.first&&!(k>0&&list[k-1].item&&list[k-1].item.day===e.item.day)?cH(e.item.day):0),0);
+  const pages=[];let cur=[[headE]];
+  const capOf=pi=>pi===0?H1:H2;
+  for(const e of ents){let pg=cur,col=pg[pg.length-1];
+    if(colH([...col,e])>capOf(pages.length)&&col.length){if(pg.length===2){pages.push(pg);cur=[[]];col=cur[0]}else{pg.push([]);col=pg[1]}}
+    col.push(e)}
+  pages.push(cur);
+  /* balance the last page so it never leaves one column empty */
+  const li=pages.length-1;const last=pages[li].flat();const capL=capOf(li);
+  if(last.length>1){let best=null;const minK=last[0]===headE?1:1;
+    for(let k=minK;k<last.length;k++){const L=last.slice(0,k),R=last.slice(k);const hl=colH(L),hr=colH(R);if(hl>capL||hr>capL)continue;const sc=Math.max(hl,hr);if(!best||sc<best.sc)best={sc,k}}
+    if(best)pages[li]=[last.slice(0,best.k),last.slice(best.k)]}
   const N=pages.length;
-  host.innerHTML=pages.map((pg,i)=>`<div class="${cls} e-round" style="width:${RXP.W}px;height:${RXP.H}px">
+  const renderCol=list=>list.map((e,k)=>{const pre=e.item&&!e.item.first&&!(k>0&&list[k-1].item&&list[k-1].item.day===e.item.day)?`<section class="rx-sec rx-items cont">${e.item.dh}</section>`:'';return `<div class="rxb">${pre}${e.html}</div>`}).join('');
+  const pageH=(pg,i)=>i<N-1&&N>1?RXP.H:Math.min(RXP.H,Math.max(520,Math.ceil(Math.max(...pg.map(colH)))+(i?RXP.strip:0)+RXP.pad+RXP.foot+18));
+  host.innerHTML=pages.map((pg,i)=>`<div class="${cls} e-round" style="width:${RXP.W}px;height:${pageH(pg,i)}px">
     ${i?`<div class="rxp-strip"><b class="ft">${esc(Nplain(tr))}</b><span class="ft">${esc(fmtRange(tr.start,tr.end,lp))}</span></div>`:''}
-    <div class="rxp-cols">${pg.cols.map(cl=>`<div class="rxp-col">${cl.map(h=>`<div class="rxb">${h}</div>`).join('')}</div>`).join('')}${pg.cols.length<2?'<div class="rxp-col"></div>':''}</div>
+    <div class="rxp-cols">${pg.map(cl=>`<div class="rxp-col">${renderCol(cl)}</div>`).join('')}${pg.length<2?'<div class="rxp-col"></div>':''}</div>
     <div class="rxp-foot"><span>TRIPLY · ${esc(Nplain(tr))}</span><b>${i+1} / ${N}</b></div></div>`).join('');
   fitText(host);await new Promise(r=>setTimeout(r,80));
   const out=[];for(const el of host.children)out.push(await html2canvas(el,{backgroundColor:null,scale:2,logging:false,useCORS:true}));return out}
@@ -5575,7 +5584,7 @@ function imagesSheet({canvases,base,text,title}){const urls=canvases.map(cv=>cv.
       copyText(text||'',t('line.copiedOpen'));setTimeout(()=>{try{window.open('https://line.me/R/share?text='+encodeURIComponent(text||''),'_blank','noopener')}catch(err){}},400)}}})}
 const rcLand=()=>settings.rc.fmt!=='long';
 async function exportLand(btn,mode){busy(btn,true);try{if(typeof html2canvas!=='function')throw new Error('nolib');const cvs=await rxPages();
-  if(mode==='pdf'){const J=window.jspdf?.jsPDF;if(!J)throw new Error('nopdf');const pdf=new J({orientation:'landscape',unit:'px',format:[RXP.W,RXP.H],hotfixes:['px_scaling']});cvs.forEach((cv,i)=>{if(i)pdf.addPage([RXP.W,RXP.H],'landscape');pdf.addImage(cv.toDataURL('image/png'),'PNG',0,0,RXP.W,RXP.H)});await offerFile(fileBase()+'.pdf',pdf.output('blob'),cvs[0].toDataURL('image/png'));return}
+  if(mode==='pdf'){const J=window.jspdf?.jsPDF;if(!J)throw new Error('nopdf');const pdf=new J({orientation:'landscape',unit:'px',format:[RXP.W,cvs[0].height/2],hotfixes:['px_scaling']});cvs.forEach((cv,i)=>{const ph=cv.height/2;if(i)pdf.addPage([RXP.W,ph],'landscape');pdf.addImage(cv.toDataURL('image/png'),'PNG',0,0,RXP.W,ph)});await offerFile(fileBase()+'.pdf',pdf.output('blob'),cvs[0].toDataURL('image/png'));return}
   imagesSheet({canvases:cvs,base:fileBase(),text:summaryText(),title:t('rc.view')})}catch(e){console.error(e);toast(t('rc.exportFail'),'bad')}finally{busy(btn,false)}}
 
 afterRender.receipt=(v,anim)=>{if(ui.rcTab==='pay'){fitText(v);document.fonts&&document.fonts.ready.then(()=>fitText($('#pcWrap')));return}const f=$('#feed',v);if(f&&!anim)f.classList.remove('printing');fitText(v);document.fonts&&document.fonts.ready.then(()=>fitText($('#receiptCapture')))};

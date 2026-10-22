@@ -1175,6 +1175,39 @@ h1,h2,h3,.ttl,.page-head h1,.hero-scene h1,.trip-hero h1,.pass-txt h2,.j-title,.
 input.inp,select.inp{line-height:2;padding-top:0;padding-bottom:0}
 input.inp,textarea.inp,.amount-inp input{font-family:'Thonburi','Noto Sans Thai','Sukhumvit Set','Leelawadee UI',system-ui,sans-serif}
 .amount-inp input{line-height:1.6}
+
+/* ===== landscape export pages ===== */
+.rxp-host{position:fixed;left:-20000px;top:0;pointer-events:none}
+.rxp-host>.rx{margin-bottom:20px}
+.rxp{position:relative;box-shadow:none;border-radius:28px;overflow:hidden;font-size:17px}
+.rxp .rxb{display:flow-root}
+.rxp-cols{position:absolute;left:36px;right:36px;top:36px;bottom:44px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.rxp-strip~.rxp-cols{top:102px}
+.rxp-col{min-width:0;overflow:hidden}
+.rxp-strip{position:absolute;left:0;right:0;top:0;height:66px;display:flex;align-items:center;gap:18px;padding:0 36px;background:var(--hb);color:var(--hi);border-bottom:2px dashed var(--l)}
+.rxp:not(.has-band) .rxp-strip{background:var(--a2);color:var(--i)}
+.rxp-strip b{font:700 24px/1.4 var(--f-display);flex:0 1 auto}.rxp-strip span{font-size:16px;opacity:.85;flex:1}
+.rxp-foot{position:absolute;left:36px;right:36px;bottom:0;height:44px;display:flex;align-items:center;justify-content:space-between;font:700 13px/1 var(--f-display);letter-spacing:.14em;color:var(--m);border-top:2px dashed var(--l)}
+.rxp-foot b{letter-spacing:.06em;font-size:14px;color:var(--i)}
+.rxp .rx-head{border-radius:22px;padding:22px 20px 18px}
+.rxp .rx-name{font-size:38px}.rxp .rx-date{font-size:18px}.rxp .rx-brand{font-size:12px}.rxp .rx-meta span{font-size:14px;padding:3px 12px}.rxp .rx-deco{height:52px}.rxp .rx-deco img{width:48px!important}
+.rxp-sum{margin-top:4px}
+.rxp .rx-total{margin:14px 0 10px;padding:14px 18px}.rxp .rx-total .lbl{font-size:15px}.rxp .rx-total .amt{font-size:46px}
+.rxp .rx-kpis small{font-size:13px}.rxp .rx-kpis b{font-size:19px}.rxp .rx-kpis>div{padding:9px 12px}
+.rxp .rx-sec{margin-top:16px;padding-top:12px}.rxp .rx-sec.cont{margin-top:6px;padding-top:0;border-top:0}
+.rxp .rx-st{font-size:17px;margin-bottom:6px}
+.rxp .rx-row{font-size:17px;padding:5px 0}.rxp .rx-crow .pct{font-size:13px}
+.rxp .rx-mh{font-size:13px}.rxp .rx-m{font-size:16px;padding:7px 0}.rxp .rx-m .nm b{font-size:17px}.rxp .rx-m .d{width:30px;height:30px}
+.rxp .rx-x{padding:12px 14px 14px}.rxp .rx-xl .who{font-size:18px}.rxp .rx-xl .amt{font-size:28px}
+.rxp .rx-bank .no{font-size:27px}.rxp .rx-bank .bn{font-size:14px}.rxp .bank-chip.lg{min-width:70px;height:32px;font-size:14px}
+.rxp .rx-dh{font-size:16px;padding:7px 12px;margin-top:8px}
+.rxp .rx-it{margin:6px 0;padding:8px 6px 8px 12px!important}.rxp .rx-it .l1{font-size:18px}.rxp .rx-it .l2{font-size:14px}.rxp .rx-it .l2.pl{font-size:14.5px}.rxp .rx-cat{font-size:12.5px;padding:0 9px}
+.rxp .rx-note{font-size:13px}
+/* preview sheet for several images */
+.imgs-prev{display:flex;flex-direction:column;gap:12px;max-height:64vh;overflow:auto;padding:4px}
+.imgs-prev figure{margin:0;border-radius:14px;overflow:hidden;background:var(--sunken);box-shadow:0 0 0 1px var(--line)}
+.imgs-prev img{display:block;width:100%;-webkit-touch-callout:default}
+.imgs-prev figcaption{display:flex;align-items:center;justify-content:space-between;padding:2px 6px 2px 12px;font-size:12px;color:var(--ink-2);font-weight:600}
 </style>
 
 <div class="splash" id="splash" aria-hidden="true"><div class="sp"><img id="splashIcon" alt=""><b id="splashWord"></b><small id="splashTag"></small></div></div>
@@ -3579,7 +3612,7 @@ th:{
  'expense.deleteQ':'ลบ "{t}"?','expense.deleteBody':'ยอดรวม ยอดของสถานที่ และยอดที่ต้องเคลียร์จะคำนวณใหม่ทันที',
  'member.title':'รายการที่ {n} จ่าย','member.none':'ยังไม่มีรายการที่ {n} จ่าย',
  'rc.title':'สลิปทริป','rc.sub':'เลือกสไตล์ แล้วบันทึกหรือส่งให้เพื่อน','rc.style':'สไตล์สลิป','rc.color':'สีธีม','rc.content':'เนื้อหา','rc.overview':'ภาพรวม','rc.detail':'รายละเอียด','rc.settlement':'ยอดเคลียร์',
- 'rc.lang':'ภาษาในสลิป','rc.langTh':'ไทย','rc.langJa':'日本語','rc.langBoth':'ไทย + 日本語','rc.show':'แสดงบนสลิป','rc.showCover':'ภาพปก','rc.showStickers':'สติกเกอร์ตกแต่ง','rc.showFooter':'บรรทัดท้ายสลิป','rc.showBank':'เลขบัญชีคนรับเงิน','rx.days':'{n} วัน','rx.items':'รายละเอียดค่าใช้จ่าย','rx.by':'{n} จ่าย','rx.of':'จากยอด {x}','rx.budget':'งบทั้งหมด','rx.left':'คงเหลือ','rx.pp':'เฉลี่ยต่อคน','rx.paid':'จ่ายไป','rx.share':'ต้องออก','rc.showMembers':'ยอดของสมาชิก',
+ 'rc.lang':'ภาษาในสลิป','rc.langTh':'ไทย','rc.langJa':'日本語','rc.langBoth':'ไทย + 日本語','rc.show':'แสดงบนสลิป','rc.showCover':'ภาพปก','rc.showStickers':'สติกเกอร์ตกแต่ง','rc.showFooter':'บรรทัดท้ายสลิป','rc.showBank':'เลขบัญชีคนรับเงิน','rx.days':'{n} วัน','rx.cont':'ต่อ','rx.nImgs':'{n} รูป','rx.saveAll':'บันทึกทุกรูป','rx.fmt':'รูปที่ส่งออก','rx.fmtLand':'แนวนอน 2 คอลัมน์','rx.fmtLong':'สลิปยาวใบเดียว','rx.fmtLandHint':'รายการเยอะจะแบ่งเป็นหลายรูป ไม่ตัดกลางรายการ ส่งเข้า LINE เป็นอัลบั้มได้','rx.fmtLongHint':'รูปเดียวแนวตั้ง เหมือนที่เห็นด้านขวา','rx.items':'รายละเอียดค่าใช้จ่าย','rx.by':'{n} จ่าย','rx.of':'จากยอด {x}','rx.budget':'งบทั้งหมด','rx.left':'คงเหลือ','rx.pp':'เฉลี่ยต่อคน','rx.paid':'จ่ายไป','rx.share':'ต้องออก','rc.showMembers':'ยอดของสมาชิก',
  'rc.png':'บันทึก PNG','rc.pdf':'บันทึก PDF','rc.share':'แชร์','rc.copy':'คัดลอกสรุป','rc.empty':'ทริปนี้ยังไม่มีค่าใช้จ่ายจริง สลิปจะสร้างได้เมื่อมีรายการแรก','rc.exporting':'กำลังสร้างไฟล์…','rc.saved':'บันทึกไฟล์แล้ว','rc.declined':'ยกเลิกการบันทึก',
  'rc.fallbackTitle':'บันทึกรูปสลิป','rc.fallback':'กดค้างที่รูป (มือถือ) หรือคลิกขวา (คอม) แล้วเลือกบันทึกรูป','rc.copied':'คัดลอกสรุปแล้ว วางในแชทได้เลย','rc.copyFail':'คัดลอกอัตโนมัติไม่ได้ เลือกข้อความด้านล่างแล้วคัดลอกเอง',
  'rc.person':'สลิปของ','rc.group':'ทั้งกลุ่ม','rc.reprint':'พิมพ์ใหม่','rc.exportFail':'สร้างไฟล์ไม่สำเร็จ ลองอีกครั้งนะ','rc.shareHint':'บันทึกรูปแล้วส่งต่อใน LINE หรือ IG Stories ได้เลย',
@@ -3691,7 +3724,7 @@ ja:{
  'expense.deleteQ':'「{t}」を削除しますか？','expense.deleteBody':'合計・場所別・精算額はすぐに再計算されます',
  'member.title':'{n}が支払った明細','member.none':'{n}が支払った明細はまだありません',
  'rc.title':'旅のレシート','rc.sub':'スタイルを選んで、旅の思い出に残そう','rc.style':'スタイル','rc.color':'テーマカラー','rc.content':'内容','rc.overview':'概要','rc.detail':'詳細','rc.settlement':'精算',
- 'rc.lang':'レシートの言語','rc.langTh':'ไทย','rc.langJa':'日本語のみ','rc.langBoth':'ไทย＋日本語','rc.show':'表示する項目','rc.showCover':'カバー画像','rc.showStickers':'ステッカー','rc.showFooter':'フッター','rc.showBank':'受取口座','rx.days':'{n}日間','rx.items':'支出の明細','rx.by':'{n}が支払','rx.of':'合計 {x} のうち','rx.budget':'予算','rx.left':'残り','rx.pp':'1人あたり','rx.paid':'支払','rx.share':'負担','rc.showMembers':'メンバー別の金額',
+ 'rc.lang':'レシートの言語','rc.langTh':'ไทย','rc.langJa':'日本語のみ','rc.langBoth':'ไทย＋日本語','rc.show':'表示する項目','rc.showCover':'カバー画像','rc.showStickers':'ステッカー','rc.showFooter':'フッター','rc.showBank':'受取口座','rx.days':'{n}日間','rx.cont':'続き','rx.nImgs':'{n}枚','rx.saveAll':'すべて保存','rx.fmt':'書き出し形式','rx.fmtLand':'横向き2段','rx.fmtLong':'縦長1枚','rx.fmtLandHint':'項目が多いと複数枚に分けます（項目の途中では切りません）','rx.fmtLongHint':'右と同じ縦長の1枚','rx.items':'支出の明細','rx.by':'{n}が支払','rx.of':'合計 {x} のうち','rx.budget':'予算','rx.left':'残り','rx.pp':'1人あたり','rx.paid':'支払','rx.share':'負担','rc.showMembers':'メンバー別の金額',
  'rc.png':'PNGで保存','rc.pdf':'PDFで保存','rc.share':'シェア','rc.copy':'概要をコピー','rc.empty':'この旅にはまだ支出がありません。最初の明細を記録するとレシートが作れます','rc.exporting':'ファイルを作成中…','rc.saved':'保存しました','rc.declined':'保存をキャンセルしました',
  'rc.fallbackTitle':'レシート画像を保存','rc.fallback':'画像を長押し（PCは右クリック）して保存してください','rc.copied':'概要をコピーしました。チャットに貼り付けてね','rc.copyFail':'自動コピーできませんでした。下のテキストを選択してコピーしてください',
  'rc.person':'対象','rc.group':'グループ全体','rc.reprint':'もう一度印刷','rc.exportFail':'ファイルを作成できませんでした。もう一度お試しください','rc.shareHint':'画像を保存して、LINEやインスタのストーリーでシェアしよう',
@@ -5230,6 +5263,7 @@ function renderReceipt(){const tid=resolveTrip('rcTrip');const r=settings.rc;con
   h+=`<div class="studio"><div class="controls rv" style="--i:1">
    <div class="grp"><span class="flabel">${esc(t('rc.style'))} <small class="muted tiny">· ${RX.length}</small></span><div class="rx-pick">${RX.map(st=>`<button data-act="rcSet" data-k="style" data-v="${st.id}" class="${rxOf(r.style).id===st.id?'on':''}"><span class="rx-th" style="background:${st.p}"><i style="background:${st.hb||st.a2}"></i><img src="${CMD_URL[st.deco[0]]}" alt=""><b style="background:${st.i}"></b><b style="background:${st.i};width:46%"></b><em style="background:${st.a}"></em></span><span class="nm">${esc(rxName(st))}</span></button>`).join('')}</div></div>
 
+   <div class="grp"><span class="flabel">${esc(t('rx.fmt'))}</span><div class="seg"><button data-act="rcSet" data-k="fmt" data-v="land" class="${r.fmt!=='long'?'on':''}">${esc(t('rx.fmtLand'))}</button><button data-act="rcSet" data-k="fmt" data-v="long" class="${r.fmt==='long'?'on':''}">${esc(t('rx.fmtLong'))}</button></div><small class="muted tiny">${esc(t(r.fmt==='long'?'rx.fmtLongHint':'rx.fmtLandHint'))}</small></div>
    <div class="grp"><span class="flabel">${esc(t('rc.content'))}</span><div class="seg">${['overview','detail','settlement'].map(k=>`<button data-act="rcSet" data-k="content" data-v="${k}" class="${r.content===k?'on':''}">${esc(t('rc.'+k))}</button>`).join('')}</div></div>
    <div class="grp"><span class="flabel">${esc(t('rc.person'))}</span><div class="pick"><button class="noav ${r.person==='all'?'on':''}" data-act="rcSet" data-k="person" data-v="all">${icon('i-users','sm')} ${esc(t('rc.group'))}</button>${mem.map(m=>`<button class="${r.person===m.id?'on':''}" data-act="rcSet" data-k="person" data-v="${m.id}">${av(m,'sm')}${esc(m.name)}</button>`).join('')}</div></div>
    <div class="grp"><span class="flabel">${esc(t('rc.lang'))}</span><div class="seg">${[['th','rc.langTh'],['ja','rc.langJa'],['both','rc.langBoth']].map(([k,l])=>`<button data-act="rcSet" data-k="lang" data-v="${k}" class="${(r.lang||settings.lang)===k?'on':''}">${esc(t(l))}</button>`).join('')}</div></div>
@@ -5331,7 +5365,7 @@ function rxBarcode(seed){let h=0;for(const ch of String(seed))h=(h*31+ch.charCod
 function fitText(root){$$('.ft',root).forEach(el=>{el.style.fontSize='';let fs=parseFloat(getComputedStyle(el).fontSize)||14;const min=Math.max(8,fs*.55);let g=0;
   while(el.scrollWidth>el.clientWidth+.5&&fs>min&&g++<40){fs-=.5;el.style.fontSize=fs+'px'}})}
 function rxDeco(s,size){return s.deco.map((k,i)=>`<img src="${CMD_URL[k]}" alt="" style="width:${size}px;transform:rotate(${[-8,6,-3,9,-6][i%5]}deg) translateY(${[2,-2,1,-1,2][i%5]}px)">`).join('')}
-function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency;const s=rxOf(r.style);const {p:lp,s:ls}=rcLangs();
+function receiptMarkup(c,asParts){const r=settings.rc,tr=c.trip,cur=tr.currency;const s=rxOf(r.style);const {p:lp,s:ls}=rcLangs();
   const M=v=>money(v,cur);const T=(k,p)=>t(k,p,lp);const n=Math.max(1,tr.memberIds.length);
   const person=r.person!=='all'&&c.per[r.person]?r.person:null;const settledAll=!c.transfers.length;
   const cats=CATS.filter(k=>c.byCat[k]).sort((a,b)=>c.byCat[b]-c.byCat[a]);
@@ -5359,17 +5393,26 @@ function receiptMarkup(c){const r=settings.rc,tr=c.trip,cur=tr.currency;const s=
      ${r.bank!==false?(hasAcct(b)?`<div class="rx-bank">${bankChip(b.bank,'lg')}<div class="acc"><div class="no ft">${esc(fmtAcct(b.acct,b.bank).replace(/-/g,' '))}</div><div class="bn ft">${esc(bankName(b.bank))}${b.acctName?' · '+esc(b.acctName):''}</div></div></div>`:`<div class="rx-bank none ft">${esc(t('line.noAcct',{n:b.name},lp))}</div>`):''}</div>`}).join('')
     :`<div class="rx-ok ft">✓ ${esc(T('r.settled'))}</div>`,'rx-xsec');
   const dp=depPending(tr);const depSec=dp.length&&!person?sec(RL('dep.sec'),dp.map(d=>row(esc(d.title),M(d.amount))).join('')+`<div class="rx-note ft">${esc(T('dep.secSub'))}</div>`):'';
-  const itemList=(()=>{let ex=[...c.ex];if(person)ex=ex.filter(e=>e.payerId===person||e.shares.some(x=>x.memberId===person));
-    ex.sort((a,b)=>(a.date+(a.time||'')).localeCompare(b.date+(b.time||'')));if(!ex.length)return '';
+  const itemDays=(()=>{let ex=[...c.ex];if(person)ex=ex.filter(e=>e.payerId===person||e.shares.some(x=>x.memberId===person));
+    ex.sort((a,b)=>(a.date+(a.time||'')).localeCompare(b.date+(b.time||'')));
     const g={};ex.forEach(e=>{const k=e.pre&&e.date<tr.start?'pre':e.date;(g[k]=g[k]||[]).push(e)});
     const keys=Object.keys(g).sort((a,b)=>a==='pre'?-1:b==='pre'?1:a.localeCompare(b));
-    return sec(`${RL('rx.items')}<span class="rx-cnt">${ex.length}</span>`,keys.map(k=>{const list=g[k];const di=tripDays(tr).indexOf(k);
+    return {n:ex.length,days:keys.map(k=>{const list=g[k];const di=tripDays(tr).indexOf(k);
       const lbl=k==='pre'?t('pre.tab',null,lp):`${fmtDate(k,'dow',lp)}${di>=0?' · '+t('plan.day',{n:dayNum(tr,di)},lp):''}`;
       const sum=list.reduce((s2,e)=>s2+(person?(e.shares.find(x=>x.memberId===person)?.amount||0):e.amount),0);
-      return `<div class="rx-day"><div class="rx-dh"><span class="ft">${esc(lbl)}</span><span class="v">${M(sum)}</span></div>${list.map(e=>{const pl=db.places.find(x=>x.id===e.placeId);const py=memberById(e.payerId);
+      const dh=cont=>`<div class="rx-dh"><span class="ft">${esc(lbl)}${cont?' · '+esc(t('rx.cont',null,lp)):''}</span><span class="v">${M(sum)}</span></div>`;
+      return {dh,items:list.map(e=>{const pl=db.places.find(x=>x.id===e.placeId);const py=memberById(e.payerId);
         const mine=person?(e.shares.find(x=>x.memberId===person)?.amount||0):0;
         const sub=[t('rx.by',{n:py.name},lp),e.type==='personal'?t('money.self',null,lp):t('money.splitN',{n:e.shares.length},lp),person&&mine!==e.amount?t('rx.of',{x:M(e.amount)},lp):''].filter(Boolean).join(' · ');
-        return `<div class="rx-it" style="--c:${catHex(e.category)};--cb:${catBg(e.category)}"><div class="l1"><span class="ft">${esc(e.title)}</span><span class="v">${M(person?mine:e.amount)}</span></div>${pl?`<div class="l2 pl"><span class="ft">📍 ${esc(Nplain(pl))}</span></div>`:''}<div class="l2"><span class="ft"><span class="rx-cat">${esc(t('cat.'+e.category,null,lp))}</span>${esc(sub)}</span></div></div>`}).join('')}</div>`}).join(''),'rx-items')})();
+        return `<div class="rx-it" style="--c:${catHex(e.category)};--cb:${catBg(e.category)}"><div class="l1"><span class="ft">${esc(e.title)}</span><span class="v">${M(person?mine:e.amount)}</span></div>${pl?`<div class="l2 pl"><span class="ft">📍 ${esc(Nplain(pl))}</span></div>`:''}<div class="l2"><span class="ft"><span class="rx-cat">${esc(t('cat.'+e.category,null,lp))}</span>${esc(sub)}</span></div></div>`})}})}})();
+  const itemTitle=`<div class="rx-st ft">${RL('rx.items')}<span class="rx-cnt">${itemDays.n}</span></div>`;
+  const itemList=itemDays.n?`<section class="rx-sec rx-items">${itemTitle}${itemDays.days.map(d=>`<div class="rx-day">${d.dh(false)}${d.items.join('')}</div>`).join('')}</section>`:'';
+  if(asParts){const P2={s,head,summary:total+kpis,blocks:[]};const B=(html,kind)=>P2.blocks.push({html,kind});
+    const secBlk=(title,parts,cls='')=>parts.forEach((h2,ix)=>B(`<section class="rx-sec ${cls} ${ix?'cont':''}">${ix?'':`<div class="rx-st ft">${title}</div>`}${h2}</section>`,'sec'));
+    secBlk(RL('r.transfers'),xs.length?xs.map(f=>{const a=memberById(f.from),b=memberById(f.to);return `<div class="rx-x"><div class="rx-xl"><span class="who ft"><b>${esc(a.name)}</b> → <b>${esc(b.name)}</b></span><span class="amt">${M(f.amount)}</span></div>${r.bank!==false?(hasAcct(b)?`<div class="rx-bank">${bankChip(b.bank,'lg')}<div class="acc"><div class="no ft">${esc(fmtAcct(b.acct,b.bank).replace(/-/g,' '))}</div><div class="bn ft">${esc(bankName(b.bank))}${b.acctName?' · '+esc(b.acctName):''}</div></div></div>`:`<div class="rx-bank none ft">${esc(t('line.noAcct',{n:b.name},lp))}</div>`):''}</div>`}):[`<div class="rx-ok ft">✓ ${esc(T('r.settled'))}</div>`],'rx-xsec');
+    if(memSec)B(memSec,'sec');if(r.content==='detail')B(catSec,'sec');
+    if(r.content!=='settlement'&&itemDays.n){itemDays.days.forEach((d,di)=>d.items.forEach((it,ii)=>B(`${di===0&&ii===0?`<section class="rx-sec rx-items">${itemTitle}`:'<section class="rx-sec rx-items cont">'}${ii===0?d.dh(false):''}${it}</section>`,{day:di,first:ii===0,dh:d.dh(true)})))}
+    if(depSec)B(depSec,'sec');return P2}
   let body;
   if(r.content==='settlement')body=xSec+memSec+depSec;
   else if(r.content==='detail')body=itemList+catSec+memSec+xSec+depSec;
@@ -5490,6 +5533,51 @@ function pcRefresh(){const w=$('#pcWrap');if(w){w.innerHTML=payCardHTML(pcState(
 async function pcCapture(){const el=$('#pcCap');if(!el||typeof html2canvas!=='function')throw new Error('nolib');await document.fonts.ready;fitText(el);
   return html2canvas(el,{backgroundColor:null,scale:3,logging:false,useCORS:true})}
 
+
+/* ---------- landscape export: 2 columns, several images, blocks never split ---------- */
+const RXP={W:1200,H:900,pad:36,gap:36,foot:44,strip:66};
+async function rxPages(){const tid=resolveTrip('rcTrip');const c=computeTrip(tid);const P=receiptMarkup(c,true);const st=P.s;const tr=c.trip;const {p:lp}=rcLangs();
+  const colW=(RXP.W-RXP.pad*2-RXP.gap)/2;const cls=`rx rx-${st.id} f-${st.font} ${st.dark?'dark':''} ${st.hb?'has-band':''} rxp`;
+  const host=document.createElement('div');host.className='rxp-host';document.body.appendChild(host);
+  try{
+  host.innerHTML=`<div class="${cls}" style="width:${colW}px;height:auto;padding:0"><div class="rxp-m"></div></div>`;const mbox=$('.rxp-m',host);
+  const measure=html=>{mbox.innerHTML=`<div class="rxb">${html}</div>`;fitText(mbox);return mbox.firstChild.getBoundingClientRect().height};
+  await document.fonts.ready;
+  const headH=measure(P.head+`<div class="rxp-sum">${P.summary}</div>`);
+  const blocks=P.blocks.map(b=>({...b,h:measure(b.html)}));const contH={};
+  const H1=RXP.H-RXP.pad-RXP.foot,H2=H1-RXP.strip;
+  const pages=[];let page=null,col=null,used=0,cap=0;
+  const newCol=()=>{if(!page||page.cols.length===2){page={cols:[]};pages.push(page)}col=[];page.cols.push(col);cap=pages.length===1?H1:H2;used=0};
+  newCol();col.push(P.head+`<div class="rxp-sum">${P.summary}</div>`);used=headH;
+  let curDay=-1;
+  for(const b of blocks){const isItem=typeof b.kind==='object';let need=b.h;let pre='';
+    if(isItem&&!b.kind.first&&curDay!==b.kind.day){pre=`<section class="rx-sec rx-items cont">${b.kind.dh}</section>`;need+=contH[b.kind.day]??(contH[b.kind.day]=measure(pre))}
+    if(used+need>cap&&used>0){newCol();if(isItem&&!b.kind.first){pre=`<section class="rx-sec rx-items cont">${b.kind.dh}</section>`;need=b.h+(contH[b.kind.day]??(contH[b.kind.day]=measure(pre)))}}
+    col.push(pre+b.html);used+=need;if(isItem)curDay=b.kind.day;
+    if(isItem&&b.kind.first)curDay=b.kind.day}
+  const N=pages.length;
+  host.innerHTML=pages.map((pg,i)=>`<div class="${cls} e-round" style="width:${RXP.W}px;height:${RXP.H}px">
+    ${i?`<div class="rxp-strip"><b class="ft">${esc(Nplain(tr))}</b><span class="ft">${esc(fmtRange(tr.start,tr.end,lp))}</span></div>`:''}
+    <div class="rxp-cols">${pg.cols.map(cl=>`<div class="rxp-col">${cl.map(h=>`<div class="rxb">${h}</div>`).join('')}</div>`).join('')}${pg.cols.length<2?'<div class="rxp-col"></div>':''}</div>
+    <div class="rxp-foot"><span>TRIPLY · ${esc(Nplain(tr))}</span><b>${i+1} / ${N}</b></div></div>`).join('');
+  fitText(host);await new Promise(r=>setTimeout(r,80));
+  const out=[];for(const el of host.children)out.push(await html2canvas(el,{backgroundColor:null,scale:2,logging:false,useCORS:true}));return out}
+  finally{host.remove()}}
+function imagesSheet({canvases,base,text,title}){const urls=canvases.map(cv=>cv.toDataURL('image/png'));const blobs=()=>Promise.all(canvases.map(cv=>new Promise(r=>cv.toBlob(r,'image/png'))));
+  const name=i=>`${base}-${i+1}.png`;
+  openSheet({title:esc(title)+` <small class="muted tiny" style="font-weight:500">· ${esc(t('rx.nImgs',{n:canvases.length}))}</small>`,body:`<div class="imgs-prev">${urls.map((u,i)=>`<figure><img src="${u}" alt=""><figcaption>${i+1} / ${urls.length}<button class="btn btn-ghost btn-sm" data-one="${i}">${icon('i-down','sm')}</button></figcaption></figure>`).join('')}</div><p class="muted tiny" style="margin:0;text-align:center">${esc(t('line.hold'))}</p>`,
+   foot:`<button class="btn btn-soft btn-icon" data-copytxt style="flex:none" aria-label="${esc(t('line.copyTxt'))}">${icon('i-copy')}</button><button class="btn btn-soft" data-saveall>${icon('i-down','sm')}${esc(t('rx.saveAll'))}</button><button class="btn btn-primary btn-line" data-share>${icon('i-share','sm')}${esc(t('line.send'))}</button>`,
+   onMount(sh){$('[data-copytxt]',sh).onclick=()=>copyText(text||'',t('rc.copied'));
+    sh.addEventListener('click',async e=>{const o=e.target.closest('[data-one]');if(o){const bs=await blobs();offerFile(name(+o.dataset.one),bs[+o.dataset.one],null,'image/png')}});
+    $('[data-saveall]',sh).onclick=async()=>{const bs=await blobs();for(let i=0;i<bs.length;i++){await offerFile(name(i),bs[i],null,'image/png')}};
+    $('[data-share]',sh).onclick=async()=>{const bs=await blobs();const files=bs.map((b,i)=>new File([b],name(i),{type:'image/png'}));
+      if(navigator.canShare&&navigator.canShare({files})){try{await navigator.share({files});return}catch(err){if(err&&err.name==='AbortError')return}}
+      copyText(text||'',t('line.copiedOpen'));setTimeout(()=>{try{window.open('https://line.me/R/share?text='+encodeURIComponent(text||''),'_blank','noopener')}catch(err){}},400)}}})}
+const rcLand=()=>settings.rc.fmt!=='long';
+async function exportLand(btn,mode){busy(btn,true);try{if(typeof html2canvas!=='function')throw new Error('nolib');const cvs=await rxPages();
+  if(mode==='pdf'){const J=window.jspdf?.jsPDF;if(!J)throw new Error('nopdf');const pdf=new J({orientation:'landscape',unit:'px',format:[RXP.W,RXP.H],hotfixes:['px_scaling']});cvs.forEach((cv,i)=>{if(i)pdf.addPage([RXP.W,RXP.H],'landscape');pdf.addImage(cv.toDataURL('image/png'),'PNG',0,0,RXP.W,RXP.H)});await offerFile(fileBase()+'.pdf',pdf.output('blob'),cvs[0].toDataURL('image/png'));return}
+  imagesSheet({canvases:cvs,base:fileBase(),text:summaryText(),title:t('rc.view')})}catch(e){console.error(e);toast(t('rc.exportFail'),'bad')}finally{busy(btn,false)}}
+
 afterRender.receipt=(v,anim)=>{if(ui.rcTab==='pay'){fitText(v);document.fonts&&document.fonts.ready.then(()=>fitText($('#pcWrap')));return}const f=$('#feed',v);if(f&&!anim)f.classList.remove('printing');fitText(v);document.fonts&&document.fonts.ready.then(()=>fitText($('#receiptCapture')))};
 function updateReceipt(reprint){const cap=$('#receiptCapture');if(!cap)return;const c=computeTrip(resolveTrip('rcTrip'));if(c.ex.length){cap.innerHTML=receiptMarkup(c);fitText(cap)}
   const f=$('#feed');if(reprint&&f){f.classList.remove('printing');void f.offsetWidth;f.classList.add('printing')}else if(f)f.classList.remove('printing');
@@ -5513,13 +5601,13 @@ async function offerFile(filename,data,previewURL,mime){const d=await getDownloa
     try{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=filename;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},2000);toast(t('rc.saved'));return true}catch(e){}}
   if(previewURL){openSheet({title:esc(t('rc.fallbackTitle')),body:`<p class="muted" style="margin:0">${esc(t('rc.fallback'))}</p><img src="${previewURL}" alt="receipt" style="width:100%;border-radius:16px;box-shadow:var(--shadow)">`})}return false}
 const fileBase=()=>{const tr=tripById(resolveTrip('rcTrip'));return 'triply-'+(tr?.name||'trip').replace(/[\\/:*?"<>|]+/g,'').replace(/\s+/g,'-').slice(0,40)}
-async function viewRc(btn){if(viewRc.busy)return;viewRc.busy=true;try{const cv=await captureReceipt();imageSheet({canvas:cv,filename:fileBase()+'.png',text:summaryText(),title:t('rc.view')})}catch(e){console.error(e);toast(t('rc.exportFail'),'bad')}finally{viewRc.busy=false}}
-async function exportPNG(btn){busy(btn,true);try{const cv=await captureReceipt();if(!(await getDownloads())&&coarse){imageSheet({canvas:cv,filename:fileBase()+'.png',text:summaryText(),title:t('rc.png')});return}const blob=await new Promise(r=>cv.toBlob(r,'image/png'));const url=cv.toDataURL('image/png');await offerFile(fileBase()+'.png',blob,url);burst(innerWidth/2,innerHeight/2,40)}
+async function viewRc(btn){if(rcLand())return exportLand(btn&&btn.tagName==='BUTTON'?btn:null);if(viewRc.busy)return;viewRc.busy=true;try{const cv=await captureReceipt();imageSheet({canvas:cv,filename:fileBase()+'.png',text:summaryText(),title:t('rc.view')})}catch(e){console.error(e);toast(t('rc.exportFail'),'bad')}finally{viewRc.busy=false}}
+async function exportPNG(btn){if(rcLand())return exportLand(btn);busy(btn,true);try{const cv=await captureReceipt();if(!(await getDownloads())&&coarse){imageSheet({canvas:cv,filename:fileBase()+'.png',text:summaryText(),title:t('rc.png')});return}const blob=await new Promise(r=>cv.toBlob(r,'image/png'));const url=cv.toDataURL('image/png');await offerFile(fileBase()+'.png',blob,url);burst(innerWidth/2,innerHeight/2,40)}
   catch(e){console.error(e);toast(t('rc.exportFail'),'bad')}finally{busy(btn,false)}}
-async function exportPDF(btn){busy(btn,true);try{const cv=await captureReceipt();const J=window.jspdf?.jsPDF;if(!J)throw new Error('nopdf');
+async function exportPDF(btn){if(rcLand())return exportLand(btn,'pdf');busy(btn,true);try{const cv=await captureReceipt();const J=window.jspdf?.jsPDF;if(!J)throw new Error('nopdf');
   const w=cv.width/2,h=cv.height/2;const pdf=new J({orientation:h>w?'portrait':'landscape',unit:'px',format:[w,h],hotfixes:['px_scaling']});pdf.addImage(cv.toDataURL('image/png'),'PNG',0,0,w,h);
   const blob=pdf.output('blob');await offerFile(fileBase()+'.pdf',blob,cv.toDataURL('image/png'))}catch(e){console.error(e);toast(t('rc.exportFail'),'bad')}finally{busy(btn,false)}}
-async function shareRc(btn){busy(btn,true);try{const cv=await captureReceipt();imageSheet({canvas:cv,filename:fileBase()+'.png',text:summaryText(),title:t('rc.share')});return;const blob=await new Promise(r=>cv.toBlob(r,'image/png'));const file=new File([blob],fileBase()+'.png',{type:'image/png'});
+async function shareRc(btn){if(rcLand())return exportLand(btn);busy(btn,true);try{const cv=await captureReceipt();imageSheet({canvas:cv,filename:fileBase()+'.png',text:summaryText(),title:t('rc.share')});return;const blob=await new Promise(r=>cv.toBlob(r,'image/png'));const file=new File([blob],fileBase()+'.png',{type:'image/png'});
   if(navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],text:summaryText()});return}catch(e){}}
   toast(t('rc.shareHint'),'info');await offerFile(fileBase()+'.png',blob,cv.toDataURL('image/png'))}catch(e){toast(t('rc.exportFail'),'bad')}finally{busy(btn,false)}}
 function busy(btn,on){if(!btn)return;btn.disabled=on;if(on){btn.dataset.lbl=btn.innerHTML;btn.innerHTML=`<span class="muted">${esc(t('rc.exporting'))}</span>`}else if(btn.dataset.lbl)btn.innerHTML=btn.dataset.lbl}
